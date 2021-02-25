@@ -1,4 +1,3 @@
-
 -- Creation du TableSpace
 
 connect sys as dba
@@ -8,8 +7,6 @@ CREATE TABLESPACE Projet_TUNING DATAFILE '%ORACLE_BASE%\oradata\&MYINSTANCE\&DBA
 
 -- Se connecter avec votre compte CDB dans la PDB pour créer l'utilisateur 
 -- &MYPDBUSER
-
-
 connect &MYCDBUSER@&DBALIASPDB/&MYCDBUSERPASS
 
 -- suprimer l'utilisateur s'il existe déjà
