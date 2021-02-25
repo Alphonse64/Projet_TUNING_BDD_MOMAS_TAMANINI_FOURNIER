@@ -40,7 +40,7 @@ CREATE TABLE catalogue (
 		check(nbPortes BETWEEN 3 AND 5),
 	couleur varchar2(10) 
         constraint chk_catalogue_couleur 
-        check(longueur IN ('blanc', 'bleu', 'gris', 'noir', 'rouge')),
+        check(couleur IN ('blanc', 'bleu', 'gris', 'noir', 'rouge')),
     occasion varchar2(10) 
         constraint chk_catalogue_occasion
 		check(occasion IN ('true', 'false')),
@@ -93,8 +93,8 @@ CREATE TABLE immatriculation (
 		check(nbPortes BETWEEN 3 AND 5),
 	couleur varchar2(10) 
         constraint chk_immat_couleur 
-        check(longueur IN ('blanc', 'bleu', 'gris', 'noir', 'rouge')),
-    occasion varchar2(10) 
+        check(couleur IN ('blanc', 'bleu', 'gris', 'noir', 'rouge')),
+	occasion varchar2(10) 
         constraint chk_immat_occasion
 		check(occasion IN ('true', 'false')),
     prix varchar2(8) 
@@ -107,7 +107,7 @@ CREATE TABLE immatriculation (
 
 CREATE TABLE client (
 	clientId NUMBER GENERATED ALWAYS AS IDENTITY constraint pk_clientId primary key,
-	age	number(2) 
+	age  number(2) 
         constraint chk_client_age
 		check(age BETWEEN 18 AND 84),
 	sexe varchar2(30) 
@@ -115,10 +115,10 @@ CREATE TABLE client (
 		check(sexe IN ('M', 'F')),
 	taux number(5) 
         constraint chk_client_taux
-		check(age BETWEEN 544 AND 74185),
+		check(taux BETWEEN 544 AND 74185),
 	situationFamiliale varchar2(30)
         constraint chk_client_situation
-		check(sexe IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
+		check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
 	nbEnfantsAcharge number(2) 
         constraint chk_client_nb_enfants
 		check(nbEnfantsAcharge BETWEEN 0 AND 4),
@@ -128,7 +128,7 @@ CREATE TABLE client (
 	immatriculation varchar2(10) 
         constraint chk_client_immat 
 		CHECK (LENGTHB(immatriculation) = 10) 
-        references Immatriculations(immatriculation)
+        references immatriculation(immatriculation)
 );
 
 
@@ -136,7 +136,7 @@ CREATE TABLE client (
 
 CREATE TABLE marketing (
 	clientMarketingId NUMBER GENERATED ALWAYS AS IDENTITY constraint pk_clientMarketingId primary key,
-	age	number(2) 
+	age	 number(2) 
         constraint chk_marketing_age
 		check(age BETWEEN 18 AND 84),
 	sexe varchar2(30) 
@@ -144,10 +144,10 @@ CREATE TABLE marketing (
 		check(sexe IN ('M', 'F')),
 	taux number(5) 
         constraint chk_marketing_taux
-		check(age BETWEEN 544 AND 74185),
+		check(taux BETWEEN 544 AND 74185),
 	situationFamiliale varchar2(30)
         constraint chk_marketing_situation
-		check(sexe IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
+		check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
 	nbEnfantsAcharge number(2) 
         constraint chk_marketing_nb_enfants
 		check(nbEnfantsAcharge BETWEEN 0 AND 4),
