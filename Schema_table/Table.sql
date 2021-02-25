@@ -14,6 +14,21 @@ define DBALIAS=ORCLPDB1
 
 define MYUSER=Projet_TUNING_BDD_MOMAS_TAMANINI_FOURNIER
 
+-- suprimer l'utilisateur s'il existe déjà
+
+drop user &MYUSER cascade;
+
+-- Création de l'utilisateur. 
+
+create user &MYUSER identified by PassOrs1
+default tablespace Projet_TUNING
+temporary tablespace temp;
+
+-- affecter et enlever des droits
+grant dba to &MYUSER;
+
+revoke unlimited tablespace from &MYUSER;
+
 -- Définir la variable contenant le password du compte SYSTEM
 define SYSTEMPASSWORD=Dbamanager1
 
