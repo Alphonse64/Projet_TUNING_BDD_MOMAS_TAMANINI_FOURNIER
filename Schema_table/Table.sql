@@ -18,7 +18,6 @@ Create table Clients(
 	deuxiemeVoiture varchar2(10) constraint chk_voiture 
 		check(deuxiemeVoiture IN ('true', 'false')),
 	immatriculation varchar2(10) constraint chk_immat 
-		CHECK (LENGTHB(immatriculation) = 10)references Immatriculations(immatriculation),
-	
+		CHECK (LENGTHB(immatriculation) = 10)references Immatriculations(immatriculation)
 ) ;
 
