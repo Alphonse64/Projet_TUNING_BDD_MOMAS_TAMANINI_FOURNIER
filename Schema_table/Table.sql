@@ -17,7 +17,8 @@ Create table Clients(
 		check(nbEnfantsAcharge BETWEEN 0 AND 4),
 	deuxiemeVoiture varchar2(10) constraint chk_voiture 
 		check(deuxiemeVoiture IN ('true', 'false')),
-	immatriculation varchar2(10) constraint chk_immat
-		CHECK (LENGTHB(immatriculation) == 10)
+	immatriculation varchar2(10) constraint chk_immat 
+		CHECK (LENGTHB(immatriculation) = 10)references Immatriculations(immatriculation),
+	
 ) ;
 
