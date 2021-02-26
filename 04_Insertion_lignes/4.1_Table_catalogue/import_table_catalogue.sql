@@ -1,7 +1,2 @@
--- Import data catalogue
-
-LOAD DATA
-INFILE 'C:\GitHub\Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER\Data\Catalogue.csv'
-INTO TABLE Catalogue
-FIELDS TERMINATED BY ','
-(marque, nom, puissance, longueur, nbPlaces, nbPortes, couleur, occasion, prix)
+-- Import des données dans la table catalogue depuis catalogue.csv via sqlloader (Dans un invite de commandes)
+sqlldr userid=&MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS control=control.ctl log=track.log

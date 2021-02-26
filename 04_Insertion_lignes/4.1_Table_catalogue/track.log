@@ -1,0 +1,237 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 09:50:24 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Fichier de contrôle :   control.ctl
+Fichier de données :      ../../Data/Catalogue.csv
+  Fichier des enregistrements refusés :     Catalogue.bad
+  Fichier de rebut :  aucune spécification
+
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à ignorer : 1
+Erreurs autorisés : 100000
+Tableau de variables :     250 lignes, maximum de 1048576 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table CATALOGUE, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : INSERT
+option TRAILING NULLCOLS effective
+
+   Nom de colonne                  Position   Long  Type de données encadr.
+------------------------------ ---------- ----- ---- ---- ---------------------
+MARQUE                              FIRST     *   ,  O(") CHARACTER            
+NOM                                  NEXT     *   ,  O(") CHARACTER            
+PUISSANCE                            NEXT     *   ,  O(") CHARACTER            
+LONGUEUR                             NEXT     *   ,  O(") CHARACTER            
+NBPLACES                             NEXT     *   ,  O(") CHARACTER            
+NBPORTES                             NEXT     *   ,  O(") CHARACTER            
+COULEUR                              NEXT     *   ,  O(") CHARACTER            
+OCCASION                             NEXT     *   ,  O(") CHARACTER            
+PRIX                                 NEXT     *   ,  O(") CHARACTER            
+
+Enregistrement 1 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 2 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 3 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 4 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 5 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 6 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 7 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 8 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 9 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 10 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 51 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 52 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 53 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 54 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 55 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 71 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 72 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 73 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 74 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 75 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 76 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 77 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 78 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 79 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 80 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 126 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 127 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 128 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 129 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 130 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 146 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 147 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 148 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 149 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 150 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 151 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 152 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 153 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 154 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 155 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 191 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 192 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 193 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 194 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 195 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 196 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 197 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 198 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 199 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 200 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_NOM) de vérification
+
+Enregistrement 231 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 232 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 233 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 234 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 235 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 236 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 237 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 238 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 239 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+Enregistrement 240 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_CATALOGUE_LONGUEUR) de vérification
+
+
+Table CATALOGUE :
+  Chargement de 210 Lignes effectué.
+  60 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 580500 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :           270
+Nombre total d'enregistrements logiques rejetés :        60
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Ven. Févr. 26 09:50:24 2021
+La fin de l'exécution a été effectuée sur Ven. Févr. 26 09:50:25 2021
+
+Temps écoulé (ELAPSED) :     00:00:01.19
+Temps processeur (CPU) :    00:00:00.23
