@@ -34,57 +34,7 @@ set echo on
 set serveroutput on
 
 
-spool &SCRIPTPATH\LOG\Ex101_Tune2_SAA_BANK_3SPOOL.LOG
-
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
--- 1. Supprimer les indexes recommandés dans EXO91 et posés dans EXO91_TUNED
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
--- liste des indexes actuels
-
-select table_name, column_name, index_name 
-from user_ind_columns
-where table_name in ('CLIENT',  'COMPTE',  'TRANSACTION')
-order by table_name, index_name, column_name;
-
--- suppression des indexes posés dans le EXO91
-/*
-declare 
-
-sql_stmt 	varchar2(200);
-cursor c1 is
-	select index_name 
-	from user_indexes
-	where table_name in ('CLIENT',  'COMPTE',  'TRANSACTION')
-	and 
-	(UNIQUENESS = 'NONUNIQUE'
-		OR 
-		(UNIQUENESS='UNIQUE' 
-			and index_name not in (
-			select constraint_name 
-			from user_constraints 
-			where constraint_type 
-			IN ('P', 'U') 
-			)
-		)
-	);
-begin
-	for C1_elem in c1 
-	loop
-		sql_stmt:= 'drop index ' || c1_elem.index_name;
-		EXECUTE IMMEDIATE sql_stmt;
-	end loop;
-
-end;
-/
-*/
-
--- liste des indexes après
-select table_name, column_name, index_name 
-from user_ind_columns
-where table_name in ('CLIENT',  'COMPTE',  'TRANSACTION')
-order by table_name, index_name, column_name;
+spool &SCRIPTPATH\LOG\SAA_PROJECT.LOG
 
 
 --------------------------------------------------------------------------------------------
@@ -129,19 +79,15 @@ USERNAME VARCHAR(30) default user
 
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example1', 'Action', 2,
-' select cl.clientid, nom, prenom, compteid, typecompte, solde
- from client cl, compte co
- where cl.clientid=co.clientid
- order by clientid , nom')
+' select nom, immatriculation from immatriculation
+WHERE marque = 'Audi'')
 /
  
  -- liste des comptes et clients dont le solde est négatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
- 'select cl.clientid, nom, prenom, compteid, typecompte, solde
- from client cl, compte co
- where cl.clientid=co.clientid
- and solde <0');
+ 'select * from client
+WHERE age > 50');
  
  
 -- liste des transactions par compte 
@@ -149,111 +95,67 @@ VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
 -- liste des transactions par compte et client
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example3', 'Action', 2,
- 'select cl.clientid, nom, prenom, co.compteid, co.typecompte, tr.date_operation,  operation, 
- optionoperation, montant
- from client cl, compte co, transaction tr
- where cl.clientid=co.clientid and co.compteid=tr.compteid');
+ 'SELECT *
+FROM catalogue 
+JOIN immatriculation
+ON catalogue.marque = immatriculation.marque
+WHERE immatriculation.occasion = 'VRAI'');
  
  
  -- liste des transactions par compte et client pour lesquels le solde du compte négatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example4', 'Action', 2,
- 'select cl.clientid, nom, prenom, co.compteid, co.typecompte, tr.date_operation,  operation, 
- optionoperation, montant
- from client cl, compte co, transaction tr
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- and co.solde <0');
+ 'SELECT DISTINCT catalogue.couleur
+FROM catalogue
+JOIN immatriculation
+ON  immatriculation.nom = catalogue.nom
+JOIN client
+ON client.immatriculation = immatriculation.immatriculation
+WHERE client.sexe='M'');
 
 -- liste des transactions par compte et client connaissant le nom du client
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example5', 'Action', 2,
- 'select cl.clientid, nom, prenom, co.compteid, co.typecompte, tr.date_operation,  operation, 
- optionoperation, montant
- from client cl, compte co, transaction tr
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- and cl.nom=''Petit''');
+ 'SELECT *
+FROM client
+JOIN marketing
+ON client.taux = marketing.taux
+WHERE marketing.deuxiemeVoiture = 'true'');
  
  -- liste des transactions par compte et client connaissant le nom du client et opérées à une date donnée
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example6', 'Action', 2,
- 'select cl.clientid, nom, prenom, co.compteid, co.typecompte, tr.date_operation,  operation, 
- optionoperation, montant
- from client cl, compte co, transaction tr
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- and cl.nom=''Petit'' and date_operation=to_date(''27-01-2010'', ''DD-MM-YYYY'')');
+ 'SELECT immatriculation
+FROM immatriculation
+JOIN catalogue
+ON catalogue.nom = immatriculation.nom
+WHERE catalogue.nom='Laguna 2.0T'')');
 
  -- 7ème requête
  -- liste des opération d'un client données de type DEBIT
 INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example7', 'Action', 2,
- 'select cl.clientid, nom, prenom, co.compteid, co.typecompte, tr.date_operation,  operation, 
- optionoperation, montant
- from client cl, compte co, transaction tr
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- and cl.nom=''Petit'' and operation=''DEBIT''');
+ 'SELECT  DISTINCT client.age
+FROM client
+JOIN immatriculation
+ON client.immatriculation=immatriculation.immatriculation 
+JOIN catalogue
+ON catalogue.marque=immatriculation.marque
+WHERE catalogue.couleur = 'rouge'');
  
  -- Erreur 1 : total des transaction par client, par compte, par operation
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example8', 'Action', 2,
- 'select cl.clientid,  tr.compteid, operation, sum(montant)
- from client cl, transaction tr, compte co
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- group by cl.clientid,  tr.compteid, operation');
-
- -- Erreur 2 : total des transaction par client, par compte, par operation 
- -- dont le total est supérieur à 10000
- INSERT INTO user_workload (username, module, action, priority, sql_text)
-VALUES ('&MYPDBUSER', 'Example9', 'Action', 2,
- 'select cl.clientid,  tr.compteid, operation, sum(montant)
- from client cl, transaction tr, compte co
- where cl.clientid=co.clientid and co.compteid=tr.compteid
- group by cl.clientid,  tr.compteid, operation
- having sum(montant) >10000');
+ 'SELECT DISTINCT immatriculation.puissance, immatriculation.marque
+FROM immatriculation
+JOIN catalogue 
+ON immatriculation.marque = catalogue.marque
+JOIN client 
+ON immatriculation.immatriculation = client.immatriculation
+WHERE immatriculation.puissance > 150
+ORDER BY client.age DESC');
 
  
--- 10ème balance des transactions par type et par date
-INSERT INTO user_workload (username, module, action, priority, sql_text)
-VALUES ('&MYPDBUSER', 'Example10', 'Action', 2,
- 'select  operation, date_operation, sum(montant)
- from transaction tr
- group by operation, date_operation');
-
--- balance des transactions par type
-INSERT INTO user_workload (username, module, action, priority, sql_text)
-VALUES ('&MYPDBUSER', 'Example11', 'Action', 2,
- 'select  operation, sum(montant)
- from transaction tr
- group by operation');
- 
- -- balance des transactions par type pour des compte épargne entre deux dates
-  INSERT INTO user_workload (username, module, action, priority, sql_text)
-VALUES ('&MYPDBUSER', 'Example12', 'Action', 2,
- 'select co.typecompte,  operation, sum(montant)
- from client cl, compte co, transaction tr
- where co.compteid=tr.compteid
- and tr.date_operation 
- between to_date(''25-01-2010'', ''DD-MM-YYYY'') and to_date(''27-01-2010'', ''DD-MM-YYYY'')
- group by co.typecompte,  operation') ;
-
-
- INSERT INTO user_workload (username, module, action, priority, sql_text)
- VALUES ('&MYPDBUSER', 'Example13', 'Action', 2,
- 'select co.typecompte,  operation, sum(montant)
- from client cl, compte co, transaction tr
- where co.compteid=tr.compteid
- and tr.date_operation 
- between to_date(''25-01-2010'', ''DD-MM-YYYY'') and to_date(''27-01-2010'', ''DD-MM-YYYY'')
- group by co.typecompte,  operation ');
- 
- INSERT INTO user_workload (username, module, action, priority, sql_text)
- VALUES ('&MYPDBUSER', 'Example14', 'Action', 2,
- 'select co.typecompte,  operation, sum(montant)
- from compte co, transaction tr
- where co.compteid=tr.compteid
- and tr.date_operation 
- between to_date(''25-01-2010'', ''DD-MM-YYYY'') and to_date(''27-01-2010'', ''DD-MM-YYYY'')
- group by co.typecompte,  operation') ;
-
 
 commit;
 
@@ -278,8 +180,8 @@ alter session set NLS_NUMERIC_CHARACTERS = '.,' ;
 declare
 saved_stmts NUMBER;
 failed_stmts NUMBER;
-wkld_name VARCHAR2(30) :='WKLD_BANK';
-taskname VARCHAR2(30) := 'TASK_BANK'; 
+wkld_name VARCHAR2(30) :='WKLD_Projet_TUNING';
+taskname VARCHAR2(30) := 'TASK_Projet_TUNING'; 
 task_id NUMBER;
 num_found NUMBER:=0;
 Begin
@@ -323,7 +225,7 @@ dbms_output.put_line(' failed_stmts='||failed_stmts);
 dbms_advisor.add_sqlwkld_ref(taskname,wkld_name);
 
 --Mise à jour de paramètres de la tâche
-dbms_advisor.set_task_parameter(taskname,'EXECUTION_TYPE','INDEX_ONLY');--'FULL');--'INDEX_ONLY');
+dbms_advisor.set_task_parameter(taskname,'EXECUTION_TYPE','FULL');--'FULL');--'INDEX_ONLY');
 dbms_advisor.set_task_parameter(taskname,'MODE','COMPREHENSIVE');
 
 -- exécuter la tâche
@@ -392,7 +294,7 @@ col SQL_TEXT format a70
 set linesize 200
 set pagesize 400
 select WORKLOAD_NAME, sql_id, SQL_TEXT from DBA_ADVISOR_SQLW_STMTS
-Where workload_name= 'WKLD_BANK'
+Where workload_name= 'WKLD_Projet_TUNING'
 order by sql_id;
 
 
@@ -401,7 +303,7 @@ order by sql_id;
 -- la recommandation
 
 SELECT REC_ID, RANK, BENEFIT, type
-FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_BANK';
+FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_Projet_TUNING';
 
 -- Visualisation des recommandations
 -- Afficher des recommandations et des bénéfices 
@@ -410,8 +312,8 @@ FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_BANK';
 SELECT sql_id, rec_id, precost, postcost,
 (precost-postcost)*100/precost AS percent_benefit
 FROM USER_ADVISOR_SQLA_WK_STMTS
-WHERE TASK_NAME = 'TASK_BANK'
-AND workload_name = 'WKLD_BANK';
+WHERE TASK_NAME = 'TASK_Projet_TUNING'
+AND workload_name = 'WKLD_Projet_TUNING';
 
 -- Visualisation des recommandations
 -- Affichage des actions recommandés :
@@ -420,7 +322,7 @@ AND workload_name = 'WKLD_BANK';
 
 SELECT 'Action Count', COUNT(DISTINCT action_id) cnt
 FROM user_advisor_actions 
-WHERE task_name = 'TASK_BANK';
+WHERE task_name = 'TASK_Projet_TUNING';
 
 
 
@@ -434,7 +336,7 @@ Col attr1 format A40
 Set long 500
 SELECT rec_id, action_id, command, attr1
 FROM user_advisor_actions 
-WHERE task_name = 'TASK_BANK'
+WHERE task_name = 'TASK_Projet_TUNING'
 ORDER BY rec_id, action_id;
 
 
@@ -446,7 +348,7 @@ ORDER BY rec_id, action_id;
 -- La fonction GET_TASK_SCRIPT construire le script
 set serveroutput on
 begin
-dbms_output.put_line(DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_BANK'));
+dbms_output.put_line(DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_Projet_TUNING'));
 end;
 /
 
@@ -454,11 +356,11 @@ end;
 -- contenant le script
 declare 
 mydate varchar2(20):=to_char(sysdate, 'DD_MM_YYYY_HH24_MI_SS');
-fname varchar2(300):='SAA_Generate_script_on_bank_app_'||mydate||'.sql';
+fname varchar2(300):='SAA_Generate_script_on_Projet_TUNING_app_'||mydate||'.sql';
 begin
 dbms_output.put_line(fname);
 DBMS_ADVISOR.CREATE_FILE(
-buffer=>DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_BANK'),
+buffer=>DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_Projet_TUNING'),
 location =>'DATA_PUMP_DIR', 
  filename=>fname
 );

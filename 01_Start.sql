@@ -3,6 +3,11 @@ cmd
 -- Lancer sqlplus sans se logger
 sqlplus /nolog
 
+--Chemin du dossier 
+
+define PROJECTPATH=C:\GitHub\Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER
+
+
 -- Définir la variable contenant le nom de l'instance
 define MYINSTANCE=orcl
 
