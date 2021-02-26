@@ -13,7 +13,7 @@ deux clich�s AWR.
 Travail � faire via l'API et en partie via OEM.
 
 1. Charger l'application bancaire (AppliBank.sql)
-dans le sch�ma de l'utilisateur ORS2
+dans le sch�ma de l'utilisateur PROJET_TUNING
 
 2. Provoquer de l'activit� (requ�tes sur l'application bancaire) 
 dans la base entre deux clich�s AWR
@@ -87,9 +87,6 @@ connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 
 -- D�sactiver l'affichage � l'�cran des r�sultats des requ�tes.
  set autotrace &TRACEOPTION
-
- col adresse format a30
-
  
  -- Lancer plusieurs requ�tes
  
@@ -414,7 +411,7 @@ RETURN VARCHAR2;
 col task_name format a20
 SELECT task_name 
 FROM DBA_ADVISOR_LOG 
-WHERE owner ='ORS2' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
+WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
 
 --?
 

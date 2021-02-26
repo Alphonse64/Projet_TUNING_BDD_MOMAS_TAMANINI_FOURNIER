@@ -38,7 +38,7 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id1='||:snapid1);
   4  end;
   5  /
-snap_id1=1179                                                                                                                                                                                           
+snap_id1=1181                                                                                                                                                                                           
 
 Procédure PL/SQL terminée avec succès.
 
@@ -55,9 +55,6 @@ SQL> -- dans la base entre deux clichï¿½s AWR
 SQL> 
 SQL> -- Dï¿½sactiver l'affichage ï¿½ l'ï¿½cran des rï¿½sultats des requï¿½tes.
 SQL>  set autotrace &TRACEOPTION
-SQL> 
-SQL>  col adresse format a30
-SQL> 
 SQL> 
 SQL>  -- Lancer plusieurs requï¿½tes
 SQL> 
@@ -82,7 +79,7 @@ Plan hash value: 3135058194
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+          1  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
        4037  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
@@ -197,9 +194,9 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         22  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-          6  consistent gets                                                                                                                                                                            
+         12  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         631  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -473,9 +470,9 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          4  recursive calls                                                                                                                                                                            
+         19  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      13909  consistent gets                                                                                                                                                                            
+      13913  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
     7514896  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -718,9 +715,9 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         65  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       9939  consistent gets                                                                                                                                                                            
+       9919  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         801  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -1047,7 +1044,7 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id2='||:snapid2);
   4  end;
   5  /
-snap_id2=1180                                                                                                                                                                                           
+snap_id2=1182                                                                                                                                                                                           
 
 Procédure PL/SQL terminée avec succès.
 
@@ -1079,8 +1076,8 @@ ORA-06512: à "SYS.DBMS_SQLTUNE", ligne 1289
 ORA-06512: à ligne 1 
 
 
-SQL> execute DBMS_SQLTUNE.DROP_SQLSET('bank_sql_tuning_set'||'&MYPDBUSER');
-BEGIN DBMS_SQLTUNE.DROP_SQLSET('bank_sql_tuning_set'||'PROJET_TUNING'); END;
+SQL> execute DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'&MYPDBUSER');
+BEGIN DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'PROJET_TUNING'); END;
 
 *
 ERREUR à la ligne 1 :
@@ -1132,7 +1129,7 @@ SQL> -- Le conseiller qui sera utilisï¿½ ici est SQL TUNNING ADVISOR.
 SQL> set serveroutput on
 SQL> DECLARE
   2  my_task_name VARCHAR2(30);
-  3  nom_sqlset varchar2(50):='bank_sql_tuning_set'||'&MYPDBUSER';
+  3  nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
   4  l_cursor  DBMS_SQLTUNE.sqlset_cursor;
   5  BEGIN
   6  DBMS_SQLTUNE.CREATE_SQLSET(
@@ -1186,8 +1183,8 @@ SQL> DECLARE
  54  
  55  END;
  56  /
-ancien   3 : nom_sqlset varchar2(50):='bank_sql_tuning_set'||'&MYPDBUSER';
-nouveau   3 : nom_sqlset varchar2(50):='bank_sql_tuning_set'||'PROJET_TUNING';
+ancien   3 : nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
+nouveau   3 : nom_sqlset varchar2(50):='projet_tuning_sql_set'||'PROJET_TUNING';
 ancien  21 :                     'parsing_schema_name =''&MYPDBUSER''  and parsing_schema_name <> ''SYS''', -- basic_filter
 nouveau  21 :                     'parsing_schema_name =''PROJET_TUNING''  and parsing_schema_name <> ''SYS''', -- basic_filter
 ancien  44 : basic_filter => 'parsing_schema_name =''&MYPDBUSER''', -- basic_filter
@@ -1253,9 +1250,9 @@ SQL> -- Vï¿½rification de la tï¿½che crï¿½ï¿½e
 SQL> col task_name format a20
 SQL> SELECT task_name
   2  FROM DBA_ADVISOR_LOG
-  3  WHERE owner ='ORS2' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
-ancien   3 : WHERE owner ='ORS2' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   3 : WHERE owner ='ORS2' and task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+  3  WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
+ancien   3 : WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
+nouveau   3 : WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
 
 aucune ligne sélectionnée
 
