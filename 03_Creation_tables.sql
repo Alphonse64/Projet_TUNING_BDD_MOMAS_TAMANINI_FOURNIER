@@ -9,7 +9,7 @@ drop table marketing cascade constraints;
 
 CREATE TABLE catalogue (
 	marque varchar2(15) 
-        constraint chk_catalogue_marque
+        constraint chk_catalogue_marque 
 		check (marque IN (
              'Audi', 'BMW', 'Dacia', 'Daihatsu', 'Fiat', 'Ford',
              'Honda', 'Hyundaï', 'Jaguar', 'Kia', 'Lancia',
@@ -48,7 +48,7 @@ CREATE TABLE catalogue (
     occasion varchar2(10) 
         constraint chk_catalogue_occasion
 		check(occasion IN ('true', 'false')),
-    prix varchar2(8) 
+    prix number(8) 
         constraint chk_catalogue_prix
 		check(prix BETWEEN 7500 AND 101300)
 );
@@ -100,8 +100,8 @@ CREATE TABLE immatriculation (
         check(couleur IN ('blanc', 'bleu', 'gris', 'noir', 'rouge')),
 	occasion varchar2(10) 
         constraint chk_immat_occasion
-		check(occasion IN ('true', 'false')),
-    prix varchar2(8) 
+		check(occasion IN ('VRAI', 'FAUX')),
+    prix number(8) 
         constraint chk_immat_prix
 		check(prix BETWEEN 7500 AND 101300)
 );
