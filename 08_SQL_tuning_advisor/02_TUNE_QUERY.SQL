@@ -288,7 +288,7 @@ connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 -- Supprimer la tache  
 -- Supprimer 1 tache PROJET_TUNING_TASK si elle existe d�j�
 execute DBMS_SQLTUNE.DROP_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER');
-execute DBMS_SQLTUNE.DROP_SQLSET('bank_sql_tuning_set'||'&MYPDBUSER');
+execute DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'&MYPDBUSER');
 -- Si vous avez d�j� ex�cut� ce script, il se peut qu'un
 -- qu'un profile de requ�te ai d�j� �t� cr��. Dans ce cas:
 -- Rechercher puis supprimer le profie s'il existe d�j� 
@@ -311,7 +311,7 @@ execute DBMS_SQLTUNE.DROP_SQL_PROFILE('NomProfile');
 set serveroutput on
 DECLARE
 my_task_name VARCHAR2(30);
-nom_sqlset varchar2(50):='bank_sql_tuning_set'||'&MYPDBUSER';
+nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
 l_cursor  DBMS_SQLTUNE.sqlset_cursor;
 BEGIN
 DBMS_SQLTUNE.CREATE_SQLSET(
