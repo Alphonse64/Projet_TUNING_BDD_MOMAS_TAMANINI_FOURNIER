@@ -1,0 +1,73 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 10:40:14 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Fichier de contrôle :   control.ctl
+Fichier de données :      ../../Data/Immatriculations.csv
+  Fichier des enregistrements refusés :     Immatriculations.bad
+  Fichier de rebut :  aucune spécification
+
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à ignorer : 1
+Erreurs autorisés : 100000
+Tableau de variables :     250 lignes, maximum de 1048576 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table IMMATRICULATION, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : INSERT
+option TRAILING NULLCOLS effective
+
+   Nom de colonne                  Position   Long  Type de données encadr.
+------------------------------ ---------- ----- ---- ---- ---------------------
+IMMATRICULATION                     FIRST     *   ,  O(") CHARACTER            
+MARQUE                               NEXT     *   ,  O(") CHARACTER            
+NOM                                  NEXT     *   ,  O(") CHARACTER            
+PUISSANCE                            NEXT     *   ,  O(") CHARACTER            
+LONGUEUR                             NEXT     *   ,  O(") CHARACTER            
+NBPLACES                             NEXT     *   ,  O(") CHARACTER            
+NBPORTES                             NEXT     *   ,  O(") CHARACTER            
+COULEUR                              NEXT     *   ,  O(") CHARACTER            
+OCCASION                             NEXT     *   ,  O(") CHARACTER            
+PRIX                                 NEXT     *   ,  O(") CHARACTER            
+
+Enregistrement 211893 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 682979 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 713517 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 727792 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 847793 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.PK_IMMATRICULATIONID)
+
+
+Table IMMATRICULATION :
+  Chargement de 1048570 Lignes effectué.
+  5 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 645000 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :       1048575
+Nombre total d'enregistrements logiques rejetés :         5
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Ven. Févr. 26 10:40:14 2021
+La fin de l'exécution a été effectuée sur Ven. Févr. 26 10:40:52 2021
+
+Temps écoulé (ELAPSED) :     00:00:37.87
+Temps processeur (CPU) :    00:00:05.55

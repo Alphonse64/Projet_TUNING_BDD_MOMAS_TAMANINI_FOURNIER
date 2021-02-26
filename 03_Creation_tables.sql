@@ -33,9 +33,9 @@ CREATE TABLE catalogue (
 	puissance number(3) 
         constraint chk_catalogue_puissance
 		check(puissance BETWEEN 55 AND 507),
-	longueur varchar2(20)
-        constraint chk_catalogue_longueur
-		check(longueur IN ('courte', 'moyenne', 'longue', 'très longue')),
+	longueur varchar2(20),
+        --constraint chk_catalogue_longueur
+		--check(longueur IN ('courte', 'moyenne', 'longue', 'très longue')),
 	nbPlaces number(2) 
         constraint chk_catalogue_nb_places
 		check(nbPlaces BETWEEN 5 AND 7),
@@ -57,10 +57,10 @@ CREATE TABLE catalogue (
 -- Table Immatriculation
 
 CREATE TABLE immatriculation (
-	immatriculation varchar2(10) 
-    constraint pk_immatriculationId primary key
-    constraint chk_immat_format 
-	CHECK (LENGTHB(immatriculation) = 10),
+	immatriculation varchar2(100) 
+    constraint pk_immatriculationId primary key,
+    --constraint chk_immat_format 
+	--CHECK (LENGTHB(immatriculation) = 10),
 	marque varchar2(15) 
         constraint chk_immat_marque
 		check (marque IN (
@@ -120,19 +120,19 @@ CREATE TABLE client (
 	taux number(5) 
         constraint chk_client_taux
 		check(taux BETWEEN 544 AND 74185),
-	situationFamiliale varchar2(30)
-        constraint chk_client_situation
-		check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
+	situationFamiliale varchar2(30),
+        --constraint chk_client_situation
+		--check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
 	nbEnfantsAcharge number(2) 
         constraint chk_client_nb_enfants
 		check(nbEnfantsAcharge BETWEEN 0 AND 4),
 	deuxiemeVoiture varchar2(10) 
         constraint chk_client_voiture 
 		check(deuxiemeVoiture IN ('true', 'false')),
-	immatriculation varchar2(10) 
-        constraint chk_client_immat 
-		CHECK (LENGTHB(immatriculation) = 10) 
-        references immatriculation(immatriculation)
+	immatriculation varchar2(100) 
+        --constraint chk_ref_immat 
+		--CHECK (LENGTHB(immatriculation) = 10) 
+        --references immatriculation(immatriculation)
 );
 
 
@@ -149,9 +149,9 @@ CREATE TABLE marketing (
 	taux number(5) 
         constraint chk_marketing_taux
 		check(taux BETWEEN 544 AND 74185),
-	situationFamiliale varchar2(30)
-        constraint chk_marketing_situation
-		check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
+	situationFamiliale varchar2(30),
+        --constraint chk_marketing_situation
+		--check(situationFamiliale IN ('Célibataire', 'Divorcée', 'En Couple', 'EnCouple', 'Marié', 'Mariée', 'Seul', 'Seule')),
 	nbEnfantsAcharge number(2) 
         constraint chk_marketing_nb_enfants
 		check(nbEnfantsAcharge BETWEEN 0 AND 4),
