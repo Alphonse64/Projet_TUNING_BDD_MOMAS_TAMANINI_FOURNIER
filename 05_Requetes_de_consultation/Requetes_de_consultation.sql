@@ -24,7 +24,7 @@ WHERE immatriculation.occasion = 'VRAI';
 
 SELECT *
 FROM client
-JOIN immatriculation
+JOIN marketing
 ON client.taux = marketing.taux
 WHERE marketing.deuxiemeVoiture = 'true';
 
@@ -73,15 +73,27 @@ JOIN catalogue
 ON catalogue.marque=immatriculation.marque
 WHERE catalogue.couleur = 'rouge';
 
-SELECT DISTINCT marketing.nbEnfantsAcharge
-FROM marketing
-JOIN client
-ON client.sexe = marketing.sexe
+SELECT DISTINCT immatriculation.puissance, immatriculation.marque
+FROM immatriculation
+JOIN catalogue 
+ON immatriculation.marque = catalogue.marque
+JOIN client 
+ON immatriculation.immatriculation = client.immatriculation
+WHERE immatriculation.puissance > 150
+ORDER BY client.age DESC;
+
+
+-- Voir l'age des clients et la marque des voitures prise pour les voitures puissates (>150)
+SELECT DISTINCT immatriculation.puissance, immatriculation.marque
+FROM immatriculation
+JOIN catalogue 
+ON immatriculation.marque = catalogue.marque
+JOIN client 
+ON immatriculation.immatriculation = client.immatriculation
+WHERE immatriculation.puissance > 150
+ORDER BY client.age DESC;
 
 
 
+-- REQUETES PLUS DE 3 TABLES
 
-
-
-
--- REQUETES 3 TABLES OU PLUS
