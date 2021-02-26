@@ -26,7 +26,7 @@ CREATE TABLE catalogue (
             'Espace 2.0T', '1007 1.4', 'Primera 1.6',
             'Maxima 3.0 V6', 'Almera 1.8', 'Copper 1.6 16V',
             'S500', 'A200', 'Ypsilon 1.4 16V', 'Picanto 1.1',
-            'X-Type 2.5 V6', 'Matrix 1.6 FR-V 1.7',
+            'X-Type 2.5 V6', 'Matrix 1.6', 'FR-V 1.7',
             'Mondeo 1.8', 'Croma 2.2', 'Cuore 1.0', 'Logan 1.6 MPI',
             'M5', '120i', 'A3 2.0 FSI', 'A2 1.4'
         )),
@@ -79,7 +79,7 @@ CREATE TABLE immatriculation (
             'Espace 2.0T', '1007 1.4', 'Primera 1.6',
             'Maxima 3.0 V6', 'Almera 1.8', 'Copper 1.6 16V',
             'S500', 'A200', 'Ypsilon 1.4 16V', 'Picanto 1.1',
-            'X-Type 2.5 V6', 'Matrix 1.6 FR-V 1.7',
+            'X-Type 2.5 V6', 'Matrix 1.6', 'FR-V 1.7',
             'Mondeo 1.8', 'Croma 2.2', 'Cuore 1.0', 'Logan 1.6 MPI',
             'M5', '120i', 'A3 2.0 FSI', 'A2 1.4'
         )),
