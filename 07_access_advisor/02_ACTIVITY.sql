@@ -86,7 +86,7 @@ WHERE marque = 'Audi'')
  -- liste des comptes et clients dont le solde est négatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
- 'select * from client
+' select * from client
 WHERE age > 50');
  
  
@@ -95,7 +95,7 @@ WHERE age > 50');
 -- liste des transactions par compte et client
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example3', 'Action', 2,
- 'SELECT *
+' SELECT *
 FROM catalogue 
 JOIN immatriculation
 ON catalogue.marque = immatriculation.marque
@@ -105,7 +105,7 @@ WHERE immatriculation.occasion = 'VRAI'');
  -- liste des transactions par compte et client pour lesquels le solde du compte négatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example4', 'Action', 2,
- 'SELECT DISTINCT catalogue.couleur
+' SELECT DISTINCT catalogue.couleur
 FROM catalogue
 JOIN immatriculation
 ON  immatriculation.nom = catalogue.nom
@@ -116,7 +116,7 @@ WHERE client.sexe='M'');
 -- liste des transactions par compte et client connaissant le nom du client
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example5', 'Action', 2,
- 'SELECT *
+' SELECT *
 FROM client
 JOIN marketing
 ON client.taux = marketing.taux
@@ -125,17 +125,17 @@ WHERE marketing.deuxiemeVoiture = 'true'');
  -- liste des transactions par compte et client connaissant le nom du client et opérées à une date donnée
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example6', 'Action', 2,
- 'SELECT immatriculation
+' SELECT immatriculation
 FROM immatriculation
 JOIN catalogue
 ON catalogue.nom = immatriculation.nom
-WHERE catalogue.nom='Laguna 2.0T'')');
+WHERE catalogue.nom='Laguna 2.0T'');
 
  -- 7ème requête
  -- liste des opération d'un client données de type DEBIT
 INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example7', 'Action', 2,
- 'SELECT  DISTINCT client.age
+' SELECT  DISTINCT client.age
 FROM client
 JOIN immatriculation
 ON client.immatriculation=immatriculation.immatriculation 
@@ -146,7 +146,7 @@ WHERE catalogue.couleur = 'rouge'');
  -- Erreur 1 : total des transaction par client, par compte, par operation
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example8', 'Action', 2,
- 'SELECT DISTINCT immatriculation.puissance, immatriculation.marque
+' SELECT DISTINCT immatriculation.puissance, immatriculation.marque
 FROM immatriculation
 JOIN catalogue 
 ON immatriculation.marque = catalogue.marque
@@ -158,7 +158,8 @@ ORDER BY client.age DESC');
  
 
 commit;
-
+--calcul des statistiques
+execute dbms_stats.gather_schema_stats('&MYPDBUSER');
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -177,6 +178,7 @@ alter session set NLS_NUMERIC_CHARACTERS = '.,' ;
 
 -- Francais
 -- alter session set NLS_NUMERIC_CHARACTERS = ',.'  ; 
+execute DBMS_ADVISOR.DELETE_TASK ('TASK_Projet_TUNING');
 declare
 saved_stmts NUMBER;
 failed_stmts NUMBER;
@@ -193,6 +195,7 @@ IF num_found > 0 THEN
 DBMS_ADVISOR.RESET_TASK (taskname);
 DBMS_ADVISOR.DELETE_SQLWKLD_REF(taskname, wkld_name);
 END IF;
+dbms_output.put_line('Dans SQL access advisor : 1############################################');
 
 -- suppression puis création de la t
 select count(*) into num_found 
@@ -203,6 +206,7 @@ IF num_found > 0 THEN
 DBMS_ADVISOR.DELETE_TASK (taskname);
 END IF;
 DBMS_ADVISOR.CREATE_TASK ('SQL Access Advisor', task_id, taskname);
+dbms_output.put_line('Dans SQL access advisor : 2############################################');
 
 -- suppression et puis création du workload
 select count(*) into num_found 
@@ -212,6 +216,7 @@ IF num_found > 0 THEN
 DBMS_ADVISOR.DELETE_SQLWKLD(workload_name=> wkld_name);
 END IF;
 DBMS_ADVISOR.CREATE_SQLWKLD (wkld_name);
+dbms_output.put_line('Dans SQL access advisor : 3############################################');
 
 -- chargement du workload
 DBMS_ADVISOR.IMPORT_SQLWKLD_USER( 
@@ -223,13 +228,16 @@ dbms_output.put_line(' failed_stmts='||failed_stmts);
 -- Attacher le workload à une tâche
 /* Link Workload to Task */
 dbms_advisor.add_sqlwkld_ref(taskname,wkld_name);
+dbms_output.put_line('Dans SQL access advisor : 4############################################');
 
 --Mise à jour de paramètres de la tâche
-dbms_advisor.set_task_parameter(taskname,'EXECUTION_TYPE','FULL');--'FULL');--'INDEX_ONLY');
+dbms_advisor.set_task_parameter(taskname,'EXECUTION_TYPE','INDEX_ONLY');--'FULL');--'INDEX_ONLY');
 dbms_advisor.set_task_parameter(taskname,'MODE','COMPREHENSIVE');
 
 -- exécuter la tâche
 DBMS_ADVISOR.EXECUTE_TASK(taskname);
+dbms_output.put_line('Dans SQL access advisor : 5############################################');
+
 Exception 
 When others then
 dbms_output.put_line(' SQLcode='||sqlcode);
