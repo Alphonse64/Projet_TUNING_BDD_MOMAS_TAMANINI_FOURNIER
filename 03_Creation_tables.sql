@@ -1,5 +1,9 @@
 -- CREATION DES TABLES
 
+drop table catalogue cascade constraints;
+drop table immatriculation cascade constraints;
+drop table client cascade constraints;
+drop table marketing cascade constraints;
 
 -- Table Catalogue
 
