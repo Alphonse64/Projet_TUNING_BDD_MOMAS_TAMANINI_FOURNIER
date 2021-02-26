@@ -40,7 +40,7 @@ define MYPDBUSERPASS=PassOrs2
 -- Définir la variable contenant la trace que vous souhaitez :
 -- ON : si affiche résultat+plan
 -- TRACEONLY : si affichage plan uniquement
--- define TRACEOPTION=TRACEONLY
+define TRACEOPTION=TRACEONLY
 
 
 
