@@ -86,9 +86,9 @@ CREATE TABLE immatriculation (
 	puissance number(3) 
         constraint chk_immat_puissance
 		check(puissance BETWEEN 55 AND 507),
-	longueur varchar2(20)
-        constraint chk_immat_longueur
-		check(longueur IN ('courte', 'moyenne', 'longue', 'très longue')),
+	longueur varchar2(20),
+        --constraint chk_immat_longueur
+		--check(longueur IN ('courte', 'moyenne', 'longue', 'très longue')),
 	nbPlaces number(2) 
         constraint chk_immat_nb_places
 		check(nbPlaces BETWEEN 5 AND 7),

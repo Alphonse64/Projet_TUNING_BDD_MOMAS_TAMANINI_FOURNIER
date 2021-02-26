@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 10:54:05 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 19:06:44 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -32,37 +32,37 @@ NBENFANTSACHARGE                     NEXT     *   ,  O(") CHARACTER
 DEUXIEMEVOITURE                      NEXT     *   ,  O(") CHARACTER            
 
 Enregistrement 2 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 3 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 4 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 5 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 6 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 8 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 10 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 13 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 15 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 16 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 Enregistrement 18 : Rejeté - Erreur sur table MARKETING.
-ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANINI_FOURNIER.CHK_MARKETING_TAUX) de vérification
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
 
 
 Table MARKETING :
@@ -80,8 +80,8 @@ Nombre total d'enregistrements logiques lus :            20
 Nombre total d'enregistrements logiques rejetés :        11
 Nombre total d'enregistrements logiques mis au rebut :        0
 
-Le début de l'exécution a été effectué sur Ven. Févr. 26 10:54:05 2021
-La fin de l'exécution a été effectuée sur Ven. Févr. 26 10:54:05 2021
+Le début de l'exécution a été effectué sur Ven. Févr. 26 19:06:44 2021
+La fin de l'exécution a été effectuée sur Ven. Févr. 26 19:06:45 2021
 
-Temps écoulé (ELAPSED) :     00:00:00.44
-Temps processeur (CPU) :    00:00:00.22
+Temps écoulé (ELAPSED) :     00:00:00.31
+Temps processeur (CPU) :    00:00:00.17

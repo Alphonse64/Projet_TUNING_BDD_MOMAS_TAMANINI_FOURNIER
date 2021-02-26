@@ -31,7 +31,7 @@ define MYCDBUSERPASS=Dbamanager1
 
 -- Définir la variable contenant le nom de l'utilisateur que vous allez 
 -- créer au niveau PDB ou utiliser s'il existe déjà. 
-define MYPDBUSER=Projet_TUNING_BDD_MOMAS_TAMANINI_FOURNIER
+define MYPDBUSER=PROJET_TUNING
  
 -- Définir la variable contenant le pass de l'utilisateur que vous allez 
 -- créer au niveau PDB ou utiliser s'il existe déjà.
