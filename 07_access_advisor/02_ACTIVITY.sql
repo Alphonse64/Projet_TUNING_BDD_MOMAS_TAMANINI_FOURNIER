@@ -1,33 +1,3 @@
-/*
-
-Exercice 101
-
-Travail à faire via l'API
-
-Ecrire un script qui permet d'analyser et produire des recommandations d'indexes 
-et/ou de vues matérialisées sur des requêtes SQL stockées dans une table utilisateur. 
-Vous devez pour cela :
- - Définir une tâche avec un template OLTP ou DWH ou mixte
- - Définir un workload à partir d'une table Utilisateur (voir Annexe 11.1) à créer 
-   à remplir avec au moins deux requêtes
- - Attacher la tâche aux workload
- - Fixer certains paramètres de la tâche tel que 
-EXECUTION_TYPE = INDEX_ONLY puis FULL
-MODE = COMPREHENSIVE
-- Exécuter la tâche
-
-Visualiser les recommandations Et si possible accepter les recommandations
-
-Les principales étapes du script sont:
-
-1. Supprimer les indexes recommandés dans EXO91 et posés dans EXO91_TUNED
-2. Charger les requêtes dans la table utilisateur user_workload
-3. Analyser les requêtes et produire les recommandations
-4. Consulter les recommandations
-
-*/
-
-
 set autotrace off
 set termout on
 set echo on
@@ -39,18 +9,18 @@ spool &PROJECTPATH\07_access_advisor\LOG\SAA_PROJECT.LOG
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
--- 2. Charger les requêtes dans la table utilisateur user_workload
+-- 2. Charger les requï¿½tes dans la table utilisateur user_workload
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
--- Si utile Suppession puis création de la table utilisateur
+-- Si utile Suppession puis crï¿½ation de la table utilisateur
 drop table user_workload;
 
 
 create table user_workload(
 MODULE VARCHAR2(64) , 	--Nom du module applicatif.
 ACTION VARCHAR2(64),	-- Action sur l'application.
-BUFFER_GETS NUMBER default 0, --nbre total de buffer-gets pour la requête.
+BUFFER_GETS NUMBER default 0, --nbre total de buffer-gets pour la requï¿½te.
 CPU_TIME NUMBER default 0, -- Total CPU time in seconds for the statement.
 ELAPSED_TIME NUMBER default 0, -- Total elapsed time in seconds for the statement.
 DISK_READS NUMBER default 0 , --Total number of disk-read operations used 
@@ -74,7 +44,7 @@ USERNAME VARCHAR(30) default user
 
 
 
--- chargement des requêtes dans cette table
+-- chargement des requï¿½tes dans cette table
 -- aggregation with selection
 
 INSERT INTO user_workload (username, module, action, priority, sql_text)
@@ -83,7 +53,7 @@ VALUES ('&MYPDBUSER', 'Example1', 'Action', 2,
 WHERE marque = 'Audi'')
 /
  
- -- liste des comptes et clients dont le solde est négatif
+ -- liste des comptes et clients dont le solde est nï¿½gatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
 ' select * from client
@@ -102,7 +72,7 @@ ON catalogue.marque = immatriculation.marque
 WHERE immatriculation.occasion = 'VRAI'');
  
  
- -- liste des transactions par compte et client pour lesquels le solde du compte négatif
+ -- liste des transactions par compte et client pour lesquels le solde du compte nï¿½gatif
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example4', 'Action', 2,
 ' SELECT DISTINCT catalogue.couleur
@@ -122,7 +92,7 @@ JOIN marketing
 ON client.taux = marketing.taux
 WHERE marketing.deuxiemeVoiture = 'true'');
  
- -- liste des transactions par compte et client connaissant le nom du client et opérées à une date donnée
+ -- liste des transactions par compte et client connaissant le nom du client et opï¿½rï¿½es ï¿½ une date donnï¿½e
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example6', 'Action', 2,
 ' SELECT immatriculation
@@ -131,8 +101,8 @@ JOIN catalogue
 ON catalogue.nom = immatriculation.nom
 WHERE catalogue.nom='Laguna 2.0T'');
 
- -- 7ème requête
- -- liste des opération d'un client données de type DEBIT
+ -- 7ï¿½me requï¿½te
+ -- liste des opï¿½ration d'un client donnï¿½es de type DEBIT
 INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example7', 'Action', 2,
 ' SELECT  DISTINCT client.age
@@ -163,7 +133,7 @@ execute dbms_stats.gather_schema_stats('&MYPDBUSER');
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
--- 3. Analyser les requêtes et produire les recommandations
+-- 3. Analyser les requï¿½tes et produire les recommandations
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
@@ -171,7 +141,7 @@ execute dbms_stats.gather_schema_stats('&MYPDBUSER');
 -- programmation de tache Sql access advisor
 set serveroutput on
 
--- fixer les spérateurs de nombre en Anglais. "," pour les décimaux et "." pour les groupes
+-- fixer les spï¿½rateurs de nombre en Anglais. "," pour les dï¿½cimaux et "." pour les groupes
 
 -- Anglais
 alter session set NLS_NUMERIC_CHARACTERS = '.,' ; 
@@ -187,7 +157,7 @@ taskname VARCHAR2(30) := 'TASK_Projet_TUNING';
 task_id NUMBER;
 num_found NUMBER:=0;
 Begin
--- détacher la tache et le workload
+-- dï¿½tacher la tache et le workload
 select count(*) into num_found 
 from user_advisor_sqla_wk_map 
 where task_name = taskname and workload_name = wkld_name;
@@ -197,7 +167,7 @@ DBMS_ADVISOR.DELETE_SQLWKLD_REF(taskname, wkld_name);
 END IF;
 dbms_output.put_line('Dans SQL access advisor : 1############################################');
 
--- suppression puis création de la t
+-- suppression puis crï¿½ation de la t
 select count(*) into num_found 
 from dba_advisor_tasks 
 where owner='&MYPDBUSER' and task_name=taskname;
@@ -208,7 +178,7 @@ END IF;
 DBMS_ADVISOR.CREATE_TASK ('SQL Access Advisor', task_id, taskname);
 dbms_output.put_line('Dans SQL access advisor : 2############################################');
 
--- suppression et puis création du workload
+-- suppression et puis crï¿½ation du workload
 select count(*) into num_found 
 from user_advisor_sqlw_sum 
 where workload_name = wkld_name;
@@ -225,16 +195,16 @@ table_name=>'USER_WORKLOAD', Saved_rows=>saved_stmts,
 Failed_rows=>failed_stmts);
 dbms_output.put_line(' saved_stmts='||saved_stmts);
 dbms_output.put_line(' failed_stmts='||failed_stmts);
--- Attacher le workload à une tâche
+-- Attacher le workload ï¿½ une tï¿½che
 /* Link Workload to Task */
 dbms_advisor.add_sqlwkld_ref(taskname,wkld_name);
 dbms_output.put_line('Dans SQL access advisor : 4############################################');
 
---Mise à jour de paramètres de la tâche
+--Mise ï¿½ jour de paramï¿½tres de la tï¿½che
 dbms_advisor.set_task_parameter(taskname,'EXECUTION_TYPE','INDEX_ONLY');--'FULL');--'INDEX_ONLY');
 dbms_advisor.set_task_parameter(taskname,'MODE','COMPREHENSIVE');
 
--- exécuter la tâche
+-- exï¿½cuter la tï¿½che
 DBMS_ADVISOR.EXECUTE_TASK(taskname);
 dbms_output.put_line('Dans SQL access advisor : 5############################################');
 
@@ -246,13 +216,13 @@ End;
 /
 /*
 *
-ERREUR à la ligne 1 :
+ERREUR ï¿½ la ligne 1 :
 ORA-13600: erreur survenue dans Advisor
-ORA-13635: La valeur indiquée pour le paramètre ADJUSTED_SCALEUP_GREEN_THRESH
-ne peut pas être convertie en nombre.
-ORA-06512: à "SYS.PRVT_ADVISOR", ligne 3902
-ORA-06512: à "SYS.DBMS_ADVISOR", ligne 102
-ORA-06512: à ligne 26
+ORA-13635: La valeur indiquï¿½e pour le paramï¿½tre ADJUSTED_SCALEUP_GREEN_THRESH
+ne peut pas ï¿½tre convertie en nombre.
+ORA-06512: ï¿½ "SYS.PRVT_ADVISOR", ligne 3902
+ORA-06512: ï¿½ "SYS.DBMS_ADVISOR", ligne 102
+ORA-06512: ï¿½ ligne 26
 */
 
 -- ALTER SYSTEM SET NLS_TERRITORY=FRANCE scope=spfile;
@@ -262,7 +232,7 @@ ORA-06512: à ligne 26
 -- si pas d'erreur
 
 /*
--- ne pas exécuter ce script si pas d'erreur plus haut
+-- ne pas exï¿½cuter ce script si pas d'erreur plus haut
 declare
 template_id NUMBER;
 template_name VARCHAR2(255):= 'MY_TEMPLATE';
@@ -275,7 +245,7 @@ DBMS_ADVISOR.SET_DEFAULT_TASK_PARAMETER (
 end;
 /
 
--- ne pas exécuter ce script si pas d'erreur plus haut
+-- ne pas exï¿½cuter ce script si pas d'erreur plus haut
 declare
 template_id NUMBER;
 template_name VARCHAR2(255):= 'MY_TEMPLATE';
@@ -296,7 +266,7 @@ end;
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
--- Consulter les requêtes de référence que va régler SAA
+-- Consulter les requï¿½tes de rï¿½fï¿½rence que va rï¿½gler SAA
 col WORKLOAD_NAME format a20
 col SQL_TEXT format a70
 set linesize 200
@@ -307,15 +277,15 @@ order by sql_id;
 
 
 -- Visualisation des recommandations
--- Affiche du nr de recommandation, le rang et le bénéfice de 
+-- Affiche du nr de recommandation, le rang et le bï¿½nï¿½fice de 
 -- la recommandation
 
 SELECT REC_ID, RANK, BENEFIT, type
 FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_Projet_TUNING';
 
 -- Visualisation des recommandations
--- Afficher des recommandations et des bénéfices 
--- par requêtes
+-- Afficher des recommandations et des bï¿½nï¿½fices 
+-- par requï¿½tes
 
 SELECT sql_id, rec_id, precost, postcost,
 (precost-postcost)*100/precost AS percent_benefit
@@ -324,8 +294,8 @@ WHERE TASK_NAME = 'TASK_Projet_TUNING'
 AND workload_name = 'WKLD_Projet_TUNING';
 
 -- Visualisation des recommandations
--- Affichage des actions recommandés :
--- Comptage des actions recommandées
+-- Affichage des actions recommandï¿½s :
+-- Comptage des actions recommandï¿½es
 
 
 SELECT 'Action Count', COUNT(DISTINCT action_id) cnt
@@ -335,8 +305,8 @@ WHERE task_name = 'TASK_Projet_TUNING';
 
 
 -- Visualisation des recommandations
--- Affichage des actions recommandés :
--- Liste des actions recommandées
+-- Affichage des actions recommandï¿½s :
+-- Liste des actions recommandï¿½es
 
 
 Col command format A30
@@ -349,9 +319,9 @@ ORDER BY rec_id, action_id;
 
 
 -- Visualisation des recommandations
--- Génération des scripts SQL
--- Afin d'implémenter les recommandations il est possible de 
--- générer des scripts
+-- Gï¿½nï¿½ration des scripts SQL
+-- Afin d'implï¿½menter les recommandations il est possible de 
+-- gï¿½nï¿½rer des scripts
 
 -- La fonction GET_TASK_SCRIPT construire le script
 set serveroutput on
@@ -360,7 +330,7 @@ dbms_output.put_line(DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_Projet_TUNING'));
 end;
 /
 
--- La fonction CREATE_FILE permet de créer le fichier 
+-- La fonction CREATE_FILE permet de crï¿½er le fichier 
 -- contenant le script
 declare 
 mydate varchar2(20):=to_char(sysdate, 'DD_MM_YYYY_HH24_MI_SS');

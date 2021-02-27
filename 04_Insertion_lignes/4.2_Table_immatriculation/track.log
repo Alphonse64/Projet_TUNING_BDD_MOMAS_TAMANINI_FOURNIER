@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 19:04:50 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Sam. Févr. 27 12:27:44 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -2892,8 +2892,8 @@ Nombre total d'enregistrements logiques lus :       1048575
 Nombre total d'enregistrements logiques rejetés :       947
 Nombre total d'enregistrements logiques mis au rebut :        0
 
-Le début de l'exécution a été effectué sur Ven. Févr. 26 19:04:50 2021
-La fin de l'exécution a été effectuée sur Ven. Févr. 26 19:05:27 2021
+Le début de l'exécution a été effectué sur Sam. Févr. 27 12:27:44 2021
+La fin de l'exécution a été effectuée sur Sam. Févr. 27 12:28:26 2021
 
-Temps écoulé (ELAPSED) :     00:00:36.74
-Temps processeur (CPU) :    00:00:06.49
+Temps écoulé (ELAPSED) :     00:00:41.57
+Temps processeur (CPU) :    00:00:07.67

@@ -117,7 +117,7 @@ CREATE TABLE client (
 	sexe varchar2(30) 
         constraint chk_client_sexe 
 		check(sexe IN ('M', 'F')),
-	taux number(5) 
+	taux number(8) 
         constraint chk_client_taux
 		check(taux BETWEEN 544 AND 74185),
 	situationFamiliale varchar2(30),
@@ -132,7 +132,7 @@ CREATE TABLE client (
 	immatriculation varchar2(100) 
         --constraint chk_ref_immat 
 		--CHECK (LENGTHB(immatriculation) = 10) 
-        --references immatriculation(immatriculation)
+        references immatriculation(immatriculation)
 );
 
 
@@ -146,7 +146,7 @@ CREATE TABLE marketing (
 	sexe varchar2(30) 
         constraint chk_marketing_sexe
 		check(sexe IN ('M', 'F')),
-	taux number(5) 
+	taux number(8) 
         constraint chk_marketing_taux
 		check(taux BETWEEN 544 AND 74185),
 	situationFamiliale varchar2(30),

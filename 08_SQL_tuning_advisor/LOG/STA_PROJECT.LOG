@@ -38,7 +38,7 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id1='||:snapid1);
   4  end;
   5  /
-snap_id1=1181                                                                                                                                                                                           
+snap_id1=1186                                                                                                                                                                                           
 
 Procédure PL/SQL terminée avec succès.
 
@@ -106,8 +106,8 @@ Plan hash value: 2124023629
 -------------------------------------------------------------------------------                                                                                                                         
 | Id  | Operation         | Name      | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
-|   0 | SELECT STATEMENT  |           |    53 |  2756 |     3   (0)| 00:00:01 |                                                                                                                         
-|*  1 |  TABLE ACCESS FULL| CATALOGUE |    53 |  2756 |     3   (0)| 00:00:01 |                                                                                                                         
+|   0 | SELECT STATEMENT  |           |    53 |  2809 |     3   (0)| 00:00:01 |                                                                                                                         
+|*  1 |  TABLE ACCESS FULL| CATALOGUE |    53 |  2809 |     3   (0)| 00:00:01 |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -118,12 +118,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-         10  consistent gets                                                                                                                                                                            
+         77  recursive calls                                                                                                                                                                            
+         38  db block gets                                                                                                                                                                              
+         41  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-       3418  bytes sent via SQL*Net to client                                                                                                                                                           
+       6884  redo size                                                                                                                                                                                  
+       3448  bytes sent via SQL*Net to client                                                                                                                                                           
         441  bytes received via SQL*Net from client                                                                                                                                                     
           5  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -157,12 +157,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         36  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       1318  consistent gets                                                                                                                                                                            
+       1330  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     753182  bytes sent via SQL*Net to client                                                                                                                                                           
+     759739  bytes sent via SQL*Net to client                                                                                                                                                           
       11474  bytes received via SQL*Net from client                                                                                                                                                     
        1009  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -182,8 +182,8 @@ Plan hash value: 1777669847
 -------------------------------------------------------------------------------                                                                                                                         
 | Id  | Operation         | Name      | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
-|   0 | SELECT STATEMENT  |           |     1 |    11 |     3   (0)| 00:00:01 |                                                                                                                         
-|*  1 |  TABLE ACCESS FULL| MARKETING |     1 |    11 |     3   (0)| 00:00:01 |                                                                                                                         
+|   0 | SELECT STATEMENT  |           |     5 |    55 |     3   (0)| 00:00:01 |                                                                                                                         
+|*  1 |  TABLE ACCESS FULL| MARKETING |     5 |    55 |     3   (0)| 00:00:01 |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -194,11 +194,11 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         22  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-         12  consistent gets                                                                                                                                                                            
+         26  recursive calls                                                                                                                                                                            
+         10  db block gets                                                                                                                                                                              
+         16  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
+       1964  redo size                                                                                                                                                                                  
         631  bytes sent via SQL*Net to client                                                                                                                                                           
         424  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -221,8 +221,8 @@ Plan hash value: 1374169303
 -------------------------------------------------------------------------------------                                                                                                                   
 | Id  | Operation         | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                   
 -------------------------------------------------------------------------------------                                                                                                                   
-|   0 | SELECT STATEMENT  |                 |   153K|  4197K|  2621   (1)| 00:00:01 |                                                                                                                   
-|*  1 |  TABLE ACCESS FULL| IMMATRICULATION |   153K|  4197K|  2621   (1)| 00:00:01 |                                                                                                                   
+|   0 | SELECT STATEMENT  |                 |   153K|  4197K|  2725   (1)| 00:00:01 |                                                                                                                   
+|*  1 |  TABLE ACCESS FULL| IMMATRICULATION |   153K|  4197K|  2725   (1)| 00:00:01 |                                                                                                                   
 -------------------------------------------------------------------------------------                                                                                                                   
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -233,12 +233,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         15  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      19726  consistent gets                                                                                                                                                                            
+      19858  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-    4469319  bytes sent via SQL*Net to client                                                                                                                                                           
+    4469409  bytes sent via SQL*Net to client                                                                                                                                                           
      112995  bytes received via SQL*Net from client                                                                                                                                                     
       10235  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -266,10 +266,10 @@ Plan hash value: 1850348159
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 |  6443K|   688M|  2683   (4)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 |  6443K|   688M|  2683   (4)| 00:00:01 |                                                                                                                  
-|   2 |   TABLE ACCESS FULL| CATALOGUE       |   265 | 13780 |     3   (0)| 00:00:01 |                                                                                                                  
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   327K|    18M|  2632   (2)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 |  6940K|   754M|  2791   (4)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 |  6940K|   754M|  2791   (4)| 00:00:01 |                                                                                                                  
+|   2 |   TABLE ACCESS FULL| CATALOGUE       |   265 | 14045 |     3   (0)| 00:00:01 |                                                                                                                  
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   523K|    30M|  2736   (2)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -281,12 +281,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          4  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-      56460  consistent gets                                                                                                                                                                            
+        131  recursive calls                                                                                                                                                                            
+         38  db block gets                                                                                                                                                                              
+      56601  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-  218686063  bytes sent via SQL*Net to client                                                                                                                                                           
+       7000  redo size                                                                                                                                                                                  
+  219152838  bytes sent via SQL*Net to client                                                                                                                                                           
     4799252  bytes received via SQL*Net from client                                                                                                                                                     
      436253  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -311,9 +311,9 @@ Plan hash value: 1338212028
 --------------------------------------------------------------------------------                                                                                                                        
 | Id  | Operation          | Name      | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                        
 --------------------------------------------------------------------------------                                                                                                                        
-|   0 | SELECT STATEMENT   |           |    58 |  4408 |   107   (2)| 00:00:01 |                                                                                                                        
-|*  1 |  HASH JOIN         |           |    58 |  4408 |   107   (2)| 00:00:01 |                                                                                                                        
-|*  2 |   TABLE ACCESS FULL| MARKETING |     1 |    31 |     3   (0)| 00:00:01 |                                                                                                                        
+|   0 | SELECT STATEMENT   |           |   259 | 19943 |   107   (2)| 00:00:01 |                                                                                                                        
+|*  1 |  HASH JOIN         |           |   259 | 19943 |   107   (2)| 00:00:01 |                                                                                                                        
+|*  2 |   TABLE ACCESS FULL| MARKETING |     5 |   160 |     3   (0)| 00:00:01 |                                                                                                                        
 |   3 |   TABLE ACCESS FULL| CLIENT    | 43596 |  1915K|   103   (1)| 00:00:01 |                                                                                                                        
 --------------------------------------------------------------------------------                                                                                                                        
                                                                                                                                                                                                         
@@ -326,12 +326,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          4  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-        326  consistent gets                                                                                                                                                                            
+         81  recursive calls                                                                                                                                                                            
+         15  db block gets                                                                                                                                                                              
+        352  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-       3934  bytes sent via SQL*Net to client                                                                                                                                                           
+       2996  redo size                                                                                                                                                                                  
+       3955  bytes sent via SQL*Net to client                                                                                                                                                           
         503  bytes received via SQL*Net from client                                                                                                                                                     
           5  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -356,10 +356,10 @@ Plan hash value: 2362199741
 ----------------------------------------------------------------------------------------------                                                                                                          
 | Id  | Operation          | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |                                                                                                          
 ----------------------------------------------------------------------------------------------                                                                                                          
-|   0 | SELECT STATEMENT   |                 | 43596 |  4470K|       |  3370   (1)| 00:00:01 |                                                                                                          
-|*  1 |  HASH JOIN         |                 | 43596 |  4470K|  2432K|  3370   (1)| 00:00:01 |                                                                                                          
+|   0 | SELECT STATEMENT   |                 | 43596 |  4512K|       |  3481   (1)| 00:00:01 |                                                                                                          
+|*  1 |  HASH JOIN         |                 | 43596 |  4512K|  2432K|  3481   (1)| 00:00:01 |                                                                                                          
 |   2 |   TABLE ACCESS FULL| CLIENT          | 43596 |  1915K|       |   103   (1)| 00:00:01 |                                                                                                          
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   153K|  8994K|       |  2622   (1)| 00:00:01 |                                                                                                          
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   153K|  9143K|       |  2726   (1)| 00:00:01 |                                                                                                          
 ----------------------------------------------------------------------------------------------                                                                                                          
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -375,12 +375,12 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         92  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10672  consistent gets                                                                                                                                                                            
+      10831  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     786243  bytes sent via SQL*Net to client                                                                                                                                                           
+     791134  bytes sent via SQL*Net to client                                                                                                                                                           
        8905  bytes received via SQL*Net from client                                                                                                                                                     
         766  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -405,10 +405,10 @@ Plan hash value: 2362199741
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 | 13138 |   384K|  2737   (2)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 | 13138 |   384K|  2737   (2)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 | 13138 |   384K|  2841   (2)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 | 13138 |   384K|  2841   (2)| 00:00:01 |                                                                                                                  
 |*  2 |   TABLE ACCESS FULL| CLIENT          | 13138 |   166K|   103   (1)| 00:00:01 |                                                                                                                  
-|   3 |   TABLE ACCESS FULL| IMMATRICULATION |  1047K|    16M|  2626   (2)| 00:00:01 |                                                                                                                  
+|   3 |   TABLE ACCESS FULL| IMMATRICULATION |  1047K|    16M|  2730   (2)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -424,12 +424,12 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         15  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10781  consistent gets                                                                                                                                                                            
+      10920  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     289895  bytes sent via SQL*Net to client                                                                                                                                                           
+     290042  bytes sent via SQL*Net to client                                                                                                                                                           
       10118  bytes received via SQL*Net from client                                                                                                                                                     
         877  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -437,7 +437,7 @@ Statistiques
       13138  rows processed                                                                                                                                                                             
 
 SQL> 
-SQL> -- SÃ©lcetionner le numÃ©ro d'immatriculation des voitures dont le modÃ¨le est Laguna 2.0T
+SQL> -- SÃ©lectionner le numÃ©ro d'immatriculation des voitures dont le modÃ¨le est Laguna 2.0T
 SQL> SELECT immatriculation
   2  FROM immatriculation
   3  JOIN catalogue
@@ -454,10 +454,10 @@ Plan hash value: 1850348159
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 |   399K|    12M|  2628   (2)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 |   399K|    12M|  2628   (2)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 |   399K|    12M|  2732   (1)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 |   399K|    12M|  2732   (1)| 00:00:01 |                                                                                                                  
 |*  2 |   TABLE ACCESS FULL| CATALOGUE       |    10 |   110 |     3   (0)| 00:00:01 |                                                                                                                  
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION | 39923 |   818K|  2622   (1)| 00:00:01 |                                                                                                                  
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION | 39923 |   818K|  2726   (1)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -472,7 +472,7 @@ Statistiques
 ----------------------------------------------------------                                                                                                                                              
          19  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      13913  consistent gets                                                                                                                                                                            
+      14078  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
     7514896  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -486,15 +486,14 @@ SQL>
 SQL> 
 SQL> -- REQUETES 3 TABLES
 SQL> 
+SQL> -- SÃ©lectionner le taux des potentiels clients qui ont le mÃªme taux que les hommes ayant achetÃ© une Audi
 SQL> SELECT DISTINCT marketing.taux
   2  FROM marketing
   3  JOIN client
   4  ON client.sexe = marketing.sexe
   5  JOIN immatriculation
   6  ON immatriculation.immatriculation = client.immatriculation
-  7  WHERE immatriculation.marque = 'Audi';
-
-9 lignes sélectionnées.
+  7  WHERE immatriculation.marque = 'Audi' AND marketing.sexe='M';
 
 
 Plan d'exécution
@@ -504,20 +503,22 @@ Plan hash value: 376392015
 ----------------------------------------------------------------------------------------                                                                                                                
 | Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                
 ----------------------------------------------------------------------------------------                                                                                                                
-|   0 | SELECT STATEMENT     |                 |     9 |   333 |  2743   (2)| 00:00:01 |                                                                                                                
-|   1 |  HASH UNIQUE         |                 |     9 |   333 |  2743   (2)| 00:00:01 |                                                                                                                
-|*  2 |   HASH JOIN          |                 |   204K|  7393K|  2730   (1)| 00:00:01 |                                                                                                                
-|   3 |    TABLE ACCESS FULL | MARKETING       |     9 |    54 |     3   (0)| 00:00:01 |                                                                                                                
-|*  4 |    HASH JOIN SEMI    |                 | 43596 |  1319K|  2725   (1)| 00:00:01 |                                                                                                                
-|   5 |     TABLE ACCESS FULL| CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                                
-|*  6 |     TABLE ACCESS FULL| IMMATRICULATION |   153K|  2698K|  2620   (1)| 00:00:01 |                                                                                                                
+|   0 | SELECT STATEMENT     |                 |     5 |   185 |  2842   (2)| 00:00:01 |                                                                                                                
+|   1 |  HASH UNIQUE         |                 |     5 |   185 |  2842   (2)| 00:00:01 |                                                                                                                
+|*  2 |   HASH JOIN          |                 |   136K|  4944K|  2833   (1)| 00:00:01 |                                                                                                                
+|*  3 |    TABLE ACCESS FULL | MARKETING       |     5 |    30 |     3   (0)| 00:00:01 |                                                                                                                
+|*  4 |    HASH JOIN SEMI    |                 | 30411 |   920K|  2829   (1)| 00:00:01 |                                                                                                                
+|*  5 |     TABLE ACCESS FULL| CLIENT          | 30411 |   386K|   103   (1)| 00:00:01 |                                                                                                                
+|*  6 |     TABLE ACCESS FULL| IMMATRICULATION |   153K|  2698K|  2725   (1)| 00:00:01 |                                                                                                                
 ----------------------------------------------------------------------------------------                                                                                                                
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
 ---------------------------------------------------                                                                                                                                                     
                                                                                                                                                                                                         
    2 - access("CLIENT"."SEXE"="MARKETING"."SEXE")                                                                                                                                                       
+   3 - filter("MARKETING"."SEXE"='M')                                                                                                                                                                   
    4 - access("IMMATRICULATION"."IMMATRICULATION"="CLIENT"."IMMATRICULATION")                                                                                                                           
+   5 - filter("CLIENT"."SEXE"='M')                                                                                                                                                                      
    6 - filter("IMMATRICULATION"."MARQUE"='Audi')                                                                                                                                                        
                                                                                                                                                                                                         
 Note                                                                                                                                                                                                    
@@ -529,24 +530,25 @@ Statistiques
 ----------------------------------------------------------                                                                                                                                              
           0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       9919  consistent gets                                                                                                                                                                            
+      10055  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-        675  bytes sent via SQL*Net to client                                                                                                                                                           
-        570  bytes received via SQL*Net from client                                                                                                                                                     
+        639  bytes sent via SQL*Net to client                                                                                                                                                           
+        593  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
           0  sorts (disk)                                                                                                                                                                               
-          9  rows processed                                                                                                                                                                             
+          5  rows processed                                                                                                                                                                             
 
 SQL> 
+SQL> -- SÃ©lectionner la couleur des Golf 2.0 FSI vendues Ã  des hommes
 SQL> SELECT DISTINCT catalogue.couleur
   2  FROM catalogue
   3  JOIN immatriculation
   4  ON  immatriculation.nom = catalogue.nom
   5  JOIN client
   6  ON client.immatriculation = immatriculation.immatriculation
-  7  WHERE client.sexe='M';
+  7  WHERE client.sexe='M' AND catalogue.nom = 'Golf 2.0 FSI';
 
 
 Plan d'exécution
@@ -556,37 +558,22 @@ Plan hash value: 720261464
 ------------------------------------------------------------------------------------------                                                                                                              
 | Id  | Operation              | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
-|   0 | SELECT STATEMENT       |                 |     5 |   255 |  2743   (2)| 00:00:01 |                                                                                                              
-|   1 |  HASH UNIQUE           |                 |     5 |   255 |  2743   (2)| 00:00:01 |                                                                                                              
-|*  2 |   HASH JOIN            |                 |   124K|  6202K|  2735   (2)| 00:00:01 |                                                                                                              
-|   3 |    VIEW                | VW_DTP_AE567E71 |   114 |  1938 |     4  (25)| 00:00:01 |                                                                                                              
-|   4 |     HASH UNIQUE        |                 |   114 |  1938 |     4  (25)| 00:00:01 |                                                                                                              
-|*  5 |      TABLE ACCESS FULL | CATALOGUE       |   265 |  4505 |     3   (0)| 00:00:01 |                                                                                                              
-|*  6 |    HASH JOIN RIGHT SEMI|                 | 30330 |  1007K|  2729   (2)| 00:00:01 |                                                                                                              
+|   0 | SELECT STATEMENT       |                 |     3 |   153 |  2839   (2)| 00:00:01 |                                                                                                              
+|   1 |  HASH UNIQUE           |                 |     3 |   153 |  2839   (2)| 00:00:01 |                                                                                                              
+|*  2 |   HASH JOIN            |                 |  3277 |   163K|  2838   (2)| 00:00:01 |                                                                                                              
+|   3 |    VIEW                | VW_DTP_AE567E71 |     3 |    51 |     4  (25)| 00:00:01 |                                                                                                              
+|   4 |     HASH UNIQUE        |                 |     3 |    51 |     4  (25)| 00:00:01 |                                                                                                              
+|*  5 |      TABLE ACCESS FULL | CATALOGUE       |    10 |   170 |     3   (0)| 00:00:01 |                                                                                                              
+|*  6 |    HASH JOIN RIGHT SEMI|                 | 30330 |  1007K|  2834   (2)| 00:00:01 |                                                                                                              
 |*  7 |     TABLE ACCESS FULL  | CLIENT          | 30411 |   386K|   103   (1)| 00:00:01 |                                                                                                              
-|   8 |     TABLE ACCESS FULL  | IMMATRICULATION |  1047K|    20M|  2618   (1)| 00:00:01 |                                                                                                              
+|   8 |     TABLE ACCESS FULL  | IMMATRICULATION |  1047K|    20M|  2722   (1)| 00:00:01 |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
 ---------------------------------------------------                                                                                                                                                     
                                                                                                                                                                                                         
    2 - access("IMMATRICULATION"."NOM"="ITEM_1")                                                                                                                                                         
-   5 - filter("CATALOGUE"."NOM"='1007 1.4' OR "CATALOGUE"."NOM"='120i' OR                                                                                                                               
-              "CATALOGUE"."NOM"='9.3 1.8T' OR "CATALOGUE"."NOM"='A2 1.4' OR                                                                                                                             
-              "CATALOGUE"."NOM"='A200' OR "CATALOGUE"."NOM"='A3 2.0 FSI' OR                                                                                                                             
-              "CATALOGUE"."NOM"='Almera 1.8' OR "CATALOGUE"."NOM"='Copper 1.6 16V' OR                                                                                                                   
-              "CATALOGUE"."NOM"='Croma 2.2' OR "CATALOGUE"."NOM"='Cuore 1.0' OR                                                                                                                         
-              "CATALOGUE"."NOM"='Espace 2.0T' OR "CATALOGUE"."NOM"='FR-V 1.7' OR                                                                                                                        
-              "CATALOGUE"."NOM"='Golf 2.0 FSI' OR "CATALOGUE"."NOM"='Laguna 2.0T' OR                                                                                                                    
-              "CATALOGUE"."NOM"='Logan 1.6 MPI' OR "CATALOGUE"."NOM"='M5' OR                                                                                                                            
-              "CATALOGUE"."NOM"='Matrix 1.6' OR "CATALOGUE"."NOM"='Maxima 3.0 V6' OR                                                                                                                    
-              "CATALOGUE"."NOM"='Megane 2.0 16V' OR "CATALOGUE"."NOM"='Mondeo 1.8' OR                                                                                                                   
-              "CATALOGUE"."NOM"='New Beatle 1.8' OR "CATALOGUE"."NOM"='Picanto 1.1' OR                                                                                                                  
-              "CATALOGUE"."NOM"='Polo 1.2 6V' OR "CATALOGUE"."NOM"='Primera 1.6' OR                                                                                                                     
-              "CATALOGUE"."NOM"='S500' OR "CATALOGUE"."NOM"='S80 T6' OR                                                                                                                                 
-              "CATALOGUE"."NOM"='Superb 2.8 V6' OR "CATALOGUE"."NOM"='Toledo 1.6' OR                                                                                                                    
-              "CATALOGUE"."NOM"='Touran 2.0 FSI' OR "CATALOGUE"."NOM"='Vel Satis 3.5 V6' OR                                                                                                             
-              "CATALOGUE"."NOM"='X-Type 2.5 V6' OR "CATALOGUE"."NOM"='Ypsilon 1.4 16V')                                                                                                                 
+   5 - filter("CATALOGUE"."NOM"='Golf 2.0 FSI')                                                                                                                                                         
    6 - access("CLIENT"."IMMATRICULATION"="IMMATRICULATION"."IMMATRICULATION")                                                                                                                           
    7 - filter("CLIENT"."SEXE"='M')                                                                                                                                                                      
 
@@ -595,17 +582,18 @@ Statistiques
 ----------------------------------------------------------                                                                                                                                              
           4  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       9919  consistent gets                                                                                                                                                                            
+      10055  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         649  bytes sent via SQL*Net to client                                                                                                                                                           
-        565  bytes received via SQL*Net from client                                                                                                                                                     
+        600  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
           0  sorts (disk)                                                                                                                                                                               
           5  rows processed                                                                                                                                                                             
 
 SQL> 
+SQL> -- SÃ©lectionner l'Ã¢ge des clients ayant achetÃ© une voiture rouge
 SQL> SELECT  DISTINCT client.age
   2  FROM client
   3  JOIN immatriculation
@@ -624,13 +612,13 @@ Plan hash value: 3421959063
 -----------------------------------------------------------------------------------------                                                                                                               
 | Id  | Operation             | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
-|   0 | SELECT STATEMENT      |                 |    67 |  3082 |  2735   (2)| 00:00:01 |                                                                                                               
-|   1 |  HASH UNIQUE          |                 |    67 |  3082 |  2735   (2)| 00:00:01 |                                                                                                               
-|*  2 |   HASH JOIN RIGHT SEMI|                 | 43596 |  1958K|  2731   (2)| 00:00:01 |                                                                                                               
+|   0 | SELECT STATEMENT      |                 |    67 |  3082 |  2839   (2)| 00:00:01 |                                                                                                               
+|   1 |  HASH UNIQUE          |                 |    67 |  3082 |  2839   (2)| 00:00:01 |                                                                                                               
+|*  2 |   HASH JOIN RIGHT SEMI|                 | 43596 |  1958K|  2836   (2)| 00:00:01 |                                                                                                               
 |*  3 |    TABLE ACCESS FULL  | CATALOGUE       |    53 |   742 |     3   (0)| 00:00:01 |                                                                                                               
-|*  4 |    HASH JOIN          |                 | 43596 |  1362K|  2728   (2)| 00:00:01 |                                                                                                               
+|*  4 |    HASH JOIN          |                 | 43596 |  1362K|  2832   (1)| 00:00:01 |                                                                                                               
 |   5 |     TABLE ACCESS FULL | CLIENT          | 43596 |   596K|   103   (1)| 00:00:01 |                                                                                                               
-|   6 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2616   (1)| 00:00:01 |                                                                                                               
+|   6 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2721   (1)| 00:00:01 |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -647,11 +635,11 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9919  consistent gets                                                                                                                                                                            
+         87  recursive calls                                                                                                                                                                            
+          5  db block gets                                                                                                                                                                              
+      10078  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
+        880  redo size                                                                                                                                                                                  
        1703  bytes sent via SQL*Net to client                                                                                                                                                           
         616  bytes received via SQL*Net from client                                                                                                                                                     
           6  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -660,6 +648,7 @@ Statistiques
          68  rows processed                                                                                                                                                                             
 
 SQL> 
+SQL> -- SÃ©lectionner la puissance et la marque des vÃ©hicules de plus de 150CV vendus, triÃ©s par l'Ã¢ge dÃ©croissant de leur acheteur
 SQL> SELECT DISTINCT immatriculation.puissance, immatriculation.marque
   2  FROM immatriculation
   3  JOIN catalogue
@@ -696,13 +685,13 @@ Plan hash value: 2029005090
 ------------------------------------------------------------------------------------------                                                                                                              
 | Id  | Operation              | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
-|   0 | SELECT STATEMENT       |                 |   135 |  5535 |  3201   (2)| 00:00:01 |                                                                                                              
-|   1 |  SORT UNIQUE           |                 |   135 |  5535 |  3198   (2)| 00:00:01 |                                                                                                              
-|*  2 |   HASH JOIN RIGHT SEMI |                 | 43356 |  1735K|  2734   (2)| 00:00:01 |                                                                                                              
+|   0 | SELECT STATEMENT       |                 |   229 |  9389 |  3308   (2)| 00:00:01 |                                                                                                              
+|   1 |  SORT UNIQUE           |                 |   229 |  9389 |  3305   (2)| 00:00:01 |                                                                                                              
+|*  2 |   HASH JOIN RIGHT SEMI |                 | 43356 |  1735K|  2841   (2)| 00:00:01 |                                                                                                              
 |   3 |    TABLE ACCESS FULL   | CATALOGUE       |   265 |  2120 |     3   (0)| 00:00:01 |                                                                                                              
-|*  4 |    HASH JOIN RIGHT SEMI|                 | 43356 |  1397K|  2731   (2)| 00:00:01 |                                                                                                              
+|*  4 |    HASH JOIN RIGHT SEMI|                 | 43356 |  1397K|  2838   (2)| 00:00:01 |                                                                                                              
 |   5 |     TABLE ACCESS FULL  | CLIENT          | 43596 |   468K|   103   (1)| 00:00:01 |                                                                                                              
-|*  6 |     TABLE ACCESS FULL  | IMMATRICULATION |   491K|    10M|  2624   (1)| 00:00:01 |                                                                                                              
+|*  6 |     TABLE ACCESS FULL  | IMMATRICULATION |   827K|    17M|  2728   (1)| 00:00:01 |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -715,11 +704,11 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9919  consistent gets                                                                                                                                                                            
+         68  recursive calls                                                                                                                                                                            
+         10  db block gets                                                                                                                                                                              
+      10074  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
+       1776  redo size                                                                                                                                                                                  
         801  bytes sent via SQL*Net to client                                                                                                                                                           
         667  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -751,14 +740,14 @@ Plan hash value: 2924402970
 -------------------------------------------------------------------------------------------                                                                                                             
 | Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |     8 |   352 |  3125   (1)| 00:00:01 |                                                                                                             
-|   1 |  SORT UNIQUE            |                 |     8 |   352 |  3123   (1)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 | 34616 |  1487K|  2730   (1)| 00:00:01 |                                                                                                             
+|   0 | SELECT STATEMENT        |                 |     8 |   352 |  3230   (1)| 00:00:01 |                                                                                                             
+|   1 |  SORT UNIQUE            |                 |     8 |   352 |  3227   (1)| 00:00:01 |                                                                                                             
+|*  2 |   HASH JOIN             |                 | 34616 |  1487K|  2835   (1)| 00:00:01 |                                                                                                             
 |   3 |    TABLE ACCESS FULL    | MARKETING       |     9 |    45 |     3   (0)| 00:00:01 |                                                                                                             
-|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2727   (1)| 00:00:01 |                                                                                                             
-|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2624   (1)| 00:00:01 |                                                                                                             
+|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2831   (1)| 00:00:01 |                                                                                                             
+|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2728   (1)| 00:00:01 |                                                                                                             
 |   6 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  1060 |     3   (0)| 00:00:01 |                                                                                                             
-|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2620   (1)| 00:00:01 |                                                                                                             
+|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2725   (1)| 00:00:01 |                                                                                                             
 |   8 |     TABLE ACCESS FULL   | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
                                                                                                                                                                                                         
@@ -773,11 +762,11 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          8  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9925  consistent gets                                                                                                                                                                            
+        137  recursive calls                                                                                                                                                                            
+          5  db block gets                                                                                                                                                                              
+      10096  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
+       1004  redo size                                                                                                                                                                                  
         633  bytes sent via SQL*Net to client                                                                                                                                                           
         666  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -805,17 +794,17 @@ Plan hash value: 1855452044
 -------------------------------------------------------------------------------------------                                                                                                             
 | Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |     5 |   215 |  2754   (2)| 00:00:01 |                                                                                                             
-|   1 |  HASH UNIQUE            |                 |     5 |   215 |  2754   (2)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 |   208K|  8766K|  2740   (2)| 00:00:01 |                                                                                                             
+|   0 | SELECT STATEMENT        |                 |     5 |   215 |  2854   (2)| 00:00:01 |                                                                                                             
+|   1 |  HASH UNIQUE            |                 |     5 |   215 |  2854   (2)| 00:00:01 |                                                                                                             
+|*  2 |   HASH JOIN             |                 |   155K|  6519K|  2844   (2)| 00:00:01 |                                                                                                             
 |   3 |    VIEW                 | VW_DTP_5F6F5A76 |    82 |   820 |     4  (25)| 00:00:01 |                                                                                                             
 |   4 |     HASH UNIQUE         |                 |    82 |   820 |     4  (25)| 00:00:01 |                                                                                                             
 |*  5 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  2650 |     3   (0)| 00:00:01 |                                                                                                             
-|*  6 |    HASH JOIN            |                 | 43549 |  1403K|  2735   (2)| 00:00:01 |                                                                                                             
+|*  6 |    HASH JOIN            |                 | 43549 |  1403K|  2839   (2)| 00:00:01 |                                                                                                             
 |*  7 |     HASH JOIN RIGHT SEMI|                 | 43549 |   765K|   107   (2)| 00:00:01 |                                                                                                             
-|*  8 |      TABLE ACCESS FULL  | MARKETING       |     8 |    40 |     3   (0)| 00:00:01 |                                                                                                             
+|*  8 |      TABLE ACCESS FULL  | MARKETING       |     5 |    25 |     3   (0)| 00:00:01 |                                                                                                             
 |   9 |      TABLE ACCESS FULL  | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
-|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|  2620   (1)| 00:00:01 |                                                                                                             
+|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|  2724   (1)| 00:00:01 |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -834,11 +823,11 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9925  consistent gets                                                                                                                                                                            
+        171  recursive calls                                                                                                                                                                            
+          5  db block gets                                                                                                                                                                              
+      10108  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
+        880  redo size                                                                                                                                                                                  
         649  bytes sent via SQL*Net to client                                                                                                                                                           
         640  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -868,14 +857,14 @@ Plan hash value: 2924402970
 -------------------------------------------------------------------------------------------                                                                                                             
 | Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |    81 |  4860 |  3236   (1)| 00:00:01 |                                                                                                             
-|   1 |  SORT UNIQUE            |                 |    81 |  4860 |  3233   (1)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 | 34616 |  2028K|  2730   (1)| 00:00:01 |                                                                                                             
-|   3 |    TABLE ACCESS FULL    | MARKETING       |     9 |   189 |     3   (0)| 00:00:01 |                                                                                                             
-|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2727   (1)| 00:00:01 |                                                                                                             
-|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2624   (1)| 00:00:01 |                                                                                                             
+|   0 | SELECT STATEMENT        |                 |    81 |  4941 |  3352   (1)| 00:00:01 |                                                                                                             
+|   1 |  SORT UNIQUE            |                 |    81 |  4941 |  3349   (1)| 00:00:01 |                                                                                                             
+|*  2 |   HASH JOIN             |                 | 34616 |  2062K|  2835   (1)| 00:00:01 |                                                                                                             
+|   3 |    TABLE ACCESS FULL    | MARKETING       |     9 |   198 |     3   (0)| 00:00:01 |                                                                                                             
+|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2831   (1)| 00:00:01 |                                                                                                             
+|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2728   (1)| 00:00:01 |                                                                                                             
 |   6 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  1060 |     3   (0)| 00:00:01 |                                                                                                             
-|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2620   (1)| 00:00:01 |                                                                                                             
+|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2725   (1)| 00:00:01 |                                                                                                             
 |   8 |     TABLE ACCESS FULL   | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
 -------------------------------------------------------------------------------------------                                                                                                             
                                                                                                                                                                                                         
@@ -890,12 +879,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-        136  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9963  consistent gets                                                                                                                                                                            
+        139  recursive calls                                                                                                                                                                            
+         10  db block gets                                                                                                                                                                              
+      10098  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-        875  bytes sent via SQL*Net to client                                                                                                                                                           
+       1788  redo size                                                                                                                                                                                  
+        879  bytes sent via SQL*Net to client                                                                                                                                                           
         741  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
           1  sorts (memory)                                                                                                                                                                             
@@ -924,15 +913,15 @@ Plan hash value: 742574618
 -----------------------------------------------------------------------------------------                                                                                                               
 | Id  | Operation             | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
-|   0 | SELECT STATEMENT      |                 |    19 |  1045 |  2735   (2)| 00:00:01 |                                                                                                               
-|   1 |  HASH UNIQUE          |                 |    19 |  1045 |  2735   (2)| 00:00:01 |                                                                                                               
-|*  2 |   HASH JOIN RIGHT SEMI|                 |  3118 |   167K|  2734   (2)| 00:00:01 |                                                                                                               
+|   0 | SELECT STATEMENT      |                 |    19 |  1064 |  2839   (2)| 00:00:01 |                                                                                                               
+|   1 |  HASH UNIQUE          |                 |    19 |  1064 |  2839   (2)| 00:00:01 |                                                                                                               
+|*  2 |   HASH JOIN RIGHT SEMI|                 |  2925 |   159K|  2838   (1)| 00:00:01 |                                                                                                               
 |   3 |    TABLE ACCESS FULL  | CATALOGUE       |   265 |  2120 |     3   (0)| 00:00:01 |                                                                                                               
-|*  4 |    HASH JOIN          |                 |  3118 |   143K|  2731   (2)| 00:00:01 |                                                                                                               
-|*  5 |     HASH JOIN         |                 |  3118 | 90422 |   107   (2)| 00:00:01 |                                                                                                               
-|*  6 |      TABLE ACCESS FULL| MARKETING       |     5 |    75 |     3   (0)| 00:00:01 |                                                                                                               
+|*  4 |    HASH JOIN          |                 |  2925 |   137K|  2835   (1)| 00:00:01 |                                                                                                               
+|*  5 |     HASH JOIN         |                 |  2925 | 87750 |   107   (2)| 00:00:01 |                                                                                                               
+|*  6 |      TABLE ACCESS FULL| MARKETING       |     5 |    80 |     3   (0)| 00:00:01 |                                                                                                               
 |   7 |      TABLE ACCESS FULL| CLIENT          | 43596 |   596K|   103   (1)| 00:00:01 |                                                                                                               
-|   8 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2616   (1)| 00:00:01 |                                                                                                               
+|   8 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2721   (1)| 00:00:01 |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -950,9 +939,9 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          0  recursive calls                                                                                                                                                                            
+         85  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       9925  consistent gets                                                                                                                                                                            
+      10082  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         746  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -984,17 +973,17 @@ Plan hash value: 213396178
 ---------------------------------------------------------------------------------------------------                                                                                                     
 | Id  | Operation               | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |                                                                                                     
 ---------------------------------------------------------------------------------------------------                                                                                                     
-|   0 | SELECT STATEMENT        |                 |   180K|  9187K|       |  5079   (1)| 00:00:01 |                                                                                                     
-|   1 |  HASH UNIQUE            |                 |   180K|  9187K|    11M|  5079   (1)| 00:00:01 |                                                                                                     
-|*  2 |   HASH JOIN             |                 |   180K|  9187K|       |  2740   (2)| 00:00:01 |                                                                                                     
+|   0 | SELECT STATEMENT        |                 |   134K|  6832K|       |  4583   (1)| 00:00:01 |                                                                                                     
+|   1 |  HASH UNIQUE            |                 |   134K|  6832K|  8488K|  4583   (1)| 00:00:01 |                                                                                                     
+|*  2 |   HASH JOIN             |                 |   134K|  6832K|       |  2843   (2)| 00:00:01 |                                                                                                     
 |   3 |    TABLE ACCESS FULL    | CATALOGUE       |   265 |  4505 |       |     3   (0)| 00:00:01 |                                                                                                     
-|*  4 |    HASH JOIN            |                 | 11678 |   399K|       |  2735   (2)| 00:00:01 |                                                                                                     
+|*  4 |    HASH JOIN            |                 | 11678 |   399K|       |  2839   (2)| 00:00:01 |                                                                                                     
 |*  5 |     HASH JOIN           |                 | 11678 |   228K|       |   108   (3)| 00:00:01 |                                                                                                     
 |   6 |      VIEW               | VW_DTP_155B9617 |     1 |     2 |       |     4  (25)| 00:00:01 |                                                                                                     
 |   7 |       HASH UNIQUE       |                 |     1 |     2 |       |     4  (25)| 00:00:01 |                                                                                                     
 |*  8 |        TABLE ACCESS FULL| MARKETING       |     4 |     8 |       |     3   (0)| 00:00:01 |                                                                                                     
 |   9 |      TABLE ACCESS FULL  | CLIENT          | 43596 |   766K|       |   103   (1)| 00:00:01 |                                                                                                     
-|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|       |  2620   (1)| 00:00:01 |                                                                                                     
+|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|       |  2724   (1)| 00:00:01 |                                                                                                     
 ---------------------------------------------------------------------------------------------------                                                                                                     
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -1012,12 +1001,12 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-        171  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-       9977  consistent gets                                                                                                                                                                            
+        173  recursive calls                                                                                                                                                                            
+         10  db block gets                                                                                                                                                                              
+      10110  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-    1368839  bytes sent via SQL*Net to client                                                                                                                                                           
+       1708  redo size                                                                                                                                                                                  
+    1369265  bytes sent via SQL*Net to client                                                                                                                                                           
       32474  bytes received via SQL*Net from client                                                                                                                                                     
        2894  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -1044,7 +1033,7 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id2='||:snapid2);
   4  end;
   5  /
-snap_id2=1182                                                                                                                                                                                           
+snap_id2=1187                                                                                                                                                                                           
 
 Procédure PL/SQL terminée avec succès.
 

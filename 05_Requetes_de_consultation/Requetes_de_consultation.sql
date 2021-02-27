@@ -50,7 +50,7 @@ JOIN client
 ON immatriculation.immatriculation = client.immatriculation
 WHERE client.sexe = 'F';
 
--- Sélcetionner le numéro d'immatriculation des voitures dont le modèle est Laguna 2.0T
+-- Sélectionner le numéro d'immatriculation des voitures dont le modèle est Laguna 2.0T
 SELECT immatriculation
 FROM immatriculation
 JOIN catalogue
@@ -60,22 +60,25 @@ WHERE catalogue.nom='Laguna 2.0T';
 
 -- REQUETES 3 TABLES
 
+-- Sélectionner le taux des potentiels clients qui ont le même taux que les hommes ayant acheté une Audi
 SELECT DISTINCT marketing.taux
 FROM marketing
 JOIN client
 ON client.sexe = marketing.sexe
 JOIN immatriculation
 ON immatriculation.immatriculation = client.immatriculation
-WHERE immatriculation.marque = 'Audi';
+WHERE immatriculation.marque = 'Audi' AND marketing.sexe='M';
 
+-- Sélectionner la couleur des Golf 2.0 FSI vendues à des hommes
 SELECT DISTINCT catalogue.couleur
 FROM catalogue
 JOIN immatriculation
 ON  immatriculation.nom = catalogue.nom
 JOIN client
 ON client.immatriculation = immatriculation.immatriculation
-WHERE client.sexe='M';
+WHERE client.sexe='M' AND catalogue.nom = 'Golf 2.0 FSI';
 
+-- Sélectionner l'âge des clients ayant acheté une voiture rouge
 SELECT  DISTINCT client.age
 FROM client
 JOIN immatriculation
@@ -84,6 +87,7 @@ JOIN catalogue
 ON catalogue.marque=immatriculation.marque
 WHERE catalogue.couleur = 'rouge';
 
+-- Sélectionner la puissance et la marque des véhicules de plus de 150CV vendus, triés par l'âge décroissant de leur acheteur
 SELECT DISTINCT immatriculation.puissance, immatriculation.marque
 FROM immatriculation
 JOIN catalogue 
@@ -131,7 +135,7 @@ ON client.sexe = marketing.sexe
 WHERE marketing.nbEnfantsAcharge<2;
 
 
---Afficher l'id, le taux et la situation familiale des clients qui poss�dent une Dacia.
+--Afficher l'id, le taux et la situation familiale des clients qui poss�dent une Dacia.
 SELECT DISTINCT  marketing.clientMarketingId, marketing.taux, marketing.situationFamiliale
 FROM marketing
 JOIN client
@@ -154,7 +158,7 @@ JOIN marketing
 ON client.age = marketing.age
 WHERE marketing.situationFamiliale = 'En Couple';
 
---Afficher l'id du client, la marque et le prix du vehicule des clients de sexe f�minin de la table marketing.
+--Afficher l'id du client, la marque et le prix du vehicule des clients de sexe f�minin de la table marketing.
 SELECT DISTINCT client.clientId, catalogue.marque, catalogue.prix
 FROM catalogue
 JOIN immatriculation
@@ -164,6 +168,3 @@ ON client.immatriculation=immatriculation.immatriculation
 JOIN marketing
 ON client.sexe = marketing.sexe
 WHERE marketing.sexe='F';
-
-
-

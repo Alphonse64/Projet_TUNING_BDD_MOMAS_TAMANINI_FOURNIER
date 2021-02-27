@@ -1,41 +1,3 @@
-/*
-
-LIRE ATTENTIVEMENT LE CHAPITRE 2 � 10 DU COURS TUNE 2 
-CONCERNANT LE REGLAGE AUTOMATIQUE DE REQUETES ET SURTOUT
-SQL TUNING ADVISOR (voir aussi les annexes).
-
-Ecrire un script qui permet d'analyser et produire des 
-recommandations sur un pool de requ�tes sur l'application
-APPLIBANK regroup� dans un  SQL Tuning Set. Le remplissage
-du SQL TUNING SET set fait en r�cup�rant les requ�tes entre
-deux clich�s AWR.
-
-Travail � faire via l'API et en partie via OEM.
-
-1. Charger l'application bancaire (AppliBank.sql)
-dans le sch�ma de l'utilisateur PROJET_TUNING
-
-2. Provoquer de l'activit� (requ�tes sur l'application bancaire) 
-dans la base entre deux clich�s AWR
-
-3. G�n�rer les recommandations
-
-Ecrire un script qui permet d'analyser et produire des 
-recommandations r�cup�r�es les requ�tes entre
-deux clich�s AWR.
-
-
-4. Afficher les r�sultats d'analyses
-
-5. G�rer le script SQL propos� pour le r�glage SQL
-
-6. Activiter de r�glage � faire � l'issue de l'ex�cution de ce script
-
-
-*/
-
-
-
 set autotrace off
 set termout on
 set echo on
@@ -142,7 +104,7 @@ JOIN client
 ON immatriculation.immatriculation = client.immatriculation
 WHERE client.sexe = 'F';
 
--- Sélcetionner le numéro d'immatriculation des voitures dont le modèle est Laguna 2.0T
+-- Sélectionner le numéro d'immatriculation des voitures dont le modèle est Laguna 2.0T
 SELECT immatriculation
 FROM immatriculation
 JOIN catalogue
@@ -152,22 +114,25 @@ WHERE catalogue.nom='Laguna 2.0T';
 
 -- REQUETES 3 TABLES
 
+-- Sélectionner le taux des potentiels clients qui ont le même taux que les hommes ayant acheté une Audi
 SELECT DISTINCT marketing.taux
 FROM marketing
 JOIN client
 ON client.sexe = marketing.sexe
 JOIN immatriculation
 ON immatriculation.immatriculation = client.immatriculation
-WHERE immatriculation.marque = 'Audi';
+WHERE immatriculation.marque = 'Audi' AND marketing.sexe='M';
 
+-- Sélectionner la couleur des Golf 2.0 FSI vendues à des hommes
 SELECT DISTINCT catalogue.couleur
 FROM catalogue
 JOIN immatriculation
 ON  immatriculation.nom = catalogue.nom
 JOIN client
 ON client.immatriculation = immatriculation.immatriculation
-WHERE client.sexe='M';
+WHERE client.sexe='M' AND catalogue.nom = 'Golf 2.0 FSI';
 
+-- Sélectionner l'âge des clients ayant acheté une voiture rouge
 SELECT  DISTINCT client.age
 FROM client
 JOIN immatriculation
@@ -176,6 +141,7 @@ JOIN catalogue
 ON catalogue.marque=immatriculation.marque
 WHERE catalogue.couleur = 'rouge';
 
+-- Sélectionner la puissance et la marque des véhicules de plus de 150CV vendus, triés par l'âge décroissant de leur acheteur
 SELECT DISTINCT immatriculation.puissance, immatriculation.marque
 FROM immatriculation
 JOIN catalogue 
