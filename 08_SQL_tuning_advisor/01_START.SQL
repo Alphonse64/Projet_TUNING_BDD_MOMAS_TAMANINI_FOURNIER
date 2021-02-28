@@ -1,6 +1,3 @@
-/*
-
--------------------------------------------------
 
 @&PROJECTPATH\08_SQL_tuning_advisor\02_TUNE_QUERY.SQL
 

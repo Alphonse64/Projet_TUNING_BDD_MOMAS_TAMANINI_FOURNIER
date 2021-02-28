@@ -1,41 +1,3 @@
-/*
-
-LIRE ATTENTIVEMENT LE CHAPITRE 2 à 10 DU COURS TUNE 2 
-CONCERNANT LE REGLAGE AUTOMATIQUE DE REQUETES ET SURTOUT
-SQL TUNING ADVISOR (voir aussi les annexes).
-
-Ecrire un script qui permet d'analyser et produire des 
-recommandations sur un pool de requêtes sur l'application
-APPLIBANK regroupé dans un  SQL Tuning Set. Le remplissage
-du SQL TUNING SET set fait en récupérant les requêtes entre
-deux clichés AWR.
-
-Travail à faire via l'API et en partie via OEM.
-
-1. Charger l'application bancaire (AppliBank.sql)
-dans le schéma de l'utilisateur ORS2
-
-2. Provoquer de l'activité (requêtes sur l'application bancaire) 
-dans la base entre deux clichés AWR
-
-3. Générer les recommandations
-
-Ecrire un script qui permet d'analyser et produire des 
-recommandations récupérées les requêtes entre
-deux clichés AWR.
-
-
-4. Afficher les résultats d'analyses
-
-5. Gérer le script SQL proposé pour le réglage SQL
-
-6. Activiter de réglage à faire à l'issue de l'exécution de ce script
-
-
-*/
-
-
-
 set autotrace off
 set termout on
 set echo on
@@ -48,7 +10,7 @@ set serveroutput on
 spool &PROJECTPATH\08_SQL_tuning_advisor\LOG\STA_PROJECT.LOG
 
   
--- vérification du type d'optimiseur
+-- vï¿½rification du type d'optimiseur
  show parameter optimizer_mode;
 
 -- optimizer_mode                       string      ALL_ROWS
@@ -61,12 +23,12 @@ alter session set optimizer_mode=all_rows ;
 -- &MYPDBUSER
 execute dbms_stats.gather_schema_stats('&MYPDBUSER');
 
--- Connexion avec au niveau CDB pour prendre un cliché AWR.
+-- Connexion avec au niveau CDB pour prendre un clichï¿½ AWR.
 -- La gestion des statistiques se fait au niveau e ma CDB
 connect &MYCDBUSER@&DBALIASCDB/&MYCDBUSERPASS
 
--- Prendre un premier cliché AWR pour délimiter
--- l'espace de récupération des requêtes.
+-- Prendre un premier clichï¿½ AWR pour dï¿½limiter
+-- l'espace de rï¿½cupï¿½ration des requï¿½tes.
 set serveroutput on
 variable snapid1 number;
 
@@ -76,22 +38,19 @@ begin
 end;
 /
 
--- ReConnexion à la  PDB pour utiliser STA
+-- ReConnexion ï¿½ la  PDB pour utiliser STA
 connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 
--- reporter le numéro de cliché rendu par le programme ici :
+-- reporter le numï¿½ro de clichï¿½ rendu par le programme ici :
 -- snap_id1=153  ? snap_id1=743
 
--- 2. Provoquer de l'activité (requêtes sur l'application bancaire) 
--- dans la base entre deux clichés AWR
+-- 2. Provoquer de l'activitï¿½ (requï¿½tes sur l'application bancaire) 
+-- dans la base entre deux clichï¿½s AWR
 
--- Désactiver l'affichage à l'écran des résultats des requêtes.
+-- Dï¿½sactiver l'affichage ï¿½ l'ï¿½cran des rï¿½sultats des requï¿½tes.
  set autotrace &TRACEOPTION
-
- col adresse format a30
-
  
- -- Lancer plusieurs requêtes
+ -- Lancer plusieurs requï¿½tes
  
 -- REQUETES 1 TABLE
 
@@ -145,7 +104,7 @@ JOIN client
 ON immatriculation.immatriculation = client.immatriculation
 WHERE client.sexe = 'F';
 
--- SÃ©lcetionner le numÃ©ro d'immatriculation des voitures dont le modÃ¨le est Laguna 2.0T
+-- SÃ©lectionner le numÃ©ro d'immatriculation des voitures dont le modÃ¨le est Laguna 2.0T
 SELECT immatriculation
 FROM immatriculation
 JOIN catalogue
@@ -155,22 +114,25 @@ WHERE catalogue.nom='Laguna 2.0T';
 
 -- REQUETES 3 TABLES
 
+-- SÃ©lectionner le taux des potentiels clients qui ont le mÃªme taux que les hommes ayant achetÃ© une Audi
 SELECT DISTINCT marketing.taux
 FROM marketing
 JOIN client
 ON client.sexe = marketing.sexe
 JOIN immatriculation
 ON immatriculation.immatriculation = client.immatriculation
-WHERE immatriculation.marque = 'Audi';
+WHERE immatriculation.marque = 'Audi' AND marketing.sexe='M';
 
+-- SÃ©lectionner la couleur des Golf 2.0 FSI vendues Ã  des hommes
 SELECT DISTINCT catalogue.couleur
 FROM catalogue
 JOIN immatriculation
 ON  immatriculation.nom = catalogue.nom
 JOIN client
 ON client.immatriculation = immatriculation.immatriculation
-WHERE client.sexe='M';
+WHERE client.sexe='M' AND catalogue.nom = 'Golf 2.0 FSI';
 
+-- SÃ©lectionner l'Ã¢ge des clients ayant achetÃ© une voiture rouge
 SELECT  DISTINCT client.age
 FROM client
 JOIN immatriculation
@@ -179,6 +141,7 @@ JOIN catalogue
 ON catalogue.marque=immatriculation.marque
 WHERE catalogue.couleur = 'rouge';
 
+-- SÃ©lectionner la puissance et la marque des vÃ©hicules de plus de 150CV vendus, triÃ©s par l'Ã¢ge dÃ©croissant de leur acheteur
 SELECT DISTINCT immatriculation.puissance, immatriculation.marque
 FROM immatriculation
 JOIN catalogue 
@@ -226,7 +189,7 @@ ON client.sexe = marketing.sexe
 WHERE marketing.nbEnfantsAcharge<2;
 
 
---Afficher l'id, le taux et la situation familiale des clients qui possèdent une Dacia.
+--Afficher l'id, le taux et la situation familiale des clients qui possï¿½dent une Dacia.
 SELECT DISTINCT  marketing.clientMarketingId, marketing.taux, marketing.situationFamiliale
 FROM marketing
 JOIN client
@@ -249,7 +212,7 @@ JOIN marketing
 ON client.age = marketing.age
 WHERE marketing.situationFamiliale = 'En Couple';
 
---Afficher l'id du client, la marque et le prix du vehicule des clients de sexe féminin de la table marketing.
+--Afficher l'id du client, la marque et le prix du vehicule des clients de sexe fï¿½minin de la table marketing.
 SELECT DISTINCT client.clientId, catalogue.marque, catalogue.prix
 FROM catalogue
 JOIN immatriculation
@@ -263,13 +226,13 @@ WHERE marketing.sexe='F';
 
  set autotrace off
 
--- Connexion avec lau niveau CDB pour prendre un cliché AWR
+-- Connexion avec lau niveau CDB pour prendre un clichï¿½ AWR
 -- La gestion des statistiques se fait au niveau e ma CDB
 connect &MYCDBUSER@&DBALIASCDB/&MYCDBUSERPASS
 
 
--- Prendre un deuxième cliché AWR pour délimiter
--- la fin de l'espace de récupération des requêtes.
+-- Prendre un deuxiï¿½me clichï¿½ AWR pour dï¿½limiter
+-- la fin de l'espace de rï¿½cupï¿½ration des requï¿½tes.
 variable snapid2 number;
 set serveroutput on
 
@@ -279,19 +242,19 @@ begin
 end;
 /
 
--- ReConnexion à la  PDB pour utiliser STA
+-- ReConnexion ï¿½ la  PDB pour utiliser STA
 connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 
--- reporter le numéro de cliché rendu par le programme ici :
+-- reporter le numï¿½ro de clichï¿½ rendu par le programme ici :
 -- snap_id2= 154 ? snap_id2=744
 
 -- Supprimer la tache  
--- Supprimer 1 tache BANK_SQL_TUNING_TASK si elle existe déjà
-execute DBMS_SQLTUNE.DROP_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER');
-execute DBMS_SQLTUNE.DROP_SQLSET('bank_sql_tuning_set'||'&MYPDBUSER');
--- Si vous avez déjà exécuté ce script, il se peut qu'un
--- qu'un profile de requête ai déjà été créé. Dans ce cas:
--- Rechercher puis supprimer le profie s'il existe déjà 
+-- Supprimer 1 tache PROJET_TUNING_TASK si elle existe dï¿½jï¿½
+execute DBMS_SQLTUNE.DROP_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER');
+execute DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'&MYPDBUSER');
+-- Si vous avez dï¿½jï¿½ exï¿½cutï¿½ ce script, il se peut qu'un
+-- qu'un profile de requï¿½te ai dï¿½jï¿½ ï¿½tï¿½ crï¿½ï¿½. Dans ce cas:
+-- Rechercher puis supprimer le profie s'il existe dï¿½jï¿½ 
 ---
 set linesize 200
 col sql_text format A40
@@ -299,19 +262,19 @@ select name
 from dba_sql_profiles
 order by name;
 
--- Supprimer le(s) profile(s) s'ils ont été trouvés avec la requête 
--- précédente. NomProfile est le résultat de la requête
--- ci-dessus. Répéter l'action si utile.
+-- Supprimer le(s) profile(s) s'ils ont ï¿½tï¿½ trouvï¿½s avec la requï¿½te 
+-- prï¿½cï¿½dente. NomProfile est le rï¿½sultat de la requï¿½te
+-- ci-dessus. Rï¿½pï¿½ter l'action si utile.
 execute DBMS_SQLTUNE.DROP_SQL_PROFILE('NomProfile');
 
--- 3. Générer les recommandations
--- Exécuter le script ci-dessous pour optimiser automatiquement
--- les requêtes lancées entre snap_id1 et snap_id2.
--- Le conseiller qui sera utilisé ici est SQL TUNNING ADVISOR.
+-- 3. Gï¿½nï¿½rer les recommandations
+-- Exï¿½cuter le script ci-dessous pour optimiser automatiquement
+-- les requï¿½tes lancï¿½es entre snap_id1 et snap_id2.
+-- Le conseiller qui sera utilisï¿½ ici est SQL TUNNING ADVISOR.
 set serveroutput on
 DECLARE
 my_task_name VARCHAR2(30);
-nom_sqlset varchar2(50):='bank_sql_tuning_set'||'&MYPDBUSER';
+nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
 l_cursor  DBMS_SQLTUNE.sqlset_cursor;
 BEGIN
 DBMS_SQLTUNE.CREATE_SQLSET(
@@ -319,10 +282,10 @@ sqlset_name => nom_sqlset,
 description => 'I/O intensive workload');
 
 -- Appel de la fonction DBMS_SQLTUNE.select_workload_repository 
--- pour recolter les requêtes à régler automatiquement entre
+-- pour recolter les requï¿½tes ï¿½ rï¿½gler automatiquement entre
 -- snap_id1 et snap_id2.
--- remplacer snap_id1 et snap_id2 par les valeurs capturées 
--- plus haut après les appels de:dbms_workload_repository.create_snapshot;.
+-- remplacer snap_id1 et snap_id2 par les valeurs capturï¿½es 
+-- plus haut aprï¿½s les appels de:dbms_workload_repository.create_snapshot;.
 --1059 et 1174
   OPEN l_cursor FOR
     SELECT VALUE(p)
@@ -341,35 +304,35 @@ description => 'I/O intensive workload');
                 --    10)   -- result_limit
                   ) p;
 
--- charger les requêtes recoltées entre snap_id1 et snap_id2
--- actuellement présente dans l_cursor dans le sql tuning 
--- set créé précédemment.
+-- charger les requï¿½tes recoltï¿½es entre snap_id1 et snap_id2
+-- actuellement prï¿½sente dans l_cursor dans le sql tuning 
+-- set crï¿½ï¿½ prï¿½cï¿½demment.
   DBMS_SQLTUNE.load_sqlset (
     sqlset_name     => nom_sqlset,
     populate_cursor => l_cursor);
 
--- créer une tâche de tuning pour le sql tuning set
--- alimenté en requête dans l'action ci-dessus.	
+-- crï¿½er une tï¿½che de tuning pour le sql tuning set
+-- alimentï¿½ en requï¿½te dans l'action ci-dessus.	
 my_task_name := DBMS_SQLTUNE.CREATE_TUNING_TASK(
 sqlset_name => nom_sqlset,
 basic_filter => 'parsing_schema_name =''&MYPDBUSER''', -- basic_filter
 scope => 'COMPREHENSIVE',
 time_limit => 60,
-task_name => 'BANK_SQL_TUNING_TASK'||'&MYPDBUSER',
+task_name => 'PROJET_TUNING_TASK'||'&MYPDBUSER',
 description => 'Task to tune a query on a specified bank queries'
 );
 
--- Exécuter le tâche de tuning 
--- le conseiller utilisé ici est STA.
+-- Exï¿½cuter le tï¿½che de tuning 
+-- le conseiller utilisï¿½ ici est STA.
 DBMS_SQLTUNE.EXECUTE_TUNING_TASK( task_name => my_task_name );
 
 END;
 /
 
--- profile des fonctions utilisées dans le programme ci-dessus.
--- A ne pas exécuter. Voir le manuel Oracle Oracle® Database
+-- profile des fonctions utilisï¿½es dans le programme ci-dessus.
+-- A ne pas exï¿½cuter. Voir le manuel Oracle Oracleï¿½ Database
 -- PL/SQL Packages and Types Reference pour la description
--- détaillée.
+-- dï¿½taillï¿½e.
 /*
 DBMS_SQLTUNE.SELECT_WORKLAOD_REPOSITORY (
 begin_snap IN NUMBER,
@@ -406,29 +369,29 @@ RETURN VARCHAR2;
 
 
 
--- 4. Afficher les résultats d'analyses
+-- 4. Afficher les rï¿½sultats d'analyses
 
 -- Consultation des informations sur la tache
 
--- Vérification de la tâche créée
+-- Vï¿½rification de la tï¿½che crï¿½ï¿½e
 col task_name format a20
 SELECT task_name 
 FROM DBA_ADVISOR_LOG 
-WHERE owner ='ORS2' and task_name='BANK_SQL_TUNING_TASK'||'&MYPDBUSER';
+WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
 
 --?
 
 -- La vue Advisor_tasks contient des informations 
--- sur les tâches
+-- sur les tï¿½ches
 
 SELECT TASK_NAME, ADVISOR_NAME, status , RECOMMENDATION_COUNT, SOURCE         
 FROM USER_ADVISOR_TASKS 
-WHERE task_name = 'BANK_SQL_TUNING_TASK'||'&MYPDBUSER';
+WHERE task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER';
 
 --?
 
 -- La vue V$ADVISOR_PROGRESS contient des informations 
--- sur la progression des tâches
+-- sur la progression des tï¿½ches
 
 -- Exemple de consultation de la progression
 
@@ -437,30 +400,30 @@ V$ADVISOR_PROGRESS  vp,
 DBA_ADVISOR_LOG da
 WHERE vp.username = '&MYPDBUSER'  
 AND vp.task_id=da.task_id
-AND da.task_name = 'BANK_SQL_TUNING_TASK'||'&MYPDBUSER';
+AND da.task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER';
 
 --?
 
 --La fonction DBMS_SQLTUNE.REPORT_TUNING_TASK permet d'afficher 
---le résultat d'une analyse
+--le rï¿½sultat d'une analyse
 
 
 SET LONG 4000
 SET LONGCHUNKSIZE 4000
 SET LINESIZE 200
-SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'BANK_SQL_TUNING_TASK'||'&MYPDBUSER')
+SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'PROJET_TUNING_TASK'||'&MYPDBUSER')
 FROM DUAL;
 
 
 --?
 
--- résultat du report il est conseillée de restructurer la
--- requête.
+-- rï¿½sultat du report il est conseillï¿½e de restructurer la
+-- requï¿½te.
 
 --?
 
 -- la ligne ci-dessous dans le rapport indique qu'il y'a une 
--- restructuration de la requete à faire.
+-- restructuration de la requete ï¿½ faire.
 -- Number of SQL Restructure Findings: 1
 
 --
@@ -483,7 +446,7 @@ DBA_ADVISOR_SQLPLANS da,
 DBA_ADVISOR_RECOMMENDATIONS dar
 where vs.sql_id=da.sql_id
 and da.task_id=dar.task_id
-and dar.task_name='BANK_SQL_TUNING_TASK'||'&MYPDBUSER'
+and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
 and sql_text not like '%EXPLAIN%'
 and sql_text not like '%opt_param%'
 and sql_text not like '%insert%'
@@ -495,9 +458,9 @@ order by dar.task_name,  vs.sql_id, reco_type;
 --?
 
 --
--- Consultation la description du problème trouvé par STA
+-- Consultation la description du problï¿½me trouvï¿½ par STA
 -- Dans la vue DBA_ADVISOR_FINDINGS
--- Résultation de la recherche
+-- Rï¿½sultation de la recherche
 ---
 
 col task_name format A10
@@ -515,7 +478,7 @@ DBA_ADVISOR_FINDINGS dar
 where vs.sql_id=da.sql_id
 and da.task_id=dar.task_id
 and da.object_id=dar.object_id
-and dar.task_name='BANK_SQL_TUNING_TASK'||'&MYPDBUSER'
+and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
 and sql_text not like '%EXPLAIN%'
 and sql_text not like '%opt_param%'
 and sql_text not like '%insert%'
@@ -529,7 +492,7 @@ order by dar.task_name,  da.object_id, vs.sql_id;
 
 ---
 --- recommandation
---- consulter les actions (diagnostic) recommandées par STA
+--- consulter les actions (diagnostic) recommandï¿½es par STA
 --- dans la vue DBA_ADVISOR_ACTIONS
 ---
 -- voir 
@@ -550,7 +513,7 @@ DBA_ADVISOR_ACTIONS dar
 where vs.sql_id=da.sql_id
 and da.task_id=dar.task_id
 and da.object_id=dar.object_id
-and dar.task_name='BANK_SQL_TUNING_TASK'||'&MYPDBUSER'
+and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
 and sql_text not like '%EXPLAIN%'
 and sql_text not like '%opt_param%'
 and sql_text not like '%insert%'
@@ -583,9 +546,9 @@ order by object_id;
 
 ---
 --- Raisonnement
---- Raisonnement avec des explications complémentaires sur 
---- le problème.
---- Consulté pour cela la vue DBA_ADVISOR_RATIONALE
+--- Raisonnement avec des explications complï¿½mentaires sur 
+--- le problï¿½me.
+--- Consultï¿½ pour cela la vue DBA_ADVISOR_RATIONALE
 ---
 
 
@@ -608,7 +571,7 @@ DBA_ADVISOR_RATIONALE dar
 where vs.sql_id=da.sql_id
 and da.task_id=dar.task_id
 and da.object_id=dar.object_id
-and dar.task_name='BANK_SQL_TUNING_TASK'||'&MYPDBUSER'
+and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
 and sql_text not like '%EXPLAIN%'
 and sql_text not like '%opt_param%'
 and sql_text not like '%insert%'
@@ -623,30 +586,30 @@ order by dar.task_name,  da.object_id, vs.sql_id;
 
 
 --
--- Rechercher s'il y'a des scripts générés
--- Identifier s'il ya un profile pour cette requête choisie plus
+-- Rechercher s'il y'a des scripts gï¿½nï¿½rï¿½s
+-- Identifier s'il ya un profile pour cette requï¿½te choisie plus
 -- haut.
 -- afficher le script complet ou partiel
 col myscript format a1000
 set long 4000
-select dbms_sqltune.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual;
+select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual;
 
-select dbms_sqltune.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual;
-select dbms_sqltune.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual;
-select dbms_sqltune.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual;
+select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual;
+select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual;
+select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual;
 
--- une autre façon d'afficher le script complet
+-- une autre faï¿½on d'afficher le script complet
 set serveroutput on
 begin
-dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
+dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
 end;
 /
 --?
 
--- 5. Gérer le script SQL proposé pour le réglage SQL
--- Gérer le script SQL proposé pour le réglage SQL : Attention ce script est disponible dans le dossier %ORACLE_BASE%\admin\dpdump
--- récupérer le script et le mettre dans votre dossier : EXO91
--- Editer ce script de façon approprié
+-- 5. Gï¿½rer le script SQL proposï¿½ pour le rï¿½glage SQL
+-- Gï¿½rer le script SQL proposï¿½ pour le rï¿½glage SQL : Attention ce script est disponible dans le dossier %ORACLE_BASE%\admin\dpdump
+-- rï¿½cupï¿½rer le script et le mettre dans votre dossier : EXO91
+-- Editer ce script de faï¿½on appropriï¿½
 declare 
 mydate varchar2(20):=to_char(sysdate, 'DD_MM_YYYY_HH24_MI_SS');
 fname varchar2(300):='STA_Generate_action_script_on_PROJET_tuning'
@@ -654,19 +617,19 @@ fname varchar2(300):='STA_Generate_action_script_on_PROJET_tuning'
 begin
 
 DBMS_ADVISOR.CREATE_FILE(
-DBMS_SQLTUNE.SCRIPT_TUNING_TASK('BANK_SQL_TUNING_TASK'||'&MYPDBUSER'),
+DBMS_SQLTUNE.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER'),
 'DATA_PUMP_DIR', 
 fname
 );
 end;
 /
 
--- exécuter le script pour accepter le profile de la requête choisie
+-- exï¿½cuter le script pour accepter le profile de la requï¿½te choisie
 
--- execute dbms_sqltune.accept_sql_profile(task_name => 'BANK_SQL_TUNING_TASK'||'&MYPDBUSER', replace => TRUE);
+-- execute dbms_sqltune.accept_sql_profile(task_name => 'PROJET_TUNING_TASK'||'&MYPDBUSER', replace => TRUE);
 
 ---
---- Vérifier la présence d'un profie dans la vue 
+--- Vï¿½rifier la prï¿½sence d'un profie dans la vue 
 ---
 set linesize 200
 
@@ -678,11 +641,11 @@ order by name;
 
 SPOOL OFF
 
--- 6. Activiter de réglage à faire à l'issue de l'exécution de ce script
+-- 6. Activiter de rï¿½glage ï¿½ faire ï¿½ l'issue de l'exï¿½cution de ce script
 -- 6.1 dupliquer le Dossier EXO91 en EXO91_TUNED
--- 6.2 Adapté les scripts dans EXO91_TUNED pour prendre en compte ce nouveau nom
--- 6.3 Analyer le résultat de l'activité de STA en lisant le fichier Ex91_Tune2_STA_BANK_8SPOOL.LOG dans EXO91_TUNED
--- 6.4 Récupérer et adapter le script généré en 5
--- 6.5 Corriger dans EXO91_TUNED\Ex91_TUNE2_STA_BANK_2ACTIVITY.SQL la requête ou le produit cartésien est évoqué
--- 6.6 Réexécuter les scripts à partir de EXO91_TUNED\Ex91_TUNE2_STA_BANK_1START.SQL
+-- 6.2 Adaptï¿½ les scripts dans EXO91_TUNED pour prendre en compte ce nouveau nom
+-- 6.3 Analyer le rï¿½sultat de l'activitï¿½ de STA en lisant le fichier Ex91_Tune2_STA_BANK_8SPOOL.LOG dans EXO91_TUNED
+-- 6.4 Rï¿½cupï¿½rer et adapter le script gï¿½nï¿½rï¿½ en 5
+-- 6.5 Corriger dans EXO91_TUNED\Ex91_TUNE2_STA_BANK_2ACTIVITY.SQL la requï¿½te ou le produit cartï¿½sien est ï¿½voquï¿½
+-- 6.6 Rï¿½exï¿½cuter les scripts ï¿½ partir de EXO91_TUNED\Ex91_TUNE2_STA_BANK_1START.SQL
 

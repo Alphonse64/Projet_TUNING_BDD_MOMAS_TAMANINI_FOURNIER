@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 19:08:09 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Dim. Févr. 28 17:05:06 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -35,6 +35,2865 @@ COULEUR                              NEXT     *   ;  O(") CHARACTER
 OCCASION                             NEXT     *   ;  O(") CHARACTER            
 PRIX                                 NEXT     *   ;  O(") CHARACTER            
 
-SQL*Loader-941 : Erreur lors de la description de la table IMMATRICULATION
-ORA-04043: objet IMMATRICULATION inexistant
+Enregistrement 27388 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
 
+Enregistrement 61985 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 65833 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 67862 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 68800 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 77367 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 85013 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 96966 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 98935 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 107496 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 111968 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 114852 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 127688 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 132733 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 138063 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 147212 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 149300 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 159621 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 163280 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 167125 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 168821 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 169052 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 170240 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 171631 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 175092 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 175148 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 181885 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 182570 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 182573 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 184734 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 187406 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 187521 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 188621 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 189483 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 195920 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 198802 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 199174 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 202697 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 203080 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 206470 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 210354 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 211893 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 212842 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 215098 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 215436 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 219641 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 226505 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 230036 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 234498 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 234969 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 235228 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 239591 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 244189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 245275 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 247268 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 247756 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 252635 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 257351 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 262801 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 265009 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 268208 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 268271 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 268594 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 270535 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 270848 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 272463 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 279879 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 281154 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 283162 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 284102 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 290049 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 292102 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 292905 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 293087 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 299964 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 300919 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 310642 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 311036 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 311523 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 312463 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 314616 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 316028 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 316715 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 320354 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 323242 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 324701 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 327688 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 329016 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 329885 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 330111 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 334517 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 334751 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 334775 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 335306 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 335756 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 338485 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 338741 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 339583 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 339924 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 340602 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 341183 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 342133 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 342993 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 344312 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 344993 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 345457 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 349903 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 351391 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 356259 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 356768 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 360012 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 361439 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 364920 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 365842 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 365991 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 366718 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 373130 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 375311 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 377725 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 378617 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 378650 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 382170 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 385072 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 388040 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 388570 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 389554 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 389950 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 391139 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 392131 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 392785 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 394924 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 395460 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 395485 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 396545 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 397403 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 397668 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 398047 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 399236 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 402755 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 405788 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 409441 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 411310 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 414211 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 414471 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 415360 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 416983 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 418240 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 419315 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 419502 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 420924 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 421188 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 423690 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 427031 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 427365 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 429755 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 430478 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 434510 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 434579 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 436349 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 436614 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 436901 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 442826 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 444817 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 445147 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 446301 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 449955 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 450911 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 451093 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 452251 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 452505 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 452535 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 452732 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 455550 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 455767 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 459035 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 461860 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 462321 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 462596 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 462649 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 467237 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 467519 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 472097 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 474318 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 474716 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 476134 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 476380 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 476816 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 477920 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 478634 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 479307 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 479339 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 480615 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 481414 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 481757 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 484453 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 484848 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 487508 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 487954 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 488748 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 491235 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 492458 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 493502 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 494327 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 495416 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 497524 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 498244 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 500092 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 501641 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 502326 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 503066 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 503081 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 503473 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 505275 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 505472 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 505612 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 505817 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 506261 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 506614 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 509723 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 511669 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 512397 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 512568 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 512698 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 512977 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 514268 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 518047 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 518583 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 518597 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 518950 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 519297 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 520731 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 521630 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 521748 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 522686 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 522931 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 523810 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 524017 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 525189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 525910 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 526580 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 528486 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 530141 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 531436 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 533849 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 535222 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 536781 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 538065 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 538100 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 539842 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 540471 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 541367 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 541525 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 542787 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 543989 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 546996 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 547325 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 547397 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 547572 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 550498 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 550968 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 551248 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 552631 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 554290 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 554512 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 554632 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 555566 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 555868 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 557122 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 557932 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 558341 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 558914 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 560294 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 561312 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 561535 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 562511 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 562879 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 563785 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 564340 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 565385 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 566609 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 567118 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 567258 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 568681 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 569080 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 570444 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 570695 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 572417 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 573272 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 573298 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 573590 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 574034 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 574364 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 575337 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 578790 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 579596 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 581547 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 583611 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 584024 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 584700 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 586028 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 586348 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 586630 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 586794 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 587120 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 587245 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 589007 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 589118 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 589496 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 590721 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 591197 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 591913 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 593300 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 593586 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 594120 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 594723 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 594849 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 597679 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 597770 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 600380 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 601904 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 602153 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 603772 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 603948 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 604830 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 605255 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 605420 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 608227 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 608698 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 610810 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 611456 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 611620 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 612086 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 612653 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 612958 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 614189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 615182 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 615265 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 616821 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 618877 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 619338 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 619500 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 621304 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 622826 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 624800 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 625332 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 626125 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 626994 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 627997 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 628709 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 630751 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 630928 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 632827 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 632884 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 634091 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 634215 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 636901 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 637397 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 637587 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 638768 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 638805 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 640140 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 640440 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 640713 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 641078 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 641167 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 641463 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 644577 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 644688 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 644960 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 645602 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 645964 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 646303 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 648229 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 648748 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 648905 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 650171 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 650717 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 650815 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 650843 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 653086 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 653692 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 653920 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 654039 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 656061 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 656847 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 657622 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 659828 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 660693 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 662574 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 662609 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 663592 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 664150 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 664998 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 665786 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 667831 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 668592 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 669758 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 670732 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 671132 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 672052 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 672566 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 672692 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 673270 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 673458 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 674745 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 674931 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 674951 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 675423 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 676271 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 677149 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 681774 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 682182 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 682559 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 682979 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 683862 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 683926 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 684210 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 684574 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 685185 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 685330 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 685374 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 685725 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 686522 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 686744 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 686911 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 688467 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 688673 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 689151 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 689834 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 693470 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 693519 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 693673 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 694932 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 695178 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 696539 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 696722 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 697206 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 697498 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 698389 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 698741 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 699613 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 700003 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 700193 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 702236 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 702352 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 702840 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 703340 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 703796 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 703810 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 704189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 704194 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 704268 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 705206 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 705755 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 707594 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 709027 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 709671 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 712363 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 712687 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 713209 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 713517 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 713522 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 714039 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 714830 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 717080 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 717573 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 717732 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 718593 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 718767 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 719897 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 721217 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 721332 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 721768 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 721916 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 722276 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 723196 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 723242 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 723530 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 725148 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 726659 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 727128 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 727308 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 727792 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 728146 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 730038 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 731127 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 731804 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 732481 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 733075 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 733135 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 734247 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 735045 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 735393 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 738654 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 738914 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 739479 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 739647 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 739880 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 740156 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 743544 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 746407 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 746429 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 746890 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 748579 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 750099 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 751187 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 751358 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 751676 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 751740 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 752960 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 753731 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 754157 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 754190 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 754787 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 756377 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 756784 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 757535 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 759342 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 760020 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 761610 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 761806 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 763318 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 764758 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 764882 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 764924 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 766177 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 767517 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 768093 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 768333 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 768724 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 770452 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 771747 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 774664 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 775446 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 775890 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 777659 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 777976 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 778305 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 779884 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 780261 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 780890 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 781280 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 782091 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 782160 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 782751 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 783033 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 784521 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 784955 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 785699 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 785983 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 786844 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 787296 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 787488 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 787781 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 787922 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 788176 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 788368 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 789417 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 792036 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 792406 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 793477 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 793771 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 793994 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 795159 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 795589 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 795751 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 796818 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 797598 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 799744 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 802521 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 802818 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 802938 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 804039 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 804314 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 805125 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 805297 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 806876 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 808001 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 808947 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 809233 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 809302 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 809393 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 809867 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 809871 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 810531 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 810849 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 811252 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 812939 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 813675 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 813903 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 815072 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 817281 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 817910 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 818966 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 819096 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 819238 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 821090 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 822005 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 822840 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 823344 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 823614 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 824359 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 824879 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 825231 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 826855 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 826863 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 828376 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 829203 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 830299 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 830644 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 831548 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 835112 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 836263 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 837185 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 837242 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 837357 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 837616 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 838802 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 839278 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 839782 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 840243 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 841838 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 842746 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 843038 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 843293 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 846345 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 846663 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 847198 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 847793 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849336 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849356 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849580 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849585 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849863 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 849898 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 850280 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 851425 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 852405 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 853365 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 853490 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 854004 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 854303 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 854774 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 855202 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 855438 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 855923 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 856128 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 856398 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 856488 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 856965 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 857097 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 857266 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 858532 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 858967 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 859312 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 861126 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 861414 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 862921 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 863844 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 864041 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 865710 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 866526 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 867287 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 868759 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 869126 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 869545 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 869690 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 869839 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 870097 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 871741 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 872793 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 873143 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 873317 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 875022 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 875393 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 875726 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 876232 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 876343 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 877288 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 877773 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 877875 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 878682 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 878811 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 879380 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 879513 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 880462 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 881558 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 881875 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 882091 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 882557 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 882782 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 883389 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 883872 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 887788 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 888394 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 888434 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 889972 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 892908 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 893591 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 894370 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 894513 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 894699 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 896982 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 897993 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 898233 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 898902 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 900248 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 901655 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 902311 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 902644 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 904123 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 904269 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 904800 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 904859 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 905490 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 905924 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 906682 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 907031 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 907263 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 907631 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 908143 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 908698 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 909585 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 909980 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 910077 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 910115 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 912241 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 913020 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 913765 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 913855 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 914927 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 915162 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 916159 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 916170 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 917102 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 917976 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 919245 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 919544 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 919816 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 921159 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 921257 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 921609 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 922153 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 922935 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 924623 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 924961 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 925230 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 927047 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 927203 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 927528 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 928036 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 928454 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 929296 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 930526 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 930610 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 931158 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 931944 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 932004 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 932293 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 933310 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 933452 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 934798 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 934893 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 935184 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 935351 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 935792 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 935893 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 937142 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 938332 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 939296 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 939313 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 939771 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 941497 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 943358 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 944531 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 946046 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 946228 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 946927 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 949118 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 950222 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 951235 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 952102 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 953872 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 954029 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 955055 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 955177 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 955343 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 955512 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 956005 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 956811 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 957813 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 958296 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 958567 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 959021 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 959553 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 960743 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 960798 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 960879 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 961045 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 961229 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 961556 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 963044 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 963099 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 964264 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 964285 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 964591 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 964916 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 965805 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 967200 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 967268 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 967540 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 967793 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 967986 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 968143 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 968293 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 969158 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 970235 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 970331 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 971795 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 972297 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 972743 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 973321 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 974531 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 974679 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 974751 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 975865 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 976239 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 976388 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 976654 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 977061 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 977867 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 978091 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 978176 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 978309 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 979279 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 980068 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 980081 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 981066 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 981698 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 981831 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 982577 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 982589 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 982820 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 982987 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 988265 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 988889 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 989304 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 989354 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 989383 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 990595 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 990672 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 990682 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 990985 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 991136 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 992163 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 992365 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 994353 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 994487 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 994979 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 997508 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 997829 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 998133 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 998209 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 998802 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 999337 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 999558 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1000260 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1000629 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1000857 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1001022 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1001139 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1001221 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1001798 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1002389 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1003049 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1003375 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1003779 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1004221 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1004499 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1004679 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1005193 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1005638 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1005643 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1005653 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1006618 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1007968 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1008647 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1008681 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1008800 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1009438 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1009544 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1009809 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1009904 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1010356 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1010843 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1011925 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1012887 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1013388 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1013723 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1014797 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1015978 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1016998 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1017437 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1017639 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1017963 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1018664 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1018925 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1020026 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1021884 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1023142 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1023524 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1023691 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1023883 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1027133 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1027721 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1029041 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1030249 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1032510 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1032665 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1033150 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1033389 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1033401 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1033728 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1034167 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1034252 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1034894 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1034972 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1035817 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1035963 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1036309 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1036617 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1036785 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1037189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1037579 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1039050 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1040132 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1041940 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1042733 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1043354 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1043933 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1044225 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1045248 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1046189 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1046928 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1047083 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1047196 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+Enregistrement 1048162 : Rejeté - Erreur sur table IMMATRICULATION.
+ORA-00001: violation de contrainte unique (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.PK_IMMATRICULATIONID)
+
+
+Table IMMATRICULATION :
+  Chargement de 1047628 Lignes effectué.
+  947 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 645000 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :       1048575
+Nombre total d'enregistrements logiques rejetés :       947
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Dim. Févr. 28 17:05:06 2021
+La fin de l'exécution a été effectuée sur Dim. Févr. 28 17:05:45 2021
+
+Temps écoulé (ELAPSED) :     00:00:39.06
+Temps processeur (CPU) :    00:00:07.28

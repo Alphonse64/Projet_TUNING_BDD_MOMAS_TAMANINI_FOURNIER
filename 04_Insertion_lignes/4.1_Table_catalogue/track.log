@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Ven. Févr. 26 19:07:00 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Dim. Févr. 28 17:06:17 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -34,6 +34,39 @@ COULEUR                              NEXT     *   ,  O(") CHARACTER
 OCCASION                             NEXT     *   ,  O(") CHARACTER            
 PRIX                                 NEXT     *   ,  O(") CHARACTER            
 
-SQL*Loader-941 : Erreur lors de la description de la table CATALOGUE
-ORA-04043: objet CATALOGUE inexistant
+Enregistrement 191 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.CHK_CATALOGUE_MARQUE) de vérification
 
+Enregistrement 192 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 193 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 194 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 195 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER.CHK_CATALOGUE_MARQUE) de vérification
+
+
+Table CATALOGUE :
+  Chargement de 265 Lignes effectué.
+  5 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 580500 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :           270
+Nombre total d'enregistrements logiques rejetés :         5
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Dim. Févr. 28 17:06:17 2021
+La fin de l'exécution a été effectuée sur Dim. Févr. 28 17:06:18 2021
+
+Temps écoulé (ELAPSED) :     00:00:00.66
+Temps processeur (CPU) :    00:00:00.17
