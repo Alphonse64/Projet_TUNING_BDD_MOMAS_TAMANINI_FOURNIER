@@ -14,7 +14,7 @@ drop user &MYPDBUSER cascade;
 
 -- Création de l'utilisateur. 
 create user &MYPDBUSER identified by &MYPDBUSERPASS
-default tablespace PROJET_TUNING
+default tablespace PROJET_TUNING_03
 temporary tablespace temp;
 
 -- affecter et enlever des droits
