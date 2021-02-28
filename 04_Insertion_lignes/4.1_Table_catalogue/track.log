@@ -1,0 +1,72 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Sam. Févr. 27 12:27:29 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Fichier de contrôle :   control.ctl
+Fichier de données :      ../../Data/Catalogue.csv
+  Fichier des enregistrements refusés :     Catalogue.bad
+  Fichier de rebut :  aucune spécification
+
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à ignorer : 1
+Erreurs autorisés : 100000
+Tableau de variables :     250 lignes, maximum de 1048576 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table CATALOGUE, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : INSERT
+option TRAILING NULLCOLS effective
+
+   Nom de colonne                  Position   Long  Type de données encadr.
+------------------------------ ---------- ----- ---- ---- ---------------------
+MARQUE                              FIRST     *   ,  O(") CHARACTER            
+NOM                                  NEXT     *   ,  O(") CHARACTER            
+PUISSANCE                            NEXT     *   ,  O(") CHARACTER            
+LONGUEUR                             NEXT     *   ,  O(") CHARACTER            
+NBPLACES                             NEXT     *   ,  O(") CHARACTER            
+NBPORTES                             NEXT     *   ,  O(") CHARACTER            
+COULEUR                              NEXT     *   ,  O(") CHARACTER            
+OCCASION                             NEXT     *   ,  O(") CHARACTER            
+PRIX                                 NEXT     *   ,  O(") CHARACTER            
+
+Enregistrement 191 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 192 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 193 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 194 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_CATALOGUE_MARQUE) de vérification
+
+Enregistrement 195 : Rejeté - Erreur sur table CATALOGUE.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_CATALOGUE_MARQUE) de vérification
+
+
+Table CATALOGUE :
+  Chargement de 265 Lignes effectué.
+  5 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 580500 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :           270
+Nombre total d'enregistrements logiques rejetés :         5
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Sam. Févr. 27 12:27:29 2021
+La fin de l'exécution a été effectuée sur Sam. Févr. 27 12:27:30 2021
+
+Temps écoulé (ELAPSED) :     00:00:01.23
+Temps processeur (CPU) :    00:00:00.16

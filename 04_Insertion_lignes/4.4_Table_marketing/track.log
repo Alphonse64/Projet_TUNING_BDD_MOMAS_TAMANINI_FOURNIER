@@ -1,0 +1,87 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Sam. Févr. 27 12:41:59 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Fichier de contrôle :   control.ctl
+Fichier de données :      ../../Data/Marketing.csv
+  Fichier des enregistrements refusés :     Marketing.bad
+  Fichier de rebut :  aucune spécification
+
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à ignorer : 1
+Erreurs autorisés : 100000
+Tableau de variables :     250 lignes, maximum de 1048576 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table MARKETING, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : INSERT
+option TRAILING NULLCOLS effective
+
+   Nom de colonne                  Position   Long  Type de données encadr.
+------------------------------ ---------- ----- ---- ---- ---------------------
+AGE                                 FIRST     *   ,  O(") CHARACTER            
+SEXE                                 NEXT     *   ,  O(") CHARACTER            
+TAUX                                 NEXT     *   ,  O(") CHARACTER            
+SITUATIONFAMILIALE                   NEXT     *   ,  O(") CHARACTER            
+NBENFANTSACHARGE                     NEXT     *   ,  O(") CHARACTER            
+DEUXIEMEVOITURE                      NEXT     *   ,  O(") CHARACTER            
+
+Enregistrement 2 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 3 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 4 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 5 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 6 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 8 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 10 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 13 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 15 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 16 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+Enregistrement 18 : Rejeté - Erreur sur table MARKETING.
+ORA-02290: violation de contraintes (PROJET_TUNING.CHK_MARKETING_TAUX) de vérification
+
+
+Table MARKETING :
+  Chargement de 9 Lignes effectué.
+  11 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :                 387000 octets(250 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          1
+Nombre total d'enregistrements logiques lus :            20
+Nombre total d'enregistrements logiques rejetés :        11
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Sam. Févr. 27 12:41:59 2021
+La fin de l'exécution a été effectuée sur Sam. Févr. 27 12:41:59 2021
+
+Temps écoulé (ELAPSED) :     00:00:00.72
+Temps processeur (CPU) :    00:00:00.22
