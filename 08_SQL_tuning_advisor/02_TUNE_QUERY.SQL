@@ -1,6 +1,3 @@
-
-  /*3*/
-
 set autotrace off
 set termout on
 set echo on
