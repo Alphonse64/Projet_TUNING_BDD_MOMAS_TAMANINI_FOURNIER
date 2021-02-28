@@ -5,6 +5,16 @@ connect sys as sysdba
 CREATE TABLESPACE PROJET_TUNING DATAFILE '%ORACLE_BASE%\oradata\&MYINSTANCE\&DBALIASPDB\PROJET_TUNING.DBF' SIZE 200M AUTOEXTEND on next 50M
     EXTENT MANAGEMENT LOCAL AUTOALLOCATE SEGMENT SPACE MANAGEMENT AUTO;
 
+--POUR SUPPRIMER UN TABLESPACE
+--DROP TABLESPACE PROJET_TUNING_03 
+--INCLUDING CONTENTS
+--CASCADE CONSTRAINTS ;
+
+DROP TABLESPACE PROJET_TUNING 
+INCLUDING CONTENTS
+CASCADE CONSTRAINTS ;
+
+
 -- Se connecter avec votre compte CDB dans la PDB pour créer l'utilisateur 
 -- &MYPDBUSER
 connect &MYCDBUSER@&DBALIASPDB/&MYCDBUSERPASS
@@ -14,7 +24,7 @@ drop user &MYPDBUSER cascade;
 
 -- Création de l'utilisateur. 
 create user &MYPDBUSER identified by &MYPDBUSERPASS
-default tablespace PROJET_TUNING_03
+default tablespace PROJET_TUNING
 temporary tablespace temp;
 
 -- affecter et enlever des droits

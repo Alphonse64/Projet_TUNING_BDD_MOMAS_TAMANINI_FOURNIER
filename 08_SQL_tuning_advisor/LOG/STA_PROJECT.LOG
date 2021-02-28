@@ -1,7 +1,20 @@
 SQL> 
+SQL> /*
+SQL> -- 1. Charger l'application bancaire (AppliBank.sql)
+SQL> -- dans le sch?ma de l'utilisateur TUNINGDB
 SQL> 
-SQL> -- vï¿½rification du type d'optimiseur
-SQL>  show parameter optimizer_mode;
+SQL> -- D?j? fait dans ...start.sql
+SQL> 
+SQL> -- Les index actuels sur l'application
+SQL> -- Pour l'instant seul les 3 indexes primary doivent exister
+SQL> select table_name, column_name, index_name
+SQL> from user_ind_columns
+SQL> where table_name in ('CLIENT',  'COMPTE',	'TRANSACTION')
+SQL> order by table_name, index_name, column_name;
+SQL> */
+SQL> 
+SQL> -- v?rification du type d'optimiseur
+SQL> show parameter optimizer_mode;
 
 NAME                                 TYPE        VALUE                                                                                                                                                  
 ------------------------------------ ----------- ------------------------------                                                                                                                         
@@ -23,13 +36,13 @@ SQL> execute dbms_stats.gather_schema_stats('&MYPDBUSER');
 Procédure PL/SQL terminée avec succès.
 
 SQL> 
-SQL> -- Connexion avec au niveau CDB pour prendre un clichï¿½ AWR.
+SQL> -- Connexion avec au niveau CDB pour prendre un clich? AWR.
 SQL> -- La gestion des statistiques se fait au niveau e ma CDB
 SQL> connect &MYCDBUSER@&DBALIASCDB/&MYCDBUSERPASS
 Connecté.
 SQL> 
-SQL> -- Prendre un premier clichï¿½ AWR pour dï¿½limiter
-SQL> -- l'espace de rï¿½cupï¿½ration des requï¿½tes.
+SQL> -- Prendre un premier clich? AWR pour d?limiter
+SQL> -- l'espace de r?cup?ration des requ?tes.
 SQL> set serveroutput on
 SQL> variable snapid1 number;
 SQL> 
@@ -38,25 +51,33 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id1='||:snapid1);
   4  end;
   5  /
-snap_id1=1186                                                                                                                                                                                           
+snap_id1=116                                                                                                                                                                                            
 
 Procédure PL/SQL terminée avec succès.
 
 SQL> 
-SQL> -- ReConnexion ï¿½ la  PDB pour utiliser STA
+SQL> -- ReConnexion ? la  PDB pour utiliser STA
 SQL> connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 Connecté.
 SQL> 
-SQL> -- reporter le numï¿½ro de clichï¿½ rendu par le programme ici :
+SQL> -- reporter le num?ro de clich? rendu par le programme ici :
 SQL> -- snap_id1=153  ? snap_id1=743
 SQL> 
-SQL> -- 2. Provoquer de l'activitï¿½ (requï¿½tes sur l'application bancaire)
-SQL> -- dans la base entre deux clichï¿½s AWR
+SQL> -- 2. Provoquer de l'activit? (requ?tes sur l'application bancaire)
+SQL> -- dans la base entre deux clich?s AWR
 SQL> 
-SQL> -- Dï¿½sactiver l'affichage ï¿½ l'ï¿½cran des rï¿½sultats des requï¿½tes.
+SQL> -- D?sactiver l'affichage ? l'?cran des r?sultats des requ?tes.
 SQL>  set autotrace &TRACEOPTION
 SQL> 
-SQL>  -- Lancer plusieurs requï¿½tes
+SQL> /*
+SQL>  col compteid format a24
+SQL>  col nom format a20
+SQL>  col prenom format a20
+SQL>  col ville format a20
+SQL>  col adresse format a30
+SQL>  */
+SQL> 
+SQL> -- Lancement de plusieurs requ?tes
 SQL> 
 SQL> -- REQUETES 1 TABLE
 SQL> 
@@ -79,9 +100,9 @@ Plan hash value: 3135058194
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-          1  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       4037  consistent gets                                                                                                                                                                            
+       4013  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         563  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -118,11 +139,11 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         77  recursive calls                                                                                                                                                                            
-         38  db block gets                                                                                                                                                                              
-         41  consistent gets                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
+          0  db block gets                                                                                                                                                                              
+         10  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-       6884  redo size                                                                                                                                                                                  
+          0  redo size                                                                                                                                                                                  
        3448  bytes sent via SQL*Net to client                                                                                                                                                           
         441  bytes received via SQL*Net from client                                                                                                                                                     
           5  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -157,12 +178,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         36  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-       1330  consistent gets                                                                                                                                                                            
+       1315  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     759739  bytes sent via SQL*Net to client                                                                                                                                                           
+     759760  bytes sent via SQL*Net to client                                                                                                                                                           
       11474  bytes received via SQL*Net from client                                                                                                                                                     
        1009  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -182,8 +203,8 @@ Plan hash value: 1777669847
 -------------------------------------------------------------------------------                                                                                                                         
 | Id  | Operation         | Name      | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
-|   0 | SELECT STATEMENT  |           |     5 |    55 |     3   (0)| 00:00:01 |                                                                                                                         
-|*  1 |  TABLE ACCESS FULL| MARKETING |     5 |    55 |     3   (0)| 00:00:01 |                                                                                                                         
+|   0 | SELECT STATEMENT  |           |     1 |    11 |     3   (0)| 00:00:01 |                                                                                                                         
+|*  1 |  TABLE ACCESS FULL| MARKETING |     1 |    11 |     3   (0)| 00:00:01 |                                                                                                                         
 -------------------------------------------------------------------------------                                                                                                                         
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -194,11 +215,11 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         26  recursive calls                                                                                                                                                                            
-         10  db block gets                                                                                                                                                                              
-         16  consistent gets                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
+          0  db block gets                                                                                                                                                                              
+          6  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-       1964  redo size                                                                                                                                                                                  
+          0  redo size                                                                                                                                                                                  
         631  bytes sent via SQL*Net to client                                                                                                                                                           
         424  bytes received via SQL*Net from client                                                                                                                                                     
           2  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -221,8 +242,8 @@ Plan hash value: 1374169303
 -------------------------------------------------------------------------------------                                                                                                                   
 | Id  | Operation         | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                   
 -------------------------------------------------------------------------------------                                                                                                                   
-|   0 | SELECT STATEMENT  |                 |   153K|  4197K|  2725   (1)| 00:00:01 |                                                                                                                   
-|*  1 |  TABLE ACCESS FULL| IMMATRICULATION |   153K|  4197K|  2725   (1)| 00:00:01 |                                                                                                                   
+|   0 | SELECT STATEMENT  |                 |   153K|  4197K|  2759   (1)| 00:00:01 |                                                                                                                   
+|*  1 |  TABLE ACCESS FULL| IMMATRICULATION |   153K|  4197K|  2759   (1)| 00:00:01 |                                                                                                                   
 -------------------------------------------------------------------------------------                                                                                                                   
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -233,12 +254,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         15  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      19858  consistent gets                                                                                                                                                                            
+      20015  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-    4469409  bytes sent via SQL*Net to client                                                                                                                                                           
+    4469319  bytes sent via SQL*Net to client                                                                                                                                                           
      112995  bytes received via SQL*Net from client                                                                                                                                                     
       10235  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -266,10 +287,10 @@ Plan hash value: 1850348159
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 |  6940K|   754M|  2791   (4)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 |  6940K|   754M|  2791   (4)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 |  6443K|   700M|  2822   (3)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 |  6443K|   700M|  2822   (3)| 00:00:01 |                                                                                                                  
 |   2 |   TABLE ACCESS FULL| CATALOGUE       |   265 | 14045 |     3   (0)| 00:00:01 |                                                                                                                  
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   523K|    30M|  2736   (2)| 00:00:01 |                                                                                                                  
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   327K|    19M|  2770   (2)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -281,12 +302,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-        131  recursive calls                                                                                                                                                                            
-         38  db block gets                                                                                                                                                                              
-      56601  consistent gets                                                                                                                                                                            
+          4  recursive calls                                                                                                                                                                            
+          0  db block gets                                                                                                                                                                              
+      56847  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-       7000  redo size                                                                                                                                                                                  
-  219152838  bytes sent via SQL*Net to client                                                                                                                                                           
+          0  redo size                                                                                                                                                                                  
+  219152292  bytes sent via SQL*Net to client                                                                                                                                                           
     4799252  bytes received via SQL*Net from client                                                                                                                                                     
      436253  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -311,9 +332,9 @@ Plan hash value: 1338212028
 --------------------------------------------------------------------------------                                                                                                                        
 | Id  | Operation          | Name      | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                        
 --------------------------------------------------------------------------------                                                                                                                        
-|   0 | SELECT STATEMENT   |           |   259 | 19943 |   107   (2)| 00:00:01 |                                                                                                                        
-|*  1 |  HASH JOIN         |           |   259 | 19943 |   107   (2)| 00:00:01 |                                                                                                                        
-|*  2 |   TABLE ACCESS FULL| MARKETING |     5 |   160 |     3   (0)| 00:00:01 |                                                                                                                        
+|   0 | SELECT STATEMENT   |           |    58 |  4466 |   107   (2)| 00:00:01 |                                                                                                                        
+|*  1 |  HASH JOIN         |           |    58 |  4466 |   107   (2)| 00:00:01 |                                                                                                                        
+|*  2 |   TABLE ACCESS FULL| MARKETING |     1 |    32 |     3   (0)| 00:00:01 |                                                                                                                        
 |   3 |   TABLE ACCESS FULL| CLIENT    | 43596 |  1915K|   103   (1)| 00:00:01 |                                                                                                                        
 --------------------------------------------------------------------------------                                                                                                                        
                                                                                                                                                                                                         
@@ -326,12 +347,12 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         81  recursive calls                                                                                                                                                                            
-         15  db block gets                                                                                                                                                                              
-        352  consistent gets                                                                                                                                                                            
+          4  recursive calls                                                                                                                                                                            
+          0  db block gets                                                                                                                                                                              
+        326  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-       2996  redo size                                                                                                                                                                                  
-       3955  bytes sent via SQL*Net to client                                                                                                                                                           
+          0  redo size                                                                                                                                                                                  
+       3945  bytes sent via SQL*Net to client                                                                                                                                                           
         503  bytes received via SQL*Net from client                                                                                                                                                     
           5  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -356,10 +377,10 @@ Plan hash value: 2362199741
 ----------------------------------------------------------------------------------------------                                                                                                          
 | Id  | Operation          | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |                                                                                                          
 ----------------------------------------------------------------------------------------------                                                                                                          
-|   0 | SELECT STATEMENT   |                 | 43596 |  4512K|       |  3481   (1)| 00:00:01 |                                                                                                          
-|*  1 |  HASH JOIN         |                 | 43596 |  4512K|  2432K|  3481   (1)| 00:00:01 |                                                                                                          
+|   0 | SELECT STATEMENT   |                 | 43596 |  4512K|       |  3515   (1)| 00:00:01 |                                                                                                          
+|*  1 |  HASH JOIN         |                 | 43596 |  4512K|  2432K|  3515   (1)| 00:00:01 |                                                                                                          
 |   2 |   TABLE ACCESS FULL| CLIENT          | 43596 |  1915K|       |   103   (1)| 00:00:01 |                                                                                                          
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   153K|  9143K|       |  2726   (1)| 00:00:01 |                                                                                                          
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION |   153K|  9143K|       |  2761   (1)| 00:00:01 |                                                                                                          
 ----------------------------------------------------------------------------------------------                                                                                                          
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -375,12 +396,12 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         92  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10831  consistent gets                                                                                                                                                                            
+      10938  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     791134  bytes sent via SQL*Net to client                                                                                                                                                           
+     791049  bytes sent via SQL*Net to client                                                                                                                                                           
        8905  bytes received via SQL*Net from client                                                                                                                                                     
         766  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -405,10 +426,10 @@ Plan hash value: 2362199741
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 | 13138 |   384K|  2841   (2)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 | 13138 |   384K|  2841   (2)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 | 13138 |   384K|  2875   (2)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 | 13138 |   384K|  2875   (2)| 00:00:01 |                                                                                                                  
 |*  2 |   TABLE ACCESS FULL| CLIENT          | 13138 |   166K|   103   (1)| 00:00:01 |                                                                                                                  
-|   3 |   TABLE ACCESS FULL| IMMATRICULATION |  1047K|    16M|  2730   (2)| 00:00:01 |                                                                                                                  
+|   3 |   TABLE ACCESS FULL| IMMATRICULATION |  1047K|    16M|  2764   (2)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -424,12 +445,12 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         15  recursive calls                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10920  consistent gets                                                                                                                                                                            
+      11048  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
-     290042  bytes sent via SQL*Net to client                                                                                                                                                           
+     289880  bytes sent via SQL*Net to client                                                                                                                                                           
       10118  bytes received via SQL*Net from client                                                                                                                                                     
         877  SQL*Net roundtrips to/from client                                                                                                                                                          
           0  sorts (memory)                                                                                                                                                                             
@@ -454,10 +475,10 @@ Plan hash value: 1850348159
 --------------------------------------------------------------------------------------                                                                                                                  
 | Id  | Operation          | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
-|   0 | SELECT STATEMENT   |                 |   399K|    12M|  2732   (1)| 00:00:01 |                                                                                                                  
-|*  1 |  HASH JOIN         |                 |   399K|    12M|  2732   (1)| 00:00:01 |                                                                                                                  
+|   0 | SELECT STATEMENT   |                 |   399K|    12M|  2766   (1)| 00:00:01 |                                                                                                                  
+|*  1 |  HASH JOIN         |                 |   399K|    12M|  2766   (1)| 00:00:01 |                                                                                                                  
 |*  2 |   TABLE ACCESS FULL| CATALOGUE       |    10 |   110 |     3   (0)| 00:00:01 |                                                                                                                  
-|*  3 |   TABLE ACCESS FULL| IMMATRICULATION | 39923 |   818K|  2726   (1)| 00:00:01 |                                                                                                                  
+|*  3 |   TABLE ACCESS FULL| IMMATRICULATION | 39923 |   818K|  2760   (1)| 00:00:01 |                                                                                                                  
 --------------------------------------------------------------------------------------                                                                                                                  
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -470,9 +491,9 @@ Predicate Information (identified by operation id):
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         19  recursive calls                                                                                                                                                                            
+          4  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      14078  consistent gets                                                                                                                                                                            
+      14232  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
     7514896  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -503,13 +524,13 @@ Plan hash value: 376392015
 ----------------------------------------------------------------------------------------                                                                                                                
 | Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                                
 ----------------------------------------------------------------------------------------                                                                                                                
-|   0 | SELECT STATEMENT     |                 |     5 |   185 |  2842   (2)| 00:00:01 |                                                                                                                
-|   1 |  HASH UNIQUE         |                 |     5 |   185 |  2842   (2)| 00:00:01 |                                                                                                                
-|*  2 |   HASH JOIN          |                 |   136K|  4944K|  2833   (1)| 00:00:01 |                                                                                                                
+|   0 | SELECT STATEMENT     |                 |     5 |   185 |  2876   (2)| 00:00:01 |                                                                                                                
+|   1 |  HASH UNIQUE         |                 |     5 |   185 |  2876   (2)| 00:00:01 |                                                                                                                
+|*  2 |   HASH JOIN          |                 |   136K|  4944K|  2867   (1)| 00:00:01 |                                                                                                                
 |*  3 |    TABLE ACCESS FULL | MARKETING       |     5 |    30 |     3   (0)| 00:00:01 |                                                                                                                
-|*  4 |    HASH JOIN SEMI    |                 | 30411 |   920K|  2829   (1)| 00:00:01 |                                                                                                                
+|*  4 |    HASH JOIN SEMI    |                 | 30411 |   920K|  2863   (1)| 00:00:01 |                                                                                                                
 |*  5 |     TABLE ACCESS FULL| CLIENT          | 30411 |   386K|   103   (1)| 00:00:01 |                                                                                                                
-|*  6 |     TABLE ACCESS FULL| IMMATRICULATION |   153K|  2698K|  2725   (1)| 00:00:01 |                                                                                                                
+|*  6 |     TABLE ACCESS FULL| IMMATRICULATION |   153K|  2698K|  2759   (1)| 00:00:01 |                                                                                                                
 ----------------------------------------------------------------------------------------                                                                                                                
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -530,7 +551,7 @@ Statistiques
 ----------------------------------------------------------                                                                                                                                              
           0  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10055  consistent gets                                                                                                                                                                            
+      10183  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         639  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -558,15 +579,15 @@ Plan hash value: 720261464
 ------------------------------------------------------------------------------------------                                                                                                              
 | Id  | Operation              | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
-|   0 | SELECT STATEMENT       |                 |     3 |   153 |  2839   (2)| 00:00:01 |                                                                                                              
-|   1 |  HASH UNIQUE           |                 |     3 |   153 |  2839   (2)| 00:00:01 |                                                                                                              
-|*  2 |   HASH JOIN            |                 |  3277 |   163K|  2838   (2)| 00:00:01 |                                                                                                              
+|   0 | SELECT STATEMENT       |                 |     3 |   153 |  2873   (2)| 00:00:01 |                                                                                                              
+|   1 |  HASH UNIQUE           |                 |     3 |   153 |  2873   (2)| 00:00:01 |                                                                                                              
+|*  2 |   HASH JOIN            |                 |  3277 |   163K|  2872   (2)| 00:00:01 |                                                                                                              
 |   3 |    VIEW                | VW_DTP_AE567E71 |     3 |    51 |     4  (25)| 00:00:01 |                                                                                                              
 |   4 |     HASH UNIQUE        |                 |     3 |    51 |     4  (25)| 00:00:01 |                                                                                                              
 |*  5 |      TABLE ACCESS FULL | CATALOGUE       |    10 |   170 |     3   (0)| 00:00:01 |                                                                                                              
-|*  6 |    HASH JOIN RIGHT SEMI|                 | 30330 |  1007K|  2834   (2)| 00:00:01 |                                                                                                              
+|*  6 |    HASH JOIN RIGHT SEMI|                 | 30330 |  1007K|  2868   (2)| 00:00:01 |                                                                                                              
 |*  7 |     TABLE ACCESS FULL  | CLIENT          | 30411 |   386K|   103   (1)| 00:00:01 |                                                                                                              
-|   8 |     TABLE ACCESS FULL  | IMMATRICULATION |  1047K|    20M|  2722   (1)| 00:00:01 |                                                                                                              
+|   8 |     TABLE ACCESS FULL  | IMMATRICULATION |  1047K|    20M|  2756   (1)| 00:00:01 |                                                                                                              
 ------------------------------------------------------------------------------------------                                                                                                              
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -582,7 +603,7 @@ Statistiques
 ----------------------------------------------------------                                                                                                                                              
           4  recursive calls                                                                                                                                                                            
           0  db block gets                                                                                                                                                                              
-      10055  consistent gets                                                                                                                                                                            
+      10183  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
           0  redo size                                                                                                                                                                                  
         649  bytes sent via SQL*Net to client                                                                                                                                                           
@@ -612,13 +633,13 @@ Plan hash value: 3421959063
 -----------------------------------------------------------------------------------------                                                                                                               
 | Id  | Operation             | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
-|   0 | SELECT STATEMENT      |                 |    67 |  3082 |  2839   (2)| 00:00:01 |                                                                                                               
-|   1 |  HASH UNIQUE          |                 |    67 |  3082 |  2839   (2)| 00:00:01 |                                                                                                               
-|*  2 |   HASH JOIN RIGHT SEMI|                 | 43596 |  1958K|  2836   (2)| 00:00:01 |                                                                                                               
+|   0 | SELECT STATEMENT      |                 |    67 |  3082 |  2873   (2)| 00:00:01 |                                                                                                               
+|   1 |  HASH UNIQUE          |                 |    67 |  3082 |  2873   (2)| 00:00:01 |                                                                                                               
+|*  2 |   HASH JOIN RIGHT SEMI|                 | 43596 |  1958K|  2870   (2)| 00:00:01 |                                                                                                               
 |*  3 |    TABLE ACCESS FULL  | CATALOGUE       |    53 |   742 |     3   (0)| 00:00:01 |                                                                                                               
-|*  4 |    HASH JOIN          |                 | 43596 |  1362K|  2832   (1)| 00:00:01 |                                                                                                               
+|*  4 |    HASH JOIN          |                 | 43596 |  1362K|  2866   (1)| 00:00:01 |                                                                                                               
 |   5 |     TABLE ACCESS FULL | CLIENT          | 43596 |   596K|   103   (1)| 00:00:01 |                                                                                                               
-|   6 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2721   (1)| 00:00:01 |                                                                                                               
+|   6 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2755   (1)| 00:00:01 |                                                                                                               
 -----------------------------------------------------------------------------------------                                                                                                               
                                                                                                                                                                                                         
 Predicate Information (identified by operation id):                                                                                                                                                     
@@ -635,11 +656,11 @@ Note
 
 Statistiques
 ----------------------------------------------------------                                                                                                                                              
-         87  recursive calls                                                                                                                                                                            
-          5  db block gets                                                                                                                                                                              
-      10078  consistent gets                                                                                                                                                                            
+          0  recursive calls                                                                                                                                                                            
+          0  db block gets                                                                                                                                                                              
+      10183  consistent gets                                                                                                                                                                            
           0  physical reads                                                                                                                                                                             
-        880  redo size                                                                                                                                                                                  
+          0  redo size                                                                                                                                                                                  
        1703  bytes sent via SQL*Net to client                                                                                                                                                           
         616  bytes received via SQL*Net from client                                                                                                                                                     
           6  SQL*Net roundtrips to/from client                                                                                                                                                          
@@ -648,383 +669,17 @@ Statistiques
          68  rows processed                                                                                                                                                                             
 
 SQL> 
-SQL> -- SÃ©lectionner la puissance et la marque des vÃ©hicules de plus de 150CV vendus, triÃ©s par l'Ã¢ge dÃ©croissant de leur acheteur
-SQL> SELECT DISTINCT immatriculation.puissance, immatriculation.marque
-  2  FROM immatriculation
-  3  JOIN catalogue
-  4  ON immatriculation.marque = catalogue.marque
-  5  JOIN client
-  6  ON immatriculation.immatriculation = client.immatriculation
-  7  WHERE immatriculation.puissance > 150
-  8  ORDER BY client.age DESC;
-ORDER BY client.age DESC
-         *
-ERREUR à la ligne 8 :
-ORA-01791: cette expression n'a pas été SELECTionnée 
-
-
 SQL> 
+SQL> set autotrace off
 SQL> 
-SQL> -- Voir la marque des voitures avec une puissante >150
-SQL> SELECT DISTINCT immatriculation.puissance, immatriculation.marque
-  2  FROM immatriculation
-  3  JOIN catalogue
-  4  ON immatriculation.marque = catalogue.marque
-  5  JOIN client
-  6  ON immatriculation.immatriculation = client.immatriculation
-  7  WHERE immatriculation.puissance > 150
-  8  ORDER BY immatriculation.puissance  DESC;
-
-8 lignes sélectionnées.
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 2029005090                                                                                                                                                                             
-                                                                                                                                                                                                        
-------------------------------------------------------------------------------------------                                                                                                              
-| Id  | Operation              | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                              
-------------------------------------------------------------------------------------------                                                                                                              
-|   0 | SELECT STATEMENT       |                 |   229 |  9389 |  3308   (2)| 00:00:01 |                                                                                                              
-|   1 |  SORT UNIQUE           |                 |   229 |  9389 |  3305   (2)| 00:00:01 |                                                                                                              
-|*  2 |   HASH JOIN RIGHT SEMI |                 | 43356 |  1735K|  2841   (2)| 00:00:01 |                                                                                                              
-|   3 |    TABLE ACCESS FULL   | CATALOGUE       |   265 |  2120 |     3   (0)| 00:00:01 |                                                                                                              
-|*  4 |    HASH JOIN RIGHT SEMI|                 | 43356 |  1397K|  2838   (2)| 00:00:01 |                                                                                                              
-|   5 |     TABLE ACCESS FULL  | CLIENT          | 43596 |   468K|   103   (1)| 00:00:01 |                                                                                                              
-|*  6 |     TABLE ACCESS FULL  | IMMATRICULATION |   827K|    17M|  2728   (1)| 00:00:01 |                                                                                                              
-------------------------------------------------------------------------------------------                                                                                                              
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("IMMATRICULATION"."MARQUE"="CATALOGUE"."MARQUE")                                                                                                                                          
-   4 - access("IMMATRICULATION"."IMMATRICULATION"="CLIENT"."IMMATRICULATION")                                                                                                                           
-   6 - filter("IMMATRICULATION"."PUISSANCE">150)                                                                                                                                                        
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-         68  recursive calls                                                                                                                                                                            
-         10  db block gets                                                                                                                                                                              
-      10074  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-       1776  redo size                                                                                                                                                                                  
-        801  bytes sent via SQL*Net to client                                                                                                                                                           
-        667  bytes received via SQL*Net from client                                                                                                                                                     
-          2  SQL*Net roundtrips to/from client                                                                                                                                                          
-          1  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-          8  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> 
-SQL> -- REQUETES PLUS DE 3 TABLES
-SQL> 
-SQL> --Selectionner l'age de tous les conducteurs de Dacia.
-SQL> SELECT DISTINCT marketing.age
-  2  FROM marketing
-  3  JOIN client
-  4  ON client.sexe = marketing.sexe
-  5  JOIN immatriculation
-  6  ON client.immatriculation=immatriculation.immatriculation
-  7  JOIN catalogue
-  8  ON catalogue.puissance=immatriculation.puissance
-  9  WHERE immatriculation.marque='Dacia'
- 10  ORDER BY marketing.age DESC;
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 2924402970                                                                                                                                                                             
-                                                                                                                                                                                                        
--------------------------------------------------------------------------------------------                                                                                                             
-| Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |     8 |   352 |  3230   (1)| 00:00:01 |                                                                                                             
-|   1 |  SORT UNIQUE            |                 |     8 |   352 |  3227   (1)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 | 34616 |  1487K|  2835   (1)| 00:00:01 |                                                                                                             
-|   3 |    TABLE ACCESS FULL    | MARKETING       |     9 |    45 |     3   (0)| 00:00:01 |                                                                                                             
-|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2831   (1)| 00:00:01 |                                                                                                             
-|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2728   (1)| 00:00:01 |                                                                                                             
-|   6 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  1060 |     3   (0)| 00:00:01 |                                                                                                             
-|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2725   (1)| 00:00:01 |                                                                                                             
-|   8 |     TABLE ACCESS FULL   | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("CLIENT"."SEXE"="MARKETING"."SEXE")                                                                                                                                                       
-   4 - access("CLIENT"."IMMATRICULATION"="IMMATRICULATION"."IMMATRICULATION")                                                                                                                           
-   5 - access("CATALOGUE"."PUISSANCE"="IMMATRICULATION"."PUISSANCE")                                                                                                                                    
-   7 - filter("IMMATRICULATION"."MARQUE"='Dacia')                                                                                                                                                       
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-        137  recursive calls                                                                                                                                                                            
-          5  db block gets                                                                                                                                                                              
-      10096  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-       1004  redo size                                                                                                                                                                                  
-        633  bytes sent via SQL*Net to client                                                                                                                                                           
-        666  bytes received via SQL*Net from client                                                                                                                                                     
-          2  SQL*Net roundtrips to/from client                                                                                                                                                          
-          1  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-          5  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> --Couleur de la voiture de tous les clients de la table marketing qui ont moins de 2 enfants.
-SQL> SELECT DISTINCT catalogue.couleur
-  2  FROM catalogue
-  3  JOIN immatriculation
-  4  ON catalogue.puissance=immatriculation.puissance
-  5  JOIN client
-  6  ON client.immatriculation=immatriculation.immatriculation
-  7  JOIN marketing
-  8  ON client.sexe = marketing.sexe
-  9  WHERE marketing.nbEnfantsAcharge<2;
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 1855452044                                                                                                                                                                             
-                                                                                                                                                                                                        
--------------------------------------------------------------------------------------------                                                                                                             
-| Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |     5 |   215 |  2854   (2)| 00:00:01 |                                                                                                             
-|   1 |  HASH UNIQUE            |                 |     5 |   215 |  2854   (2)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 |   155K|  6519K|  2844   (2)| 00:00:01 |                                                                                                             
-|   3 |    VIEW                 | VW_DTP_5F6F5A76 |    82 |   820 |     4  (25)| 00:00:01 |                                                                                                             
-|   4 |     HASH UNIQUE         |                 |    82 |   820 |     4  (25)| 00:00:01 |                                                                                                             
-|*  5 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  2650 |     3   (0)| 00:00:01 |                                                                                                             
-|*  6 |    HASH JOIN            |                 | 43549 |  1403K|  2839   (2)| 00:00:01 |                                                                                                             
-|*  7 |     HASH JOIN RIGHT SEMI|                 | 43549 |   765K|   107   (2)| 00:00:01 |                                                                                                             
-|*  8 |      TABLE ACCESS FULL  | MARKETING       |     5 |    25 |     3   (0)| 00:00:01 |                                                                                                             
-|   9 |      TABLE ACCESS FULL  | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
-|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|  2724   (1)| 00:00:01 |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("ITEM_1"="IMMATRICULATION"."PUISSANCE")                                                                                                                                                   
-   5 - filter("CATALOGUE"."PUISSANCE">=55 AND "CATALOGUE"."PUISSANCE"<=507)                                                                                                                             
-   6 - access("CLIENT"."IMMATRICULATION"="IMMATRICULATION"."IMMATRICULATION")                                                                                                                           
-   7 - access("CLIENT"."SEXE"="MARKETING"."SEXE")                                                                                                                                                       
-   8 - filter("MARKETING"."NBENFANTSACHARGE"<2)                                                                                                                                                         
-                                                                                                                                                                                                        
-Note                                                                                                                                                                                                    
------                                                                                                                                                                                                   
-   - this is an adaptive plan                                                                                                                                                                           
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-        171  recursive calls                                                                                                                                                                            
-          5  db block gets                                                                                                                                                                              
-      10108  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-        880  redo size                                                                                                                                                                                  
-        649  bytes sent via SQL*Net to client                                                                                                                                                           
-        640  bytes received via SQL*Net from client                                                                                                                                                     
-          2  SQL*Net roundtrips to/from client                                                                                                                                                          
-          0  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-          5  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> 
-SQL> --Afficher l'id, le taux et la situation familiale des clients qui possï¿½dent une Dacia.
-SQL> SELECT DISTINCT  marketing.clientMarketingId, marketing.taux, marketing.situationFamiliale
-  2  FROM marketing
-  3  JOIN client
-  4  ON client.sexe = marketing.sexe
-  5  JOIN immatriculation
-  6  ON client.immatriculation=immatriculation.immatriculation
-  7  JOIN catalogue
-  8  ON catalogue.puissance=immatriculation.puissance
-  9  WHERE immatriculation.marque='Dacia'
- 10  ORDER BY marketing.clientMarketingId DESC;
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 2924402970                                                                                                                                                                             
-                                                                                                                                                                                                        
--------------------------------------------------------------------------------------------                                                                                                             
-| Id  | Operation               | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-|   0 | SELECT STATEMENT        |                 |    81 |  4941 |  3352   (1)| 00:00:01 |                                                                                                             
-|   1 |  SORT UNIQUE            |                 |    81 |  4941 |  3349   (1)| 00:00:01 |                                                                                                             
-|*  2 |   HASH JOIN             |                 | 34616 |  2062K|  2835   (1)| 00:00:01 |                                                                                                             
-|   3 |    TABLE ACCESS FULL    | MARKETING       |     9 |   198 |     3   (0)| 00:00:01 |                                                                                                             
-|*  4 |    HASH JOIN            |                 |  7376 |   280K|  2831   (1)| 00:00:01 |                                                                                                             
-|*  5 |     HASH JOIN RIGHT SEMI|                 |  7335 |   186K|  2728   (1)| 00:00:01 |                                                                                                             
-|   6 |      TABLE ACCESS FULL  | CATALOGUE       |   265 |  1060 |     3   (0)| 00:00:01 |                                                                                                             
-|*  7 |      TABLE ACCESS FULL  | IMMATRICULATION |  7335 |   157K|  2725   (1)| 00:00:01 |                                                                                                             
-|   8 |     TABLE ACCESS FULL   | CLIENT          | 43596 |   553K|   103   (1)| 00:00:01 |                                                                                                             
--------------------------------------------------------------------------------------------                                                                                                             
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("CLIENT"."SEXE"="MARKETING"."SEXE")                                                                                                                                                       
-   4 - access("CLIENT"."IMMATRICULATION"="IMMATRICULATION"."IMMATRICULATION")                                                                                                                           
-   5 - access("CATALOGUE"."PUISSANCE"="IMMATRICULATION"."PUISSANCE")                                                                                                                                    
-   7 - filter("IMMATRICULATION"."MARQUE"='Dacia')                                                                                                                                                       
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-        139  recursive calls                                                                                                                                                                            
-         10  db block gets                                                                                                                                                                              
-      10098  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-       1788  redo size                                                                                                                                                                                  
-        879  bytes sent via SQL*Net to client                                                                                                                                                           
-        741  bytes received via SQL*Net from client                                                                                                                                                     
-          2  SQL*Net roundtrips to/from client                                                                                                                                                          
-          1  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-          5  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> -- Selectionner la marque de voiture que prend les clients qui ont comme situation familiale "En Couple".
-SQL> SELECT DISTINCT immatriculation.marque
-  2  FROM immatriculation
-  3  JOIN catalogue
-  4  ON immatriculation.marque = catalogue.marque
-  5  JOIN client
-  6  ON immatriculation.immatriculation = client.immatriculation
-  7  JOIN marketing
-  8  ON client.age = marketing.age
-  9  WHERE marketing.situationFamiliale = 'En Couple';
-
-13 lignes sélectionnées.
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 742574618                                                                                                                                                                              
-                                                                                                                                                                                                        
------------------------------------------------------------------------------------------                                                                                                               
-| Id  | Operation             | Name            | Rows  | Bytes | Cost (%CPU)| Time     |                                                                                                               
------------------------------------------------------------------------------------------                                                                                                               
-|   0 | SELECT STATEMENT      |                 |    19 |  1064 |  2839   (2)| 00:00:01 |                                                                                                               
-|   1 |  HASH UNIQUE          |                 |    19 |  1064 |  2839   (2)| 00:00:01 |                                                                                                               
-|*  2 |   HASH JOIN RIGHT SEMI|                 |  2925 |   159K|  2838   (1)| 00:00:01 |                                                                                                               
-|   3 |    TABLE ACCESS FULL  | CATALOGUE       |   265 |  2120 |     3   (0)| 00:00:01 |                                                                                                               
-|*  4 |    HASH JOIN          |                 |  2925 |   137K|  2835   (1)| 00:00:01 |                                                                                                               
-|*  5 |     HASH JOIN         |                 |  2925 | 87750 |   107   (2)| 00:00:01 |                                                                                                               
-|*  6 |      TABLE ACCESS FULL| MARKETING       |     5 |    80 |     3   (0)| 00:00:01 |                                                                                                               
-|   7 |      TABLE ACCESS FULL| CLIENT          | 43596 |   596K|   103   (1)| 00:00:01 |                                                                                                               
-|   8 |     TABLE ACCESS FULL | IMMATRICULATION |  1047K|    17M|  2721   (1)| 00:00:01 |                                                                                                               
------------------------------------------------------------------------------------------                                                                                                               
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("IMMATRICULATION"."MARQUE"="CATALOGUE"."MARQUE")                                                                                                                                          
-   4 - access("IMMATRICULATION"."IMMATRICULATION"="CLIENT"."IMMATRICULATION")                                                                                                                           
-   5 - access("CLIENT"."AGE"="MARKETING"."AGE")                                                                                                                                                         
-   6 - filter("MARKETING"."SITUATIONFAMILIALE"='En Couple')                                                                                                                                             
-                                                                                                                                                                                                        
-Note                                                                                                                                                                                                    
------                                                                                                                                                                                                   
-   - this is an adaptive plan                                                                                                                                                                           
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-         85  recursive calls                                                                                                                                                                            
-          0  db block gets                                                                                                                                                                              
-      10082  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-          0  redo size                                                                                                                                                                                  
-        746  bytes sent via SQL*Net to client                                                                                                                                                           
-        655  bytes received via SQL*Net from client                                                                                                                                                     
-          2  SQL*Net roundtrips to/from client                                                                                                                                                          
-          0  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-         13  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> --Afficher l'id du client, la marque et le prix du vehicule des clients de sexe fï¿½minin de la table marketing.
-SQL> SELECT DISTINCT client.clientId, catalogue.marque, catalogue.prix
-  2  FROM catalogue
-  3  JOIN immatriculation
-  4  ON catalogue.puissance=immatriculation.puissance
-  5  JOIN client
-  6  ON client.immatriculation=immatriculation.immatriculation
-  7  JOIN marketing
-  8  ON client.sexe = marketing.sexe
-  9  WHERE marketing.sexe='F';
-
-43385 lignes sélectionnées.
-
-
-Plan d'exécution
-----------------------------------------------------------                                                                                                                                              
-Plan hash value: 213396178                                                                                                                                                                              
-                                                                                                                                                                                                        
----------------------------------------------------------------------------------------------------                                                                                                     
-| Id  | Operation               | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |                                                                                                     
----------------------------------------------------------------------------------------------------                                                                                                     
-|   0 | SELECT STATEMENT        |                 |   134K|  6832K|       |  4583   (1)| 00:00:01 |                                                                                                     
-|   1 |  HASH UNIQUE            |                 |   134K|  6832K|  8488K|  4583   (1)| 00:00:01 |                                                                                                     
-|*  2 |   HASH JOIN             |                 |   134K|  6832K|       |  2843   (2)| 00:00:01 |                                                                                                     
-|   3 |    TABLE ACCESS FULL    | CATALOGUE       |   265 |  4505 |       |     3   (0)| 00:00:01 |                                                                                                     
-|*  4 |    HASH JOIN            |                 | 11678 |   399K|       |  2839   (2)| 00:00:01 |                                                                                                     
-|*  5 |     HASH JOIN           |                 | 11678 |   228K|       |   108   (3)| 00:00:01 |                                                                                                     
-|   6 |      VIEW               | VW_DTP_155B9617 |     1 |     2 |       |     4  (25)| 00:00:01 |                                                                                                     
-|   7 |       HASH UNIQUE       |                 |     1 |     2 |       |     4  (25)| 00:00:01 |                                                                                                     
-|*  8 |        TABLE ACCESS FULL| MARKETING       |     4 |     8 |       |     3   (0)| 00:00:01 |                                                                                                     
-|   9 |      TABLE ACCESS FULL  | CLIENT          | 43596 |   766K|       |   103   (1)| 00:00:01 |                                                                                                     
-|  10 |     TABLE ACCESS FULL   | IMMATRICULATION |  1047K|    14M|       |  2724   (1)| 00:00:01 |                                                                                                     
----------------------------------------------------------------------------------------------------                                                                                                     
-                                                                                                                                                                                                        
-Predicate Information (identified by operation id):                                                                                                                                                     
----------------------------------------------------                                                                                                                                                     
-                                                                                                                                                                                                        
-   2 - access("CATALOGUE"."PUISSANCE"="IMMATRICULATION"."PUISSANCE")                                                                                                                                    
-   4 - access("CLIENT"."IMMATRICULATION"="IMMATRICULATION"."IMMATRICULATION")                                                                                                                           
-   5 - access("CLIENT"."SEXE"="ITEM_1")                                                                                                                                                                 
-   8 - filter("MARKETING"."SEXE"='F')                                                                                                                                                                   
-                                                                                                                                                                                                        
-Note                                                                                                                                                                                                    
------                                                                                                                                                                                                   
-   - this is an adaptive plan                                                                                                                                                                           
-
-
-Statistiques
-----------------------------------------------------------                                                                                                                                              
-        173  recursive calls                                                                                                                                                                            
-         10  db block gets                                                                                                                                                                              
-      10110  consistent gets                                                                                                                                                                            
-          0  physical reads                                                                                                                                                                             
-       1708  redo size                                                                                                                                                                                  
-    1369265  bytes sent via SQL*Net to client                                                                                                                                                           
-      32474  bytes received via SQL*Net from client                                                                                                                                                     
-       2894  SQL*Net roundtrips to/from client                                                                                                                                                          
-          0  sorts (memory)                                                                                                                                                                             
-          0  sorts (disk)                                                                                                                                                                               
-      43385  rows processed                                                                                                                                                                             
-
-SQL> 
-SQL> 
-SQL>  set autotrace off
-SQL> 
-SQL> -- Connexion avec lau niveau CDB pour prendre un clichï¿½ AWR
+SQL> -- Connexion avec lau niveau CDB pour prendre un clich? AWR
 SQL> -- La gestion des statistiques se fait au niveau e ma CDB
 SQL> connect &MYCDBUSER@&DBALIASCDB/&MYCDBUSERPASS
 Connecté.
 SQL> 
 SQL> 
-SQL> -- Prendre un deuxiï¿½me clichï¿½ AWR pour dï¿½limiter
-SQL> -- la fin de l'espace de rï¿½cupï¿½ration des requï¿½tes.
+SQL> -- Prendre un deuxi?me clich? AWR pour d?limiter
+SQL> -- la fin de l'espace de r?cup?ration des requ?tes.
 SQL> variable snapid2 number;
 SQL> set serveroutput on
 SQL> 
@@ -1033,26 +688,27 @@ SQL> begin
   3  	     dbms_output.put_line('snap_id2='||:snapid2);
   4  end;
   5  /
-snap_id2=1187                                                                                                                                                                                           
+snap_id2=117                                                                                                                                                                                            
 
 Procédure PL/SQL terminée avec succès.
 
 SQL> 
-SQL> -- ReConnexion ï¿½ la  PDB pour utiliser STA
+SQL> -- ReConnexion ? la  PDB pour utiliser STA
 SQL> connect &MYPDBUSER@&DBALIASPDB/&MYPDBUSERPASS
 Connecté.
 SQL> 
-SQL> -- reporter le numï¿½ro de clichï¿½ rendu par le programme ici :
+SQL> 
+SQL> -- reporter le num?ro de clich? rendu par le programme ici :
 SQL> -- snap_id2= 154 ? snap_id2=744
 SQL> 
 SQL> -- Supprimer la tache
-SQL> -- Supprimer 1 tache PROJET_TUNING_TASK si elle existe dï¿½jï¿½
-SQL> execute DBMS_SQLTUNE.DROP_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER');
-BEGIN DBMS_SQLTUNE.DROP_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING'); END;
+SQL> -- Supprimer 1 tache TP_SQL_TUNING_TASK si elle existe d?j?
+SQL> execute DBMS_SQLTUNE.DROP_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER');
+BEGIN DBMS_SQLTUNE.DROP_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'); END;
 
 *
 ERREUR à la ligne 1 :
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 3062 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
@@ -1065,8 +721,8 @@ ORA-06512: à "SYS.DBMS_SQLTUNE", ligne 1289
 ORA-06512: à ligne 1 
 
 
-SQL> execute DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'&MYPDBUSER');
-BEGIN DBMS_SQLTUNE.DROP_SQLSET('projet_tuning_sql_set'||'PROJET_TUNING'); END;
+SQL> execute DBMS_SQLTUNE.DROP_SQLSET('tp_sql_tuning_set'||'&MYPDBUSER');
+BEGIN DBMS_SQLTUNE.DROP_SQLSET('tp_sql_tuning_set'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'); END;
 
 *
 ERREUR à la ligne 1 :
@@ -1076,9 +732,9 @@ ORA-06512: à "SYS.DBMS_SQLTUNE", ligne 7309
 ORA-06512: à ligne 1 
 
 
-SQL> -- Si vous avez dï¿½jï¿½ exï¿½cutï¿½ ce script, il se peut qu'un
-SQL> -- qu'un profile de requï¿½te ai dï¿½jï¿½ ï¿½tï¿½ crï¿½ï¿½. Dans ce cas:
-SQL> -- Rechercher puis supprimer le profie s'il existe dï¿½jï¿½
+SQL> -- Si vous avez d?j? ex?cut? ce script, il se peut qu'un
+SQL> -- qu'un profile de requ?te ai d?j? ?t? cr??. Dans ce cas:
+SQL> -- Rechercher puis supprimer le profie s'il existe d?j?
 SQL> ---
 SQL> set linesize 200
 SQL> col sql_text format A40
@@ -1086,18 +742,12 @@ SQL> select name
   2  from dba_sql_profiles
   3  order by name;
 
-NAME                                                                                                                                                                                                    
---------------------------------------------------------------------------------------------------------------------------------                                                                        
-SYS_SQLPROF_0177d8ca8c750000                                                                                                                                                                            
-SYS_SQLPROF_0177d8ccf5f10001                                                                                                                                                                            
-SYS_SQLPROF_0177d8cfc4a10002                                                                                                                                                                            
-SYS_SQLPROF_0177d8cfc4fe0003                                                                                                                                                                            
-SYS_SQLPROF_0177d8cfc5550004                                                                                                                                                                            
+aucune ligne sélectionnée
 
 SQL> 
-SQL> -- Supprimer le(s) profile(s) s'ils ont ï¿½tï¿½ trouvï¿½s avec la requï¿½te
-SQL> -- prï¿½cï¿½dente. NomProfile est le rï¿½sultat de la requï¿½te
-SQL> -- ci-dessus. Rï¿½pï¿½ter l'action si utile.
+SQL> -- Supprimer le(s) profile(s) s'ils ont ?t? trouv?s avec la requ?te
+SQL> -- pr?c?dente. NomProfile est le r?sultat de la requ?te
+SQL> -- ci-dessus. R?p?ter l'action si utile.
 SQL> execute DBMS_SQLTUNE.DROP_SQL_PROFILE('NomProfile');
 BEGIN DBMS_SQLTUNE.DROP_SQL_PROFILE('NomProfile'); END;
 
@@ -1111,14 +761,14 @@ ORA-06512: à ligne 1
 
 
 SQL> 
-SQL> -- 3. Gï¿½nï¿½rer les recommandations
-SQL> -- Exï¿½cuter le script ci-dessous pour optimiser automatiquement
-SQL> -- les requï¿½tes lancï¿½es entre snap_id1 et snap_id2.
-SQL> -- Le conseiller qui sera utilisï¿½ ici est SQL TUNNING ADVISOR.
+SQL> -- 3. G?n?rer les recommandations
+SQL> -- Ex?cuter le script ci-dessous pour optimiser automatiquement
+SQL> -- les requ?tes lanc?es entre snap_id1 et snap_id2.
+SQL> -- Le conseiller qui sera utilis? ici est SQL TUNNING ADVISOR.
 SQL> set serveroutput on
 SQL> DECLARE
   2  my_task_name VARCHAR2(30);
-  3  nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
+  3  nom_sqlset varchar2(50):='tp_sql_tuning_set'||'&MYPDBUSER';
   4  l_cursor  DBMS_SQLTUNE.sqlset_cursor;
   5  BEGIN
   6  DBMS_SQLTUNE.CREATE_SQLSET(
@@ -1126,10 +776,10 @@ SQL> DECLARE
   8  description => 'I/O intensive workload');
   9  
  10  -- Appel de la fonction DBMS_SQLTUNE.select_workload_repository
- 11  -- pour recolter les requï¿½tes ï¿½ rï¿½gler automatiquement entre
+ 11  -- pour recolter les requ?tes ? r?gler automatiquement entre
  12  -- snap_id1 et snap_id2.
- 13  -- remplacer snap_id1 et snap_id2 par les valeurs capturï¿½es
- 14  -- plus haut aprï¿½s les appels de:dbms_workload_repository.create_snapshot;.
+ 13  -- remplacer snap_id1 et snap_id2 par les valeurs captur?es
+ 14  -- plus haut apr?s les appels de:dbms_workload_repository.create_snapshot;.
  15  --1059 et 1174
  16    OPEN l_cursor FOR
  17  	 SELECT VALUE(p)
@@ -1148,100 +798,60 @@ SQL> DECLARE
  30  		     --    10)	 -- result_limit
  31  		       ) p;
  32  
- 33  -- charger les requï¿½tes recoltï¿½es entre snap_id1 et snap_id2
- 34  -- actuellement prï¿½sente dans l_cursor dans le sql tuning
- 35  -- set crï¿½ï¿½ prï¿½cï¿½demment.
+ 33  -- charger les requ?tes recolt?es entre snap_id1 et snap_id2
+ 34  -- actuellement pr?sente dans l_cursor dans le sql tuning
+ 35  -- set cr?? pr?c?demment.
  36    DBMS_SQLTUNE.load_sqlset (
  37  	 sqlset_name	 => nom_sqlset,
  38  	 populate_cursor => l_cursor);
  39  
- 40  -- crï¿½er une tï¿½che de tuning pour le sql tuning set
- 41  -- alimentï¿½ en requï¿½te dans l'action ci-dessus.
+ 40  -- cr?er une t?che de tuning pour le sql tuning set
+ 41  -- aliment? en requ?te dans l'action ci-dessus.
  42  my_task_name := DBMS_SQLTUNE.CREATE_TUNING_TASK(
  43  sqlset_name => nom_sqlset,
  44  basic_filter => 'parsing_schema_name =''&MYPDBUSER''', -- basic_filter
  45  scope => 'COMPREHENSIVE',
  46  time_limit => 60,
- 47  task_name => 'PROJET_TUNING_TASK'||'&MYPDBUSER',
+ 47  task_name => 'TP_SQL_TUNING_TASK'||'&MYPDBUSER',
  48  description => 'Task to tune a query on a specified bank queries'
  49  );
  50  
- 51  -- Exï¿½cuter le tï¿½che de tuning
- 52  -- le conseiller utilisï¿½ ici est STA.
- 53  DBMS_SQLTUNE.EXECUTE_TUNING_TASK( task_name => my_task_name );
- 54  
- 55  END;
- 56  /
-ancien   3 : nom_sqlset varchar2(50):='projet_tuning_sql_set'||'&MYPDBUSER';
-nouveau   3 : nom_sqlset varchar2(50):='projet_tuning_sql_set'||'PROJET_TUNING';
+ 51  -- Ex?cuter le t?che de tuning
+ 52  -- le conseiller utilis? ici est STA.
+ 53  
+ 54  --invocation du conseillÃ© grace Ã  la tache
+ 55  DBMS_SQLTUNE.EXECUTE_TUNING_TASK( task_name => my_task_name );
+ 56  
+ 57  END;
+ 58  /
+ancien   3 : nom_sqlset varchar2(50):='tp_sql_tuning_set'||'&MYPDBUSER';
+nouveau   3 : nom_sqlset varchar2(50):='tp_sql_tuning_set'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER';
 ancien  21 :                     'parsing_schema_name =''&MYPDBUSER''  and parsing_schema_name <> ''SYS''', -- basic_filter
-nouveau  21 :                     'parsing_schema_name =''PROJET_TUNING''  and parsing_schema_name <> ''SYS''', -- basic_filter
+nouveau  21 :                     'parsing_schema_name =''Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER''  and parsing_schema_name <> ''SYS''', -- basic_filter
 ancien  44 : basic_filter => 'parsing_schema_name =''&MYPDBUSER''', -- basic_filter
-nouveau  44 : basic_filter => 'parsing_schema_name =''PROJET_TUNING''', -- basic_filter
-ancien  47 : task_name => 'PROJET_TUNING_TASK'||'&MYPDBUSER',
-nouveau  47 : task_name => 'PROJET_TUNING_TASK'||'PROJET_TUNING',
+nouveau  44 : basic_filter => 'parsing_schema_name =''Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER''', -- basic_filter
+ancien  47 : task_name => 'TP_SQL_TUNING_TASK'||'&MYPDBUSER',
+nouveau  47 : task_name => 'TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER',
 DECLARE
 *
 ERREUR à la ligne 1 :
-ORA-13755: le nom de l'"ensemble de réglages SQL" n'est pas valide 
-ORA-06512: à "SYS.DBMS_SQLTUNE_UTIL1", ligne 437 
-ORA-06512: à "SYS.PRVT_SQLSET_INFRA", ligne 18 
-ORA-06512: à "SYS.DBMS_SQLTUNE", ligne 7269 
-ORA-06512: à ligne 6 
+ORA-06502: PL/SQL : erreur numérique ou erreur sur une valeur: tampon de chaîne de caractères trop petit 
+ORA-06512: à ligne 3 
 
 
 SQL> 
-SQL> -- profile des fonctions utilisï¿½es dans le programme ci-dessus.
-SQL> -- A ne pas exï¿½cuter. Voir le manuel Oracle Oracleï¿½ Database
-SQL> -- PL/SQL Packages and Types Reference pour la description
-SQL> -- dï¿½taillï¿½e.
-SQL> /*
-SQL> DBMS_SQLTUNE.SELECT_WORKLAOD_REPOSITORY (
-SQL> begin_snap IN NUMBER,
-SQL> end_snap IN NUMBER,
-SQL> basic_filter IN VARCHAR2 := NULL,
-SQL> object_filter IN VARCHAR2 := NULL,
-SQL> ranking_measure1 IN VARCHAR2 := NULL,
-SQL> ranking_measure2 IN VARCHAR2 := NULL,
-SQL> ranking_measure3 IN VARCHAR2 := NULL,
-SQL> result_percentage IN NUMBER := 1,
-SQL> result_limit IN NUMBER := NULL
-SQL> attribute_list IN VARCHAR2 := NULL)
-SQL> RETURN sys.sqlset PIPELINED;
 SQL> 
-SQL> 
-SQL> DBMS_SQLTUNE.CREATE_TUNING_TASK(
-SQL> sqlset_name IN VARCHAR2,
-SQL> basic_filter IN VARCHAR2 := NULL,
-SQL> object_filter IN VARCHAR2 := NULL,
-SQL> rank1 IN VARCHAR2 := NULL,
-SQL> rank2 IN VARCHAR2 := NULL,
-SQL> rank3 IN VARCHAR2 := NULL,
-SQL> result_percentage IN NUMBER := NULL,
-SQL> result_limit IN NUMBER := NULL,
-SQL> scope IN VARCHAR2 := SCOPE_COMPREHENSIVE,
-SQL> time_limit IN NUMBER := TIME_LIMIT_DEFAULT,
-SQL> task_name IN VARCHAR2 := NULL,
-SQL> description IN VARCHAR2 := NULL
-SQL> plan_filter IN VARCHAR2 := 'MAX_ELAPSED_TIME',
-SQL> sqlset_owner IN VARCHAR2 := NULL)
-SQL> RETURN VARCHAR2;
-SQL> 
-SQL> */
-SQL> 
-SQL> 
-SQL> 
-SQL> -- 4. Afficher les rï¿½sultats d'analyses
+SQL> -- 4. Afficher les r?sultats d'analyses
 SQL> 
 SQL> -- Consultation des informations sur la tache
 SQL> 
-SQL> -- Vï¿½rification de la tï¿½che crï¿½ï¿½e
+SQL> -- V?rification de la t?che cr??e
 SQL> col task_name format a20
 SQL> SELECT task_name
   2  FROM DBA_ADVISOR_LOG
-  3  WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER';
-ancien   3 : WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   3 : WHERE owner ='PROJET_TUNING' and task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+  3  WHERE owner ='&MYPDBUSER' and task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER';
+ancien   3 : WHERE owner ='&MYPDBUSER' and task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   3 : WHERE owner ='Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER' and task_name='TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
@@ -1249,13 +859,13 @@ SQL>
 SQL> --?
 SQL> 
 SQL> -- La vue Advisor_tasks contient des informations
-SQL> -- sur les tï¿½ches
+SQL> -- sur les t?ches
 SQL> 
 SQL> SELECT TASK_NAME, ADVISOR_NAME, status , RECOMMENDATION_COUNT, SOURCE
   2  FROM USER_ADVISOR_TASKS
-  3  WHERE task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER';
-ancien   3 : WHERE task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   3 : WHERE task_name = 'PROJET_TUNING_TASK'||'PROJET_TUNING'
+  3  WHERE task_name = 'TP_SQL_TUNING_TASK'||'&MYPDBUSER';
+ancien   3 : WHERE task_name = 'TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   3 : WHERE task_name = 'TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
@@ -1263,7 +873,7 @@ SQL>
 SQL> --?
 SQL> 
 SQL> -- La vue V$ADVISOR_PROGRESS contient des informations
-SQL> -- sur la progression des tï¿½ches
+SQL> -- sur la progression des t?ches
 SQL> 
 SQL> -- Exemple de consultation de la progression
 SQL> 
@@ -1272,11 +882,11 @@ SQL> SELECT sofar, totalwork FROM
   3  DBA_ADVISOR_LOG da
   4  WHERE vp.username = '&MYPDBUSER'
   5  AND vp.task_id=da.task_id
-  6  AND da.task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER';
+  6  AND da.task_name = 'TP_SQL_TUNING_TASK'||'&MYPDBUSER';
 ancien   4 : WHERE vp.username = '&MYPDBUSER'
-nouveau   4 : WHERE vp.username = 'PROJET_TUNING'
-ancien   6 : AND da.task_name = 'PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   6 : AND da.task_name = 'PROJET_TUNING_TASK'||'PROJET_TUNING'
+nouveau   4 : WHERE vp.username = 'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
+ancien   6 : AND da.task_name = 'TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   6 : AND da.task_name = 'TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
@@ -1284,18 +894,18 @@ SQL>
 SQL> --?
 SQL> 
 SQL> --La fonction DBMS_SQLTUNE.REPORT_TUNING_TASK permet d'afficher
-SQL> --le rï¿½sultat d'une analyse
+SQL> --le r?sultat d'une analyse
 SQL> 
 SQL> 
 SQL> SET LONG 4000
 SQL> SET LONGCHUNKSIZE 4000
 SQL> SET LINESIZE 200
-SQL> SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'PROJET_TUNING_TASK'||'&MYPDBUSER')
+SQL> SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'TP_SQL_TUNING_TASK'||'&MYPDBUSER')
   2  FROM DUAL;
-ancien   1 : SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'PROJET_TUNING_TASK'||'&MYPDBUSER')
-nouveau   1 : SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'PROJET_TUNING_TASK'||'PROJET_TUNING')
+ancien   1 : SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'TP_SQL_TUNING_TASK'||'&MYPDBUSER')
+nouveau   1 : SELECT DBMS_SQLTUNE.REPORT_TUNING_TASK( 'TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER')
 ERROR:
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1312,13 +922,13 @@ SQL>
 SQL> 
 SQL> --?
 SQL> 
-SQL> -- rï¿½sultat du report il est conseillï¿½e de restructurer la
-SQL> -- requï¿½te.
+SQL> -- r?sultat du report il est conseill?e de restructurer la
+SQL> -- requ?te.
 SQL> 
 SQL> --?
 SQL> 
 SQL> -- la ligne ci-dessous dans le rapport indique qu'il y'a une
-SQL> -- restructuration de la requete ï¿½ faire.
+SQL> -- restructuration de la requete ? faire.
 SQL> -- Number of SQL Restructure Findings: 1
 SQL> 
 SQL> --
@@ -1341,15 +951,15 @@ SQL> select distinct dar.task_name,  vs.sql_id, vs.SQL_TEXT, dar.type reco_type 
   4  DBA_ADVISOR_RECOMMENDATIONS dar
   5  where vs.sql_id=da.sql_id
   6  and da.task_id=dar.task_id
-  7  and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
+  7  and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
   8  and sql_text not like '%EXPLAIN%'
   9  and sql_text not like '%opt_param%'
  10  and sql_text not like '%insert%'
  11  and sql_text not like '%V_$SESSTAT%'
  12  and sql_text not like '%PLAN_TABLE%'
  13  order by dar.task_name,  vs.sql_id, reco_type;
-ancien   7 : and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   7 : and dar.task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+ancien   7 : and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   7 : and dar.task_name='TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
@@ -1358,9 +968,9 @@ SQL>
 SQL> --?
 SQL> 
 SQL> --
-SQL> -- Consultation la description du problï¿½me trouvï¿½ par STA
+SQL> -- Consultation la description du probl?me trouv? par STA
 SQL> -- Dans la vue DBA_ADVISOR_FINDINGS
-SQL> -- Rï¿½sultation de la recherche
+SQL> -- R?sultation de la recherche
 SQL> ---
 SQL> 
 SQL> col task_name format A10
@@ -1378,26 +988,24 @@ SQL> select distinct dar.task_name,  da.object_id, vs.sql_id, vs.SQL_TEXT, MESSA
   5  where vs.sql_id=da.sql_id
   6  and da.task_id=dar.task_id
   7  and da.object_id=dar.object_id
-  8  and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
+  8  and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
   9  and sql_text not like '%EXPLAIN%'
  10  and sql_text not like '%opt_param%'
  11  and sql_text not like '%insert%'
  12  and sql_text not like '%V_$SESSTAT%'
  13  and sql_text not like '%PLAN_TABLE%'
  14  order by dar.task_name,  da.object_id, vs.sql_id;
-ancien   8 : and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   8 : and dar.task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+ancien   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
-SQL> 
-SQL> 
 SQL> 
 SQL> --?
 SQL> 
 SQL> ---
 SQL> --- recommandation
-SQL> --- consulter les actions (diagnostic) recommandï¿½es par STA
+SQL> --- consulter les actions (diagnostic) recommand?es par STA
 SQL> --- dans la vue DBA_ADVISOR_ACTIONS
 SQL> ---
 SQL> -- voir
@@ -1418,20 +1026,21 @@ SQL> select distinct dar.task_name,  da.object_id, vs.sql_id, vs.SQL_TEXT, messa
   5  where vs.sql_id=da.sql_id
   6  and da.task_id=dar.task_id
   7  and da.object_id=dar.object_id
-  8  and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
+  8  and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
   9  and sql_text not like '%EXPLAIN%'
  10  and sql_text not like '%opt_param%'
  11  and sql_text not like '%insert%'
  12  and sql_text not like '%V_$SESSTAT%'
  13  and sql_text not like '%PLAN_TABLE%'
  14  order by dar.task_name, da.object_id, vs.sql_id;
-ancien   8 : and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   8 : and dar.task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+ancien   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
 SQL> 
 SQL> --?
+SQL> 
 SQL> 
 SQL> -- Liste des actions possibles
 SQL> set linesize 200
@@ -1449,70 +1058,21 @@ SQL> select
   6  ATTR4,
   7  ATTR5
   8  from DBA_ADVISOR_ACTIONS
-  9  where attr1!='SYS'
- 10  and attr1 not like '%SYSMAN%'
- 11  order by object_id;
+  9  where attr1 like '&MYPDBUSER'||'%'
+ 10  order by object_id;
+ancien   9 : where attr1 like '&MYPDBUSER'||'%'
+nouveau   9 : where attr1 like 'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'||'%'
 
- OBJECT_ID ATTR1                          ATTR2      ATTR3                ATTR4      ATTR5                                                                                                              
----------- ------------------------------ ---------- -------------------- ---------- ------------------------------                                                                                     
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("DATE_OPERATION")                                                                                                 
-           0000"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         0 "ORS2"."PK_COMPTE_COMPTEID"               "ORS2"."COMPTE"      BTREE      ("COMPTEID")                                                                                                       
-         0 "ORS2"."COMPTE_IDX$$_001D0004"            "ORS2"."COMPTE"      BTREE      ("SOLDE")                                                                                                          
-         0 "ORS2"."COMPTE_IDX$$_001D0004"            "ORS2"."COMPTE"      BTREE      ("SOLDE")                                                                                                          
-         0 "ORS2"."CLIENT_IDX$$_001D0001"            "ORS2"."CLIENT"      BTREE      ("NOM")                                                                                                            
-         0 "ORS2"."COMPTE_IDX$$_001D0002"            "ORS2"."COMPTE"      BTREE      ("CLIENTID")                                                                                                       
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("COMPTEID")                                                                                                       
-           0003"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("COMPTEID")                                                                                                       
-           0003"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("COMPTEID")                                                                                                       
-           0003"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         0 "ORS2"."PK_CLIENT_CLIENTID"               "ORS2"."CLIENT"      BTREE      ("CLIENTID")                                                                                                       
-         0 "ORS2"."PK_CLIENT_CLIENTID"               "ORS2"."CLIENT"      BTREE      ("CLIENTID")                                                                                                       
-         0 "ORS2"."PK_CLIENT_CLIENTID"               "ORS2"."CLIENT"      BTREE      ("CLIENTID")                                                                                                       
-         0 "ORS2"."PK_CLIENT_CLIENTID"               "ORS2"."CLIENT"      BTREE      ("CLIENTID")                                                                                                       
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("DATE_OPERATION")                                                                                                 
-           0000"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         0 "ORS2"."TRANSACTION_IDX$$_001D            "ORS2"."TRANSACTION" BTREE      ("DATE_OPERATION")                                                                                                 
-           0000"                                                                                                                                                                                        
-                                                                                                                                                                                                        
-         1 alter table "ORS2"."ALLOBJECTS alter tabl alter table "ORS2"."                                                                                                                               
-           " shrink space                 e "ORS2"." ALLOBJECTS" enable r                                                                                                                               
-                                          ALLOBJECTS ow movement                                                                                                                                        
-                                          " shrink s                                                                                                                                                    
-                                          pace COMPA                                                                                                                                                    
-                                          CT                                                                                                                                                            
-                                                                                                                                                                                                        
-        14 BANK_SQL_TUNING_TASKORS2       14         SQL PROFILE                                                                                                                                        
-        18 BANK_SQL_TUNING_TASKORS2       18         SQL PROFILE                                                                                                                                        
-        19 BANK_SQL_TUNING_TASKORS2       19         SQL PROFILE                                                                                                                                        
-        23 BANK_SQL_TUNING_TASKORS2       23         SQL PROFILE                                                                                                                                        
-        26 alter table "ORS2"."ALLOBJECTS alter tabl alter table "ORS2"."                                                                                                                               
-           2" shrink space                e "ORS2"." ALLOBJECTS2" enable                                                                                                                                
-                                          ALLOBJECTS row movement                                                                                                                                       
-                                          2" shrink                                                                                                                                                     
-                                          space COMP                                                                                                                                                    
-                                          ACT                                                                                                                                                           
-                                                                                                                                                                                                        
-
-21 lignes sélectionnées.
+aucune ligne sélectionnée
 
 SQL> 
 SQL> 
 SQL> ---
 SQL> --- Raisonnement
-SQL> --- Raisonnement avec des explications complï¿½mentaires sur
-SQL> --- le problï¿½me.
-SQL> --- Consultï¿½ pour cela la vue DBA_ADVISOR_RATIONALE
+SQL> --- Raisonnement avec des explications compl?mentaires sur
+SQL> --- le probl?me.
+SQL> --- Consult? pour cela la vue DBA_ADVISOR_RATIONALE
 SQL> ---
-SQL> 
-SQL> 
 SQL> 
 SQL> 
 SQL> 
@@ -1532,37 +1092,33 @@ SQL> select distinct dar.task_name,  da.object_id, vs.sql_id, vs.SQL_TEXT, messa
   5  where vs.sql_id=da.sql_id
   6  and da.task_id=dar.task_id
   7  and da.object_id=dar.object_id
-  8  and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
+  8  and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
   9  and sql_text not like '%EXPLAIN%'
  10  and sql_text not like '%opt_param%'
  11  and sql_text not like '%insert%'
  12  and sql_text not like '%V_$SESSTAT%'
  13  and sql_text not like '%PLAN_TABLE%'
  14  order by dar.task_name,  da.object_id, vs.sql_id;
-ancien   8 : and dar.task_name='PROJET_TUNING_TASK'||'&MYPDBUSER'
-nouveau   8 : and dar.task_name='PROJET_TUNING_TASK'||'PROJET_TUNING'
+ancien   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'&MYPDBUSER'
+nouveau   8 : and dar.task_name='TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'
 
 aucune ligne sélectionnée
 
 SQL> --?
 SQL> 
 SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
 SQL> --
-SQL> -- Rechercher s'il y'a des scripts gï¿½nï¿½rï¿½s
-SQL> -- Identifier s'il ya un profile pour cette requï¿½te choisie plus
+SQL> -- Rechercher s'il y'a des scripts g?n?r?s
+SQL> -- Identifier s'il ya un profile pour cette requ?te choisie plus
 SQL> -- haut.
 SQL> -- afficher le script complet ou partiel
 SQL> col myscript format a1000
 SQL> set long 4000
-SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual;
-ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual
-nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING', 'ALL') MYSCRIPT from dual
+SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual;
+ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL') MYSCRIPT from dual
+nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'ALL') MYSCRIPT from dual
 ERROR:
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1576,11 +1132,11 @@ ORA-06512: à ligne 1
 aucune ligne sélectionnée
 
 SQL> 
-SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual;
-ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual
-nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING', 'INDEXES') MYSCRIPT from dual
+SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual;
+ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'INDEXES') MYSCRIPT from dual
+nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'INDEXES') MYSCRIPT from dual
 ERROR:
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1593,11 +1149,11 @@ ORA-06512: à ligne 1
 
 aucune ligne sélectionnée
 
-SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual;
-ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual
-nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING', 'PROFILES') MYSCRIPT from dual
+SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual;
+ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'PROFILES') MYSCRIPT from dual
+nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'PROFILES') MYSCRIPT from dual
 ERROR:
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1610,11 +1166,11 @@ ORA-06512: à ligne 1
 
 aucune ligne sélectionnée
 
-SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual;
-ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual
-nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING', 'STATISTICS') MYSCRIPT from dual
+SQL> select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual;
+ancien   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'STATISTICS') MYSCRIPT from dual
+nouveau   1 : select dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'STATISTICS') MYSCRIPT from dual
 ERROR:
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1628,18 +1184,18 @@ ORA-06512: à ligne 1
 aucune ligne sélectionnée
 
 SQL> 
-SQL> -- une autre faï¿½on d'afficher le script complet
+SQL> -- une autre fa?on d'afficher le script complet
 SQL> set serveroutput on
 SQL> begin
-  2  dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
+  2  dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
   3  end;
   4  /
-ancien   2 : dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
-nouveau   2 : dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING', 'ALL'));
+ancien   2 : dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER', 'ALL'));
+nouveau   2 : dbms_output.put_line(dbms_sqltune.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'ALL'));
 begin
 *
 ERREUR à la ligne 1 :
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1651,31 +1207,31 @@ ORA-06512: à ligne 2
 
 SQL> --?
 SQL> 
-SQL> -- 5. Gï¿½rer le script SQL proposï¿½ pour le rï¿½glage SQL
-SQL> -- Gï¿½rer le script SQL proposï¿½ pour le rï¿½glage SQL : Attention ce script est disponible dans le dossier %ORACLE_BASE%\admin\dpdump
-SQL> -- rï¿½cupï¿½rer le script et le mettre dans votre dossier : EXO91
-SQL> -- Editer ce script de faï¿½on appropriï¿½
+SQL> -- 5. G?rer le script SQL propos? pour le r?glage SQL
+SQL> -- G?rer le script SQL propos? pour le r?glage SQL : Attention ce script est disponible dans le dossier %ORACLE_BASE%\admin\dpdump
+SQL> -- r?cup?rer le script et le mettre dans votre dossier : EXO91
+SQL> -- Editer ce script de fa?on appropri?
 SQL> declare
   2  mydate varchar2(20):=to_char(sysdate, 'DD_MM_YYYY_HH24_MI_SS');
-  3  fname varchar2(300):='STA_Generate_action_script_on_PROJET_tuning'
+  3  fname varchar2(300):='STA_Generate_action_script_on_TuningProject'
   4  ||'&MYPDBUSER'|| '_'||mydate||'.sql';
   5  begin
   6  
   7  DBMS_ADVISOR.CREATE_FILE(
-  8  DBMS_SQLTUNE.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER'),
+  8  DBMS_SQLTUNE.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER'),
   9  'DATA_PUMP_DIR',
  10  fname
  11  );
  12  end;
  13  /
 ancien   4 : ||'&MYPDBUSER'|| '_'||mydate||'.sql';
-nouveau   4 : ||'PROJET_TUNING'|| '_'||mydate||'.sql';
-ancien   8 : DBMS_SQLTUNE.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'&MYPDBUSER'),
-nouveau   8 : DBMS_SQLTUNE.SCRIPT_TUNING_TASK('PROJET_TUNING_TASK'||'PROJET_TUNING'),
+nouveau   4 : ||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'|| '_'||mydate||'.sql';
+ancien   8 : DBMS_SQLTUNE.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'&MYPDBUSER'),
+nouveau   8 : DBMS_SQLTUNE.SCRIPT_TUNING_TASK('TP_SQL_TUNING_TASK'||'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER'),
 declare
 *
 ERREUR à la ligne 1 :
-ORA-13608: Le nom indiqué, PROJET_TUNING_TASKPROJET_TU..., n'est pas valide. 
+ORA-13608: Le nom indiqué, TP_SQL_TUNING_TASKProjet_TU..., n'est pas valide. 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7285 
 ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
 ORA-06512: à "SYS.PRVT_ADVISOR", ligne 68 
@@ -1686,12 +1242,12 @@ ORA-06512: à ligne 7
 
 
 SQL> 
-SQL> -- exï¿½cuter le script pour accepter le profile de la requï¿½te choisie
+SQL> -- ex?cuter le script pour accepter le profile de la requ?te choisie
 SQL> 
-SQL> -- execute dbms_sqltune.accept_sql_profile(task_name => 'PROJET_TUNING_TASK'||'&MYPDBUSER', replace => TRUE);
+SQL> -- execute dbms_sqltune.accept_sql_profile(task_name => 'TP_SQL_TUNING_TASK'||'&MYPDBUSER', replace => TRUE);
 SQL> 
 SQL> ---
-SQL> --- Vï¿½rifier la prï¿½sence d'un profie dans la vue
+SQL> --- V?rifier la pr?sence d'un profie dans la vue
 SQL> ---
 SQL> set linesize 200
 SQL> 
@@ -1700,71 +1256,7 @@ SQL> select name ,CATEGORY,  SQL_TEXT , STATUS,FORCE_MATCHING
   2  from dba_sql_profiles
   3  order by name;
 
-NAME                                                                                                                                                                                                    
---------------------------------------------------------------------------------------------------------------------------------                                                                        
-CATEGORY                                                                                                                         SQL_TEXT                                 STATUS   FOR                  
--------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------- -------- ---                  
-SYS_SQLPROF_0177d8ca8c750000                                                                                                                                                                            
-DEFAULT                                                                                                                           select co.typecompte,  operation, sum(m ENABLED  NO                   
-                                                                                                                                 ontant)                                                                
-                                                                                                                                  from client cl, compte co, transaction                                
-                                                                                                                                 tr                                                                     
-                                                                                                                                  where cl.clientid=co.clientid and co.co                               
-                                                                                                                                 mpteid=tr.compteid                                                     
-                                                                                                                                  and tr.date_operation                                                 
-                                                                                                                                  between to_date('25-01-2010', 'DD-MM-YY                               
-                                                                                                                                 YY') and to_date('27-01-2010', 'DD-MM-YY                               
-                                                                                                                                 YY')                                                                   
-                                                                                                                                  group by co.typecompte,  operation                                    
-                                                                                                                                                                                                        
-SYS_SQLPROF_0177d8ccf5f10001                                                                                                                                                                            
-DEFAULT                                                                                                                          EXPLAIN PLAN SET STATEMENT_ID='PLUS10000 ENABLED  NO                   
-                                                                                                                                 4' FOR  select cl.clientid, nom, prenom,                               
-                                                                                                                                  co.compteid, co.typecompte, tr.date_ope                               
-                                                                                                                                 ration,  operation,                                                    
-                                                                                                                                  optionoperation, montant                                              
-                                                                                                                                  from client cl, compte co, transaction                                
-                                                                                                                                 tr                                                                     
-                                                                                                                                  where cl.clientid=co.clientid and co.co                               
-                                                                                                                                 mpteid=tr.compteid                                                     
-                                                                                                                                  and co.solde <0                                                       
-                                                                                                                                                                                                        
-SYS_SQLPROF_0177d8cfc4a10002                                                                                                                                                                            
-DEFAULT                                                                                                                          EXPLAIN PLAN SET STATEMENT_ID='PLUS10000 ENABLED  NO                   
-                                                                                                                                 7' FOR   select cl.clientid,  co.comptei                               
-                                                                                                                                 d, operation, sum(montant)                                             
-                                                                                                                                  from client cl, compte co, transaction                                
-                                                                                                                                 tr                                                                     
-                                                                                                                                  where cl.clientid=co.clientid and co.co                               
-                                                                                                                                 mpteid=tr.compteid                                                     
-                                                                                                                                  group by cl.clientid,  co.compteid, ope                               
-                                                                                                                                 ration                                                                 
-                                                                                                                                                                                                        
-SYS_SQLPROF_0177d8cfc4fe0003                                                                                                                                                                            
-DEFAULT                                                                                                                          EXPLAIN PLAN SET STATEMENT_ID='PLUS10000 ENABLED  NO                   
-                                                                                                                                 7' FOR  select cl.clientid, nom, prenom,                               
-                                                                                                                                  co.compteid, co.typecompte, tr.date_ope                               
-                                                                                                                                 ration,  operation,                                                    
-                                                                                                                                  optionoperation, montant                                              
-                                                                                                                                  from client cl, compte co, transaction                                
-                                                                                                                                 tr                                                                     
-                                                                                                                                  where cl.clientid=co.clientid and co.co                               
-                                                                                                                                 mpteid=tr.compteid                                                     
-                                                                                                                                  and cl.nom='Petit' and operation='DEBIT                               
-                                                                                                                                 '                                                                      
-                                                                                                                                                                                                        
-SYS_SQLPROF_0177d8cfc5550004                                                                                                                                                                            
-DEFAULT                                                                                                                          EXPLAIN PLAN SET STATEMENT_ID='PLUS10000 ENABLED  NO                   
-                                                                                                                                 7' FOR  select cl.clientid, nom, prenom,                               
-                                                                                                                                  co.compteid, co.typecompte, tr.date_ope                               
-                                                                                                                                 ration,  operation,                                                    
-                                                                                                                                  optionoperation, montant                                              
-                                                                                                                                  from client cl, compte co, transaction                                
-                                                                                                                                 tr                                                                     
-                                                                                                                                  where cl.clientid=co.clientid and co.co                               
-                                                                                                                                 mpteid=tr.compteid                                                     
-                                                                                                                                  and cl.nom='Petit'                                                    
-                                                                                                                                                                                                        
+aucune ligne sélectionnée
 
 SQL> 
 SQL> 

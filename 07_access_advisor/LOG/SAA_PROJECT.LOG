@@ -8,8 +8,11 @@ SQL> ---------------------------------------------------------------------------
 SQL> 
 SQL> -- Si utile Suppession puis crï¿½ation de la table utilisateur
 SQL> drop table user_workload;
+drop table user_workload
+           *
+ERREUR à la ligne 1 :
+ORA-00942: Table ou vue inexistante 
 
-Table supprimée.
 
 SQL> 
 SQL> 
@@ -52,7 +55,7 @@ SQL> INSERT INTO user_workload (username, module, action, priority, sql_text)
   4  WHERE marque = 'Audi'')
   5  /
 ancien   2 : VALUES ('&MYPDBUSER', 'Example1', 'Action', 2,
-nouveau   2 : VALUES ('PROJET_TUNING', 'Example1', 'Action', 2,
+nouveau   2 : VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example1', 'Action', 2,
 WHERE marque = 'Audi'')
                 *
 ERREUR à la ligne 4 :
@@ -66,9 +69,14 @@ SQL>  INSERT INTO user_workload (username, module, action, priority, sql_text)
   3  ' select * from client
   4  WHERE age > 50');
 ancien   2 : VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
-nouveau   2 : VALUES ('PROJET_TUNING', 'Example2', 'Action', 2,
+nouveau   2 : VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example2', 'Action', 2,
+VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example2', 'Action', 2,
+        *
+ERREUR à la ligne 2 :
+ORA-12899: valeur trop grande pour la colonne 
+"PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER"."USER_WORKLOAD"."USERNAME" (réelle : 
+40, maximum : 30) 
 
-1 ligne créée.
 
 SQL> 
 SQL> 
@@ -83,7 +91,7 @@ SQL> INSERT INTO user_workload (username, module, action, priority, sql_text)
   6  ON catalogue.marque = immatriculation.marque
   7  WHERE immatriculation.occasion = 'VRAI'');
 ancien   2 : VALUES ('&MYPDBUSER', 'Example3', 'Action', 2,
-nouveau   2 : VALUES ('PROJET_TUNING', 'Example3', 'Action', 2,
+nouveau   2 : VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example3', 'Action', 2,
 WHERE immatriculation.occasion = 'VRAI'')
                                   *
 ERREUR à la ligne 7 :
@@ -103,7 +111,7 @@ SQL>  INSERT INTO user_workload (username, module, action, priority, sql_text)
   8  ON client.immatriculation = immatriculation.immatriculation
   9  WHERE client.sexe='M'');
 ancien   2 :  VALUES ('&MYPDBUSER', 'Example4', 'Action', 2,
-nouveau   2 :  VALUES ('PROJET_TUNING', 'Example4', 'Action', 2,
+nouveau   2 :  VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example4', 'Action', 2,
 WHERE client.sexe='M'')
                    *
 ERREUR à la ligne 9 :
@@ -120,7 +128,7 @@ SQL>  INSERT INTO user_workload (username, module, action, priority, sql_text)
   6  ON client.taux = marketing.taux
   7  WHERE marketing.deuxiemeVoiture = 'true'');
 ancien   2 :  VALUES ('&MYPDBUSER', 'Example5', 'Action', 2,
-nouveau   2 :  VALUES ('PROJET_TUNING', 'Example5', 'Action', 2,
+nouveau   2 :  VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example5', 'Action', 2,
 WHERE marketing.deuxiemeVoiture = 'true'')
                                    *
 ERREUR à la ligne 7 :
@@ -137,7 +145,7 @@ SQL>  INSERT INTO user_workload (username, module, action, priority, sql_text)
   6  ON catalogue.nom = immatriculation.nom
   7  WHERE catalogue.nom='Laguna 2.0T'');
 ancien   2 :  VALUES ('&MYPDBUSER', 'Example6', 'Action', 2,
-nouveau   2 :  VALUES ('PROJET_TUNING', 'Example6', 'Action', 2,
+nouveau   2 :  VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example6', 'Action', 2,
 WHERE catalogue.nom='Laguna 2.0T'')
                      *
 ERREUR à la ligne 7 :
@@ -157,7 +165,7 @@ SQL> INSERT INTO user_workload (username, module, action, priority, sql_text)
   8  ON catalogue.marque=immatriculation.marque
   9  WHERE catalogue.couleur = 'rouge'');
 ancien   2 :  VALUES ('&MYPDBUSER', 'Example7', 'Action', 2,
-nouveau   2 :  VALUES ('PROJET_TUNING', 'Example7', 'Action', 2,
+nouveau   2 :  VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example7', 'Action', 2,
 WHERE catalogue.couleur = 'rouge'')
                            *
 ERREUR à la ligne 9 :
@@ -177,9 +185,14 @@ SQL> INSERT INTO user_workload (username, module, action, priority, sql_text)
   9  WHERE immatriculation.puissance > 150
  10  ORDER BY client.age DESC');
 ancien   2 : VALUES ('&MYPDBUSER', 'Example8', 'Action', 2,
-nouveau   2 : VALUES ('PROJET_TUNING', 'Example8', 'Action', 2,
+nouveau   2 : VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example8', 'Action', 2,
+VALUES ('Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER', 'Example8', 'Action', 2,
+        *
+ERREUR à la ligne 2 :
+ORA-12899: valeur trop grande pour la colonne 
+"PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER"."USER_WORKLOAD"."USERNAME" (réelle : 
+40, maximum : 30) 
 
-1 ligne créée.
 
 SQL> 
 SQL> 
@@ -215,8 +228,19 @@ SQL>
 SQL> -- Francais
 SQL> -- alter session set NLS_NUMERIC_CHARACTERS = ',.'  ;
 SQL> execute DBMS_ADVISOR.DELETE_TASK ('TASK_Projet_TUNING');
+BEGIN DBMS_ADVISOR.DELETE_TASK ('TASK_Projet_TUNING'); END;
 
-Procédure PL/SQL terminée avec succès.
+*
+ERREUR à la ligne 1 :
+ORA-13605: La tâche ou l'objet TASK_Projet_TUNING indiqué n'existe pas pour 
+l'utilisateur en cours. 
+ORA-06512: à "SYS.PRVT_ADVISOR", ligne 3062 
+ORA-06512: à "SYS.DBMS_SYS_ERROR", ligne 86 
+ORA-06512: à "SYS.PRVT_ADVISOR", ligne 7277 
+ORA-06512: à "SYS.PRVT_ADVISOR", ligne 3046 
+ORA-06512: à "SYS.DBMS_ADVISOR", ligne 193 
+ORA-06512: à ligne 1 
+
 
 SQL> declare
   2  saved_stmts NUMBER;
@@ -284,14 +308,14 @@ SQL> declare
  64  End;
  65  /
 ancien  22 : where owner='&MYPDBUSER' and task_name=taskname;
-nouveau  22 : where owner='PROJET_TUNING' and task_name=taskname;
+nouveau  22 : where owner='Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER' and task_name=taskname;
 ancien  42 : workload_name=> wkld_name,import_mode=>'NEW', owner_name=>'&MYPDBUSER',
-nouveau  42 : workload_name=> wkld_name,import_mode=>'NEW', owner_name=>'PROJET_TUNING',
+nouveau  42 : workload_name=> wkld_name,import_mode=>'NEW', owner_name=>'Projet_TUNING_BDD_MOMAS_TAMANIN_FOURNIER',
 Dans SQL access advisor : 1############################################         
 Dans SQL access advisor : 2############################################         
 Dans SQL access advisor : 3############################################         
-saved_stmts=1                                                                   
-failed_stmts=1                                                                  
+saved_stmts=0                                                                   
+failed_stmts=0                                                                  
 Dans SQL access advisor : 4############################################         
 Dans SQL access advisor : 5############################################         
 
@@ -358,11 +382,7 @@ SQL> select WORKLOAD_NAME, sql_id, SQL_TEXT from DBA_ADVISOR_SQLW_STMTS
   2  Where workload_name= 'WKLD_Projet_TUNING'
   3  order by sql_id;
 
-WORKLOAD_NAME            SQL_ID SQL_TEXT                                                                                                                                                                
--------------------- ---------- ----------------------------------------------------------------------                                                                                                  
-WKLD_Projet_TUNING           41  select * from client                                                                                                                                                   
-                                WHERE age > 50                                                                                                                                                          
-                                                                                                                                                                                                        
+aucune ligne sélectionnée
 
 SQL> 
 SQL> 
@@ -435,12 +455,13 @@ SQL> begin
   4  /
 Rem  SQL Access Advisor : Version 19.0.0.0.0 - Production
 Rem  
-Rem  Nom utilisateur :    PROJET_TUNING
+Rem  Nom utilisateur :    PROJET_TUNING_BDD_MOMAS_TAMANIN_FOURNIER
 Rem  Tâche :             TASK_Projet_TUNING
-Rem  Date d'exécution :   
+Rem  Date d'exécution :  
+
 Rem  
 
-                  
+                                                                                                                                                                                                
 
 Procédure PL/SQL terminée avec succès.
 
@@ -459,7 +480,7 @@ SQL> declare
  10  );
  11  end;
  12  /
-SAA_Generate_script_on_Projet_TUNING_app_27_02_2021_12_58_02.sql                                                                                                                                        
+SAA_Generate_script_on_Projet_TUNING_app_28_02_2021_17_08_59.sql                                                                                                                                        
 
 Procédure PL/SQL terminée avec succès.
 
