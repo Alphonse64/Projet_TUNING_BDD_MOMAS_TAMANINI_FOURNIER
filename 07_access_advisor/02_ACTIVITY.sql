@@ -42,37 +42,32 @@ USERNAME VARCHAR(30) default user
 --Current user User submitting the query. This is a required column.
 );
 
-
-
 -- chargement des requ�tes dans cette table
 -- aggregation with selection
 
+-- Sélectionner le nom et le numéro d'immatriculation des voitures de la marque Audi
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example1', 'Action', 2,
 ' select nom, immatriculation from immatriculation
-WHERE marque = 'Audi'')
+WHERE marque = ''Audi''')
 /
  
- -- liste des comptes et clients dont le solde est n�gatif
+-- Sélectionner les clients de plus de 50 ans
  INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example2', 'Action', 2,
 ' select * from client
 WHERE age > 50');
  
- 
--- liste des transactions par compte 
-
--- liste des transactions par compte et client
+-- Sélectionner les véhicules du catalogue qui ont déjà été immatriculés en tant que véhicules d'occasion
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example3', 'Action', 2,
 ' SELECT *
 FROM catalogue 
 JOIN immatriculation
 ON catalogue.marque = immatriculation.marque
-WHERE immatriculation.occasion = 'VRAI'');
+WHERE immatriculation.occasion = ''VRAI''');
  
- 
- -- liste des transactions par compte et client pour lesquels le solde du compte n�gatif
+-- Sélectionner la couleur des Golf 2.0 FSI vendues à des hommes
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example4', 'Action', 2,
 ' SELECT DISTINCT catalogue.couleur
@@ -81,28 +76,27 @@ JOIN immatriculation
 ON  immatriculation.nom = catalogue.nom
 JOIN client
 ON client.immatriculation = immatriculation.immatriculation
-WHERE client.sexe='M'');
+WHERE client.sexe=''M'' AND catalogue.nom = ''Golf 2.0 FSI''');
 
--- liste des transactions par compte et client connaissant le nom du client
+-- Sélectionner les clients qui ont le même taux que les potentiels client qui veulent acheter une deuxième voiture
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example5', 'Action', 2,
 ' SELECT *
 FROM client
 JOIN marketing
 ON client.taux = marketing.taux
-WHERE marketing.deuxiemeVoiture = 'true'');
+WHERE marketing.deuxiemeVoiture = ''true''');
  
- -- liste des transactions par compte et client connaissant le nom du client et op�r�es � une date donn�e
+-- Sélectionner le numéro d'immatriculation des voitures dont le modèle est Laguna 2.0T
  INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example6', 'Action', 2,
 ' SELECT immatriculation
 FROM immatriculation
 JOIN catalogue
 ON catalogue.nom = immatriculation.nom
-WHERE catalogue.nom='Laguna 2.0T'');
+WHERE catalogue.nom=''Laguna 2.0T''');
 
- -- 7�me requ�te
- -- liste des op�ration d'un client donn�es de type DEBIT
+-- Sélectionner l'âge des clients ayant acheté une voiture rouge
 INSERT INTO user_workload (username, module, action, priority, sql_text)
  VALUES ('&MYPDBUSER', 'Example7', 'Action', 2,
 ' SELECT  DISTINCT client.age
@@ -111,9 +105,9 @@ JOIN immatriculation
 ON client.immatriculation=immatriculation.immatriculation 
 JOIN catalogue
 ON catalogue.marque=immatriculation.marque
-WHERE catalogue.couleur = 'rouge'');
+WHERE catalogue.couleur = ''rouge''');
  
- -- Erreur 1 : total des transaction par client, par compte, par operation
+-- Sélectionner la puissance et la marque des véhicules de plus de 150CV vendus, triés par l'âge décroissant de leur acheteur
 INSERT INTO user_workload (username, module, action, priority, sql_text)
 VALUES ('&MYPDBUSER', 'Example8', 'Action', 2,
 ' SELECT DISTINCT immatriculation.puissance, immatriculation.marque
@@ -148,12 +142,12 @@ alter session set NLS_NUMERIC_CHARACTERS = '.,' ;
 
 -- Francais
 -- alter session set NLS_NUMERIC_CHARACTERS = ',.'  ; 
-execute DBMS_ADVISOR.DELETE_TASK ('TASK_Projet_TUNING');
+execute DBMS_ADVISOR.DELETE_TASK ('TASK'||'&MYPDBUSER');
 declare
 saved_stmts NUMBER;
 failed_stmts NUMBER;
-wkld_name VARCHAR2(30) :='WKLD_Projet_TUNING';
-taskname VARCHAR2(30) := 'TASK_Projet_TUNING'; 
+wkld_name VARCHAR2(30) :='WKLD'||'&MYPDBUSER';
+taskname VARCHAR2(30) := 'TASK'||'&MYPDBUSER'; 
 task_id NUMBER;
 num_found NUMBER:=0;
 Begin
@@ -214,51 +208,6 @@ dbms_output.put_line(' SQLcode='||sqlcode);
 dbms_output.put_line(' SQLerrm='||sqlerrm);
 End;
 /
-/*
-*
-ERREUR � la ligne 1 :
-ORA-13600: erreur survenue dans Advisor
-ORA-13635: La valeur indiqu�e pour le param�tre ADJUSTED_SCALEUP_GREEN_THRESH
-ne peut pas �tre convertie en nombre.
-ORA-06512: � "SYS.PRVT_ADVISOR", ligne 3902
-ORA-06512: � "SYS.DBMS_ADVISOR", ligne 102
-ORA-06512: � ligne 26
-*/
-
--- ALTER SYSTEM SET NLS_TERRITORY=FRANCE scope=spfile;
-
--- si cette apparait faire les 	actions suivantes 
--- Ne pas lancer les deux programmes qui suivent 
--- si pas d'erreur
-
-/*
--- ne pas ex�cuter ce script si pas d'erreur plus haut
-declare
-template_id NUMBER;
-template_name VARCHAR2(255):= 'MY_TEMPLATE';
-Begin
-DBMS_ADVISOR.SET_DEFAULT_TASK_PARAMETER (
-'SQL Access Advisor', 
-'ADJUSTED_SCALEUP_GREEN_THRESH'  ,
-'1,25' -- au lieu de 1.25
-);
-end;
-/
-
--- ne pas ex�cuter ce script si pas d'erreur plus haut
-declare
-template_id NUMBER;
-template_name VARCHAR2(255):= 'MY_TEMPLATE';
-Begin
-DBMS_ADVISOR.SET_DEFAULT_TASK_PARAMETER (
-'SQL Access Advisor', 
-'OVERALL_SCALEUP_GREEN_THRESH'  ,
-'1,5' -- au lieu de 1.5
-);
-end;
-/
-
-*/
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -272,7 +221,7 @@ col SQL_TEXT format a70
 set linesize 200
 set pagesize 400
 select WORKLOAD_NAME, sql_id, SQL_TEXT from DBA_ADVISOR_SQLW_STMTS
-Where workload_name= 'WKLD_Projet_TUNING'
+Where workload_name= 'WKLD'||'&MYPDBUSER'
 order by sql_id;
 
 
@@ -281,7 +230,7 @@ order by sql_id;
 -- la recommandation
 
 SELECT REC_ID, RANK, BENEFIT, type
-FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_Projet_TUNING';
+FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK'||'&MYPDBUSER';
 
 -- Visualisation des recommandations
 -- Afficher des recommandations et des b�n�fices 
@@ -290,8 +239,8 @@ FROM USER_ADVISOR_RECOMMENDATIONS WHERE TASK_NAME = 'TASK_Projet_TUNING';
 SELECT sql_id, rec_id, precost, postcost,
 (precost-postcost)*100/precost AS percent_benefit
 FROM USER_ADVISOR_SQLA_WK_STMTS
-WHERE TASK_NAME = 'TASK_Projet_TUNING'
-AND workload_name = 'WKLD_Projet_TUNING';
+WHERE TASK_NAME = 'TASK'||'&MYPDBUSER'
+AND workload_name = 'WKLD'||'&MYPDBUSER';
 
 -- Visualisation des recommandations
 -- Affichage des actions recommand�s :
@@ -300,7 +249,7 @@ AND workload_name = 'WKLD_Projet_TUNING';
 
 SELECT 'Action Count', COUNT(DISTINCT action_id) cnt
 FROM user_advisor_actions 
-WHERE task_name = 'TASK_Projet_TUNING';
+WHERE task_name = 'TASK'||'&MYPDBUSER';
 
 
 
@@ -314,7 +263,7 @@ Col attr1 format A40
 Set long 500
 SELECT rec_id, action_id, command, attr1
 FROM user_advisor_actions 
-WHERE task_name = 'TASK_Projet_TUNING'
+WHERE task_name = 'TASK'||'&MYPDBUSER'
 ORDER BY rec_id, action_id;
 
 
@@ -326,7 +275,7 @@ ORDER BY rec_id, action_id;
 -- La fonction GET_TASK_SCRIPT construire le script
 set serveroutput on
 begin
-dbms_output.put_line(DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_Projet_TUNING'));
+dbms_output.put_line(DBMS_ADVISOR.GET_TASK_SCRIPT('TASK'||'&MYPDBUSER'));
 end;
 /
 
@@ -338,7 +287,7 @@ fname varchar2(300):='SAA_Generate_script_on_Projet_TUNING_app_'||mydate||'.sql'
 begin
 dbms_output.put_line(fname);
 DBMS_ADVISOR.CREATE_FILE(
-buffer=>DBMS_ADVISOR.GET_TASK_SCRIPT('TASK_Projet_TUNING'),
+buffer=>DBMS_ADVISOR.GET_TASK_SCRIPT('TASK'||'&MYPDBUSER'),
 location =>'DATA_PUMP_DIR', 
  filename=>fname
 );
@@ -346,4 +295,3 @@ end;
 /
 
 spool off
-
